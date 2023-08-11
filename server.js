@@ -1,4 +1,5 @@
 const express = require("express");
+const path =require('path')
 const cors = require("cors");
 const app = express();
 const dotenv = require("dotenv");
@@ -14,15 +15,17 @@ const hpp = require('hpp');
 
 const authRoute = require("./src/api/v1/routes/auth");
 const userRoute = require("./src/api/v1/routes/user");
-
+const movieRoute = require("./src/api/v1/routes/movie");
+const uploadRouter = require("./src/api/v1/controllers/uploadController")
 const AppError = require('./src/api/v1/utils/appError');
 dotenv.config();
 require('express-async-errors');
 
+mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGODB_URL, () => {
   console.log("CONNECTED TO MONGO DB successfully");
 });
-
+app.use(express.static(path.join(__dirname, 'public')));
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
 app.use(cors());
@@ -83,7 +86,8 @@ app.use(
 //ROUTES
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/user", userRoute);
-
+app.use("/api/v1/movie", movieRoute);
+app.use('/upload', uploadRouter);
 app.use("/hello",(req,res) => {
     res.send("hello")
 })

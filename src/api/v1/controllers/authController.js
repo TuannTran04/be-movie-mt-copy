@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const AppError = require("../utils/appError");
 
 let refreshTokens = [];
 console.log("arr refresh token currenly", refreshTokens)
@@ -18,7 +19,8 @@ const authController = {
         email,
         password: hashed,
       });
-
+      if(!username) throw new AppError("lỗi ko có newUser", 401)
+      if(!email) throw new AppError("lỗi ko có email", 401)
       //Save user to DB
       const user = await newUser.save();
       res.status(200).json(user);
