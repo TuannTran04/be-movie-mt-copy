@@ -4,11 +4,11 @@ const jwt = require("jsonwebtoken");
 const AppError = require("../utils/appError");
 
 let refreshTokens = [];
-console.log("arr refresh token currenly", refreshTokens)
+console.log("arr refresh token currenly", refreshTokens);
 const authController = {
   //REGISTER
   registerUser: async (req, res) => {
-    let {username, password, email} = req.body;
+    let { username, password, email } = req.body;
     try {
       const salt = await bcrypt.genSalt(10);
       const hashed = await bcrypt.hash(password, salt);
@@ -19,13 +19,21 @@ const authController = {
         email,
         password: hashed,
       });
-      if(!username) throw new AppError("lỗi ko có newUser", 401)
-      if(!email) throw new AppError("lỗi ko có email", 401)
+      if (!username) throw new AppError("lỗi ko có newUser", 401);
+      if (!email) throw new AppError("lỗi ko có email", 401);
       //Save user to DB
       const user = await newUser.save();
-      res.status(200).json(user);
+      res.status(200).json({
+        code: 200,
+        mes: "ok",
+        data: user,
+      });
     } catch (err) {
-      res.status(500).json(err);
+      res.status(404).json({
+        code: 404,
+        mes: "error catch",
+      });
+      // return throw new AppError("lỗi 505", 505);
     }
   },
 
@@ -56,14 +64,15 @@ const authController = {
     try {
       const user = await User.findOne({ username: req.body.username });
       if (!user) {
-        res.status(404).json("Incorrect username");
+        // return res.status(404).json("Incorrect username");
+        throw new AppError("incorrect", 404);
       }
       const validPassword = await bcrypt.compare(
         req.body.password,
         user.password
       );
       if (!validPassword) {
-        res.status(404).json("Incorrect password");
+        throw new AppError("incorrect", 404);
       }
       if (user && validPassword) {
         //Generate access token
@@ -74,15 +83,27 @@ const authController = {
         //STORE REFRESH TOKEN IN COOKIE
         res.cookie("refreshToken", refreshToken, {
           httpOnly: true,
-          secure:false,
+          secure: false,
           path: "/",
           sameSite: "strict",
         });
         const { password, ...others } = user._doc;
-        res.status(200).json({ ...others, accessToken, refreshToken });
+        return res.status(200).json({
+          code: 200,
+          mes: "ok",
+          data: {
+            ...others,
+            accessToken,
+            refreshToken,
+          },
+        });
       }
     } catch (err) {
-      res.status(500).json(err);
+      res.status(404).json({
+        code: 404,
+        mes: "error catch",
+        err,
+      });
     }
   },
 
@@ -105,7 +126,7 @@ const authController = {
       refreshTokens.push(newRefreshToken);
       res.cookie("refreshToken", refreshToken, {
         httpOnly: true,
-        secure:false,
+        secure: false,
         path: "/",
         sameSite: "strict",
       });
