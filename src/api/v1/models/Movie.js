@@ -7,6 +7,7 @@ const movieSchema = new mongoose.Schema(
       require: true,
       min: 6,
     },
+    slug: String,
     desc: {
       type: String,
       require: true,
