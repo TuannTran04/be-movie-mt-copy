@@ -19,13 +19,14 @@ const movieSchema = new mongoose.Schema(
     },
     photo: [String],
     // category: [String],
-    category: [
-      {
-        type: mongoose.Schema.ObjectId,
-        ref: "Category",
-        required: [true, "Phải có category"],
-      },
-    ], // store array of id of category collections
+    // category: [
+    //   {
+    //     type: mongoose.Schema.ObjectId,
+    //     ref: "Category",
+    //     required: [true, "Phải có category"],
+    //   },
+    // ], // store array of id of category collections
+    category: [{ type: mongoose.Types.ObjectId, ref: "Category" }],
     // follows: [
     //   {
     //     type: Schema.Types.ObjectId, //HERE
