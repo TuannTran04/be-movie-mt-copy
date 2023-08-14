@@ -1,31 +1,33 @@
 const express = require("express");
-const path =require('path')
+const path = require("path");
 const cors = require("cors");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 // const asyncHandler = require('express-async-handler')
-var morgan = require('morgan')
-const helmet = require('helmet');
-const rateLimit = require('express-rate-limit');
-const mongoSanitize = require('express-mongo-sanitize');
-const xss = require('xss-clean');
-const hpp = require('hpp');
+var morgan = require("morgan");
+const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
+const mongoSanitize = require("express-mongo-sanitize");
+const xss = require("xss-clean");
+const hpp = require("hpp");
 
 const authRoute = require("./src/api/v1/routes/auth");
 const userRoute = require("./src/api/v1/routes/user");
 const movieRoute = require("./src/api/v1/routes/movie");
-const uploadRouter = require("./src/api/v1/controllers/uploadController")
-const AppError = require('./src/api/v1/utils/appError');
-dotenv.config();
-require('express-async-errors');
+const categoryRoute = require("./src/api/v1/routes/category");
+const uploadRouter = require("./src/api/v1/controllers/uploadController");
+const AppError = require("./src/api/v1/utils/appError");
 
-mongoose.set('strictQuery', false);
+dotenv.config();
+require("express-async-errors");
+
+mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGODB_URL, () => {
   console.log("CONNECTED TO MONGO DB successfully");
 });
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
 app.use(cors());
@@ -35,7 +37,7 @@ app.use(cors());
 //   origin: 'https://www.natours.com'
 // }))
 
-app.options('*', cors());
+app.options("*", cors());
 // app.options('/api/v1/tours/:id', cors());
 
 // Serving static files
@@ -45,8 +47,8 @@ app.options('*', cors());
 app.use(helmet());
 
 // Development logging
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'));
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
 }
 // :method :url :status :response-time ms - :res[content-length]
 // app.use(morgan("combined"))
@@ -55,13 +57,13 @@ if (process.env.NODE_ENV === 'development') {
 const limiter = rateLimit({
   max: 100,
   windowMs: 60 * 60 * 1000,
-  message: 'Too many requests from this IP, please try again in an hour!'
+  message: "Too many requests from this IP, please try again in an hour!",
 });
-app.use('/api', limiter);
+app.use("/api", limiter);
 
 // Body parser, reading data from body into req.body
-app.use(express.json({ limit: '10kb' }));
-app.use(express.urlencoded({ extended: true, limit: '10kb' }));
+app.use(express.json({ limit: "10kb" }));
+app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 app.use(cookieParser());
 
 // Data sanitization against NoSQL query injection
@@ -74,28 +76,29 @@ app.use(xss());
 app.use(
   hpp({
     whitelist: [
-      'duration',
-      'ratingsQuantity',
-      'ratingsAverage',
-      'maxGroupSize',
-      'difficulty',
-      'price'
-    ]
+      "duration",
+      "ratingsQuantity",
+      "ratingsAverage",
+      "maxGroupSize",
+      "difficulty",
+      "price",
+    ],
   })
 );
 //ROUTES
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/movie", movieRoute);
-app.use('/upload', uploadRouter);
-app.use("/hello",(req,res) => {
-    res.send("hello")
-})
-app.use("/test", (req,res) => {
-    res.status(200).json({
-        mes: 'ok'
-    })
-})
+app.use("/api/v1/category", categoryRoute);
+app.use("/upload", uploadRouter);
+app.use("/hello", (req, res) => {
+  res.send("hello");
+});
+app.use("/test", (req, res) => {
+  res.status(200).json({
+    mes: "ok",
+  });
+});
 // app.get('/handler', asyncHandler(async (req, res, next) => {
 // 	res.status(200).json({
 //         mes: 'ok'
@@ -107,21 +110,21 @@ app.use("/test", (req,res) => {
 app.use((req, res, next) => {
   res.status(400).json({
     code: 400,
-    mes: "Not found"
-  })
-})
-app.use((err,req, res, next) => {
+    mes: "Not found",
+  });
+});
+app.use((err, req, res, next) => {
   res.json({
     code: err.status || 500,
-    mes: err.message || "error in last middleware"
-  })
-})
+    mes: err.message || "error in last middleware",
+  });
+});
 
-app.all('*', (req, res, next) => {
+app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
 // app.use(globalErrorHandler);
 app.listen(8000, () => {
-  console.log("Server is running");
+  console.log("Server main is running port 8000");
 });
