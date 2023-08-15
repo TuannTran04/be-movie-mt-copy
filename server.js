@@ -55,9 +55,15 @@ if (process.env.NODE_ENV === "development") {
 
 // Limit requests from same API
 const limiter = rateLimit({
-  max: 100,
-  windowMs: 60 * 60 * 1000,
-  message: "Too many requests from this IP, please try again in an hour!",
+  max: 5,
+  windowMs: 2 * 60 * 1000,
+  // message: "Too many requests from this IP, please try again in an hour!",
+  handler: function (req, res) {
+    res.status(429).send({
+      status: 500,
+      message: "Too many requests!",
+    });
+  },
 });
 app.use("/api", limiter);
 
@@ -86,7 +92,7 @@ app.use(
   })
 );
 //ROUTES
-app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/auth", limiter, authRoute);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/movie", movieRoute);
 app.use("/api/v1/category", categoryRoute);
