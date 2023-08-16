@@ -8,6 +8,8 @@ const cookieParser = require("cookie-parser");
 // const asyncHandler = require('express-async-handler')
 var morgan = require("morgan");
 const helmet = require("helmet");
+// helmet help hidden info when request api, hacker do not know what
+//technology backend used
 const rateLimit = require("express-rate-limit");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
