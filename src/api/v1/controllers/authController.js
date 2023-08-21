@@ -5,6 +5,7 @@ const AppError = require("../utils/appError");
 
 let refreshTokens = [];
 console.log("arr refresh token currenly", refreshTokens);
+
 const authController = {
   //REGISTER
   registerUser: async (req, res) => {
@@ -40,7 +41,7 @@ const authController = {
   generateAccessToken: (user) => {
     return jwt.sign(
       {
-        id: user.id,
+        id: user._id,
         isAdmin: user.isAdmin,
       },
       process.env.JWT_ACCESS_KEY,
@@ -51,7 +52,7 @@ const authController = {
   generateRefreshToken: (user) => {
     return jwt.sign(
       {
-        id: user.id,
+        id: user._id,
         isAdmin: user.isAdmin,
       },
       process.env.JWT_REFRESH_KEY,
@@ -63,7 +64,9 @@ const authController = {
   loginUser: async (req, res) => {
     try {
       const user = await User.findOne({ username: req.body.username });
+      console.log(">>> USER: <<<", user);
       if (!user) {
+        console.log(">>> USER DOESN'T EXIST <<<");
         // return res.status(404).json("Incorrect username");
         throw new AppError("incorrect", 404);
       }
@@ -71,7 +74,9 @@ const authController = {
         req.body.password,
         user.password
       );
+      console.log(">>> validPassword: <<<", validPassword);
       if (!validPassword) {
+        console.log(">>> WRONG PASSWORD <<<");
         throw new AppError("incorrect", 404);
       }
       if (user && validPassword) {
@@ -87,6 +92,7 @@ const authController = {
           path: "/",
           sameSite: "strict",
         });
+        console.log(">>> USER _DOC: <<<", user._doc);
         const { password, ...others } = user._doc;
         return res.status(200).json({
           code: 200,
@@ -99,6 +105,7 @@ const authController = {
         });
       }
     } catch (err) {
+      console.log(err);
       res.status(404).json({
         code: 404,
         mes: "error catch",

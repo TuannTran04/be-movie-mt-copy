@@ -24,8 +24,10 @@ dotenv.config();
 require("express-async-errors");
 
 mongoose.set("strictQuery", false);
-mongoose.connect(process.env.MONGODB_URL, () => {
-  console.log("CONNECTED TO MONGO DB successfully");
+mongoose.connect(process.env.MONGODB_URL, {
+  dbName: "movieDB",
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
 });
 app.use(express.static(path.join(__dirname, "public")));
 // 1) GLOBAL MIDDLEWARES
@@ -65,7 +67,7 @@ const limiter = rateLimit({
     });
   },
 });
-app.use("/api", limiter);
+// app.use("/api", limiter);
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: "10kb" }));
@@ -131,6 +133,8 @@ app.all("*", (req, res, next) => {
 });
 
 // app.use(globalErrorHandler);
-app.listen(8000, () => {
-  console.log("Server main is running port 8000");
+
+mongoose.connection.once("open", () => {
+  console.log("Connected to MongoDB");
+  app.listen(8000, () => console.log(`Server running on port 8000`));
 });

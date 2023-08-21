@@ -16,7 +16,7 @@ const movieController = {
       let movie;
       if (slugName) {
         movie = await Movie.find({
-          slug: { $regex: ".*" + slugName + ".*" },
+          slug: { $regex: ".*" + slugName.replace(/-/g, " ") + ".*" },
         })
           .limit(req.query?.li || 10)
           .populate("category");
@@ -37,6 +37,7 @@ const movieController = {
       res.status(500).json(err);
     }
   },
+
   addMovie: async (req, res) => {
     try {
       const newMovie = await new Movie({ ...req.body });

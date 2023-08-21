@@ -20,6 +20,7 @@ const categoryController = {
       throw new AppError(err.message, err.status);
     }
   },
+
   getAllCategory: async (req, res) => {
     try {
       const cate = await Category.find().limit(10);
