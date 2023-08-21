@@ -1,11 +1,10 @@
 const Movie = require("../models/Movie");
 const User = require("../models/User");
 const AppError = require("../utils/appError");
-
+const _ = require("lodash");
 const movieController = {
   getAllMovies: async (req, res) => {
     let { slug: slugName } = req.query;
-    console.log(req.query);
     try {
       // 1. get all with limit
       //2. populate category
@@ -54,13 +53,6 @@ const movieController = {
       throw new AppError(err.message, err.status);
     }
   },
-  rating: async (req, res) => {
-    let arr = [5, 4, 3];
-    let tbinh = 0;
-    await Movie.updateOne({
-      rating: tbinh,
-    });
-  },
   addLoveMovie: async (req, res) => {
     let { userId, movieId, isLove } = req.body;
     try {
@@ -105,18 +97,64 @@ const movieController = {
     } catch (err) {
       res.status(500).json(err);
     }
-    console.log(req.body);
   },
-
-  //   //DELETE A USER
-  //   deleteUser: async (req, res) => {
-  //     try {
-  //       await User.findByIdAndDelete(req.params.id);
-  //       res.status(200).json("User deleted");
-  //     } catch (err) {
-  //       res.status(500).json(err);
-  //     }
-  //   },
+  rating: async (req, res) => {
+    // slow one step, but not problem
+    try {
+      let { name: nameRoot, point: pointRoot } = req.body;
+      if (_.isNull(nameRoot) && _.isNull(pointRoot))
+        throw new AppError("error params input", 404);
+      let movie = await Movie.findById(req.body.movieId);
+      if (movie) {
+        if (
+          movie.listUserRating.length == 0 ||
+          movie.listUserRating.findIndex((item) => item.name == nameRoot) == -1
+        ) {
+          await Movie.updateOne(
+            { _id: movie._id },
+            { $push: { listUserRating: { name: nameRoot, point: pointRoot } } }
+          );
+          let avgPoint = movie.listUserRating.reduce(
+            (acc, cur) => acc + cur.point,
+            0
+          );
+          await Movie.updateOne(
+            { _id: movie._id },
+            { rating: avgPoint / movie.listUserRating.length }
+          );
+          return res.status(200).json({
+            code: 200,
+          });
+        } else {
+          let result = await Movie.updateOne(
+            { "listUserRating.name": nameRoot },
+            {
+              $set: {
+                "listUserRating.$.point": pointRoot,
+              },
+            }
+          );
+          let avgPoint = movie.listUserRating.reduce(
+            (acc, cur) => acc + cur.point,
+            0
+          );
+          await Movie.updateOne(
+            { _id: movie._id },
+            { rating: avgPoint / movie.listUserRating.length }
+          );
+          return res.status(200).json({
+            code: 200,
+          });
+        }
+      }
+      return res.status(400).json({
+        mes: "err 2",
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+  getSingle: async (req, res) => {},
 };
 
 module.exports = movieController;
