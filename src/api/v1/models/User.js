@@ -27,6 +27,8 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    loveMovie: [{ type: mongoose.Types.ObjectId, ref: "Movie" }],
+    markBookMovie: [{ type: mongoose.Types.ObjectId, ref: "Movie" }],
   },
   { timestamps: true }
 );

@@ -54,6 +54,60 @@ const movieController = {
       throw new AppError(err.message, err.status);
     }
   },
+  rating: async (req, res) => {
+    let arr = [5, 4, 3];
+    let tbinh = 0;
+    await Movie.updateOne({
+      rating: tbinh,
+    });
+  },
+  addLoveMovie: async (req, res) => {
+    let { userId, movieId, isLove } = req.body;
+    try {
+      let result;
+      if (isLove) {
+        result = await User.updateOne(
+          { _id: userId },
+          { $push: { loveMovie: movieId } }
+        );
+      } else {
+        result = await User.updateOne(
+          { _id: userId },
+          { $pull: { loveMovie: movieId } }
+        );
+      }
+      return res.status(200).json({
+        result,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+    console.log(req.body);
+  },
+  addBookmarkMovie: async (req, res) => {
+    let { userId, movieId, isBookmark } = req.body;
+    try {
+      let result;
+      if (isBookmark) {
+        result = await User.updateOne(
+          { _id: userId },
+          { $push: { markBookMovie: movieId } }
+        );
+      } else {
+        result = await User.updateOne(
+          { _id: userId },
+          { $pull: { markBookMovie: movieId } }
+        );
+      }
+      return res.status(200).json({
+        result,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+    console.log(req.body);
+  },
+
   //   //DELETE A USER
   //   deleteUser: async (req, res) => {
   //     try {

@@ -8,6 +8,8 @@ const cookieParser = require("cookie-parser");
 // const asyncHandler = require('express-async-handler')
 var morgan = require("morgan");
 const helmet = require("helmet");
+// helmet help hidden info when request api, hacker do not know what
+//technology backend used
 const rateLimit = require("express-rate-limit");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
@@ -58,7 +60,7 @@ if (process.env.NODE_ENV === "development") {
 // Limit requests from same API
 const limiter = rateLimit({
   max: 5,
-  windowMs: 2 * 60 * 1000,
+  windowMs: 10 * 60 * 1000,
   // message: "Too many requests from this IP, please try again in an hour!",
   handler: function (req, res) {
     res.status(429).send({

@@ -93,6 +93,12 @@ router.post("/", upload.single("filename"), async (req, res) => {
       metadata
     );
     //by using uploadBytesResumable we can control the progress of uploading like pause, resume, cancel
+    console.log(
+      "print snapshot",
+      snapshot.bytesTransferred,
+      "----",
+      snapshot.totalBytes
+    );
 
     // Grab the public url
     const downloadURL = await getDownloadURL(snapshot.ref);
