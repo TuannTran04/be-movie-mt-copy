@@ -10,6 +10,10 @@ const router = require("express").Router();
 router.get("/", verifyToken, userController.getAllUsers);
 router.get("/get-love-movie", verifyToken, userController.getLoveMovie);
 router.get("/get-bookmark-movie", verifyToken, userController.getBookmarkMovie);
+
+//UPDATE USER
+router.put("/update-info-user", verifyToken, userController.updateInfoUser);
+
 //DELETE USER
 router.delete(
   "/:id",

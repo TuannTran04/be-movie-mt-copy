@@ -11,6 +11,44 @@ const userController = {
     }
   },
 
+  //UPDATE INFO USER
+  updateInfoUser: async (req, res) => {
+    const { username, givenName, familyName, email, national, avatar } =
+      req.body;
+
+    try {
+      const updatedUser = await User.findOneAndUpdate(
+        { _id: req.user.id },
+        {
+          username,
+          givenName,
+          familyName,
+          email,
+          national,
+          avatar,
+        },
+        { new: true } // Trả về người dùng sau khi cập nhật
+      );
+
+      if (!updatedUser) {
+        return res.status(404).json({ mes: "User not found" });
+      }
+
+      const { password, ...others } = updatedUser._doc;
+
+      return res.status(200).json({
+        code: 200,
+        mes: "update success",
+        data: {
+          ...others,
+        },
+      });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  },
+
   //DELETE A USER
   deleteUser: async (req, res) => {
     try {
@@ -35,6 +73,7 @@ const userController = {
       const user = await User.findById(req.user.id)
         .populate("markBookMovie")
         .select("markBookMovie");
+      console.log(">>> GET BOOKMARK MOVIE: <<<", user);
       return res.status(200).json(user);
     } catch (err) {
       res.status(500).json(err);

@@ -23,6 +23,8 @@ const movieController = {
         movie = await Movie.find()
           .limit(req.query?.li || 10)
           .populate("category");
+
+        // console.log(">>> All Movies: <<<", movie[1].category);
       }
       res.status(200).json({
         code: 200,
@@ -55,6 +57,7 @@ const movieController = {
   },
   addLoveMovie: async (req, res) => {
     let { userId, movieId, isLove } = req.body;
+    console.log(">>> addLoveMovie: <<<", req.body);
     try {
       let result;
       if (isLove) {
@@ -78,6 +81,7 @@ const movieController = {
   },
   addBookmarkMovie: async (req, res) => {
     let { userId, movieId, isBookmark } = req.body;
+    console.log(">>> addBookmarkMovie: <<<", req.body);
     try {
       let result;
       if (isBookmark) {
@@ -134,10 +138,12 @@ const movieController = {
               },
             }
           );
+          console.log(">>> result: <<<", result);
           let avgPoint = movie.listUserRating.reduce(
             (acc, cur) => acc + cur.point,
             0
           );
+          console.log(">>> avgPoint: <<<", avgPoint);
           await Movie.updateOne(
             { _id: movie._id },
             { rating: avgPoint / movie.listUserRating.length }

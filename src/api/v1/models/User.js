@@ -27,6 +27,18 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    givenName: {
+      type: String,
+    },
+    familyName: {
+      type: String,
+    },
+    national: {
+      type: String,
+    },
+    avatar: {
+      type: String,
+    },
     loveMovie: [{ type: mongoose.Types.ObjectId, ref: "Movie" }],
     markBookMovie: [{ type: mongoose.Types.ObjectId, ref: "Movie" }],
   },
