@@ -20,8 +20,8 @@ const authController = {
         email,
         password: hashed,
       });
-      if (!username) throw new AppError("lỗi ko có newUser", 401);
-      if (!email) throw new AppError("lỗi ko có email", 401);
+      if (!username) throw new AppError("lỗi không có newUser", 401);
+      if (!email) throw new AppError("lỗi không có email", 401);
       //Save user to DB
       const user = await newUser.save();
       res.status(200).json({
@@ -30,9 +30,10 @@ const authController = {
         data: user,
       });
     } catch (err) {
+      console.log(err);
       res.status(404).json({
         code: 404,
-        mes: "error catch",
+        mes: err,
       });
       // return throw new AppError("lỗi 505", 505);
     }
@@ -68,7 +69,7 @@ const authController = {
       if (!user) {
         console.log(">>> USER DOESN'T EXIST <<<");
         // return res.status(404).json("Incorrect username");
-        throw new AppError("incorrect", 404);
+        throw new AppError("Tên đăng nhập không đúng", 404);
       }
       const validPassword = await bcrypt.compare(
         req.body.password,
@@ -77,7 +78,7 @@ const authController = {
       console.log(">>> validPassword: <<<", validPassword);
       if (!validPassword) {
         console.log(">>> WRONG PASSWORD <<<");
-        throw new AppError("incorrect", 404);
+        throw new AppError("Mật khẩu không đúng", 404);
       }
       if (user && validPassword) {
         //Generate access token
@@ -96,7 +97,7 @@ const authController = {
         const { password, ...others } = user._doc;
         return res.status(200).json({
           code: 200,
-          mes: "ok",
+          mes: "Đăng nhập thành công",
           data: {
             ...others,
             accessToken,
@@ -150,6 +151,30 @@ const authController = {
     refreshTokens = refreshTokens.filter((token) => token !== req.body.token);
     res.clearCookie("refreshToken");
     res.status(200).json("Logged out successfully!");
+  },
+
+  //CHANGE PWD USER
+  updatePwdUser: async (req, res) => {
+    const { email, password, confirmPassword } = req.body;
+    console.log(">>> updatePwdUser :<<<", req.body);
+    const salt = await bcrypt.genSalt(10);
+    const hashed = await bcrypt.hash(password, salt);
+
+    try {
+      const existingUser = await User.findOne({ email });
+      if (!existingUser) {
+        return res.status(404).json({ code: 404, mes: "Email không tồn tại" });
+      }
+      await User.updateOne({ email }, { password: hashed });
+
+      return res.status(200).json({
+        code: 200,
+        mes: "Thay đổi mật khẩu thành công",
+      });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
   },
 };
 

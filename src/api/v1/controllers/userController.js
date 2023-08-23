@@ -15,7 +15,7 @@ const userController = {
   updateInfoUser: async (req, res) => {
     const { username, givenName, familyName, email, national, avatar } =
       req.body;
-
+    console.log("test log update");
     try {
       const updatedUser = await User.findOneAndUpdate(
         { _id: req.user.id },

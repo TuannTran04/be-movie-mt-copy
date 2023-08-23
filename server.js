@@ -96,7 +96,7 @@ app.use(
   })
 );
 //ROUTES
-app.use("/api/v1/auth", limiter, authRoute);
+app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/movie", movieRoute);
 app.use("/api/v1/category", categoryRoute);
