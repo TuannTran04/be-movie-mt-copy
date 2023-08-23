@@ -13,11 +13,12 @@ const movieSchema = new mongoose.Schema(
       require: true,
       min: 6,
     },
-    author: {
-      type: String,
-      require: true,
-      min: 6,
-    },
+    author: [
+      {
+        type: String,
+        required: true,
+      },
+    ],
     photo: [String],
     // category: [String],
     // category: [

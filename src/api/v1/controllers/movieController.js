@@ -39,6 +39,35 @@ const movieController = {
     }
   },
 
+  getSearchMovies: async (req, res) => {
+    const query = req.query.q; // Chuỗi tìm kiếm
+    console.log(">>> search query: <<<", query);
+    try {
+      const movies = await Movie.find({
+        $or: [
+          { title: { $regex: query, $options: "i" } }, // Tìm theo tên phim
+          { author: { $regex: query, $options: "i" } }, // Tìm theo tên đạo diễn
+          { actors: { $regex: query, $options: "i" } }, // Tìm theo tên diễn viên
+        ],
+      });
+
+      if (movies.length === 0) {
+        return res.json({ message: "Không có kết quả tìm kiếm" });
+      }
+
+      res.status(200).json({
+        code: 200,
+        mes: "Tìm kiếm thành công",
+        data: {
+          countTotalObject: movies.length,
+          movies,
+        },
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+
   addMovie: async (req, res) => {
     try {
       const newMovie = await new Movie({ ...req.body });
