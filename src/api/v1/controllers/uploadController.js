@@ -5,7 +5,6 @@
 
 const express = require("express");
 const { initializeApp } = require("firebase/app");
-// import { getAnalytics } from "firebase/analytics";
 const {
   getStorage,
   ref,
@@ -26,7 +25,6 @@ const storage = getStorage();
 
 // Setting up multer as a middleware to grab photo uploads
 const upload = multer({ storage: multer.memoryStorage() });
-
 router.post(
   "/photos/upload",
   upload.array("photos", 12),
