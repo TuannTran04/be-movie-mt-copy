@@ -4,24 +4,22 @@ const AppError = require("../utils/appError");
 const _ = require("lodash");
 const movieController = {
   getAllMovies: async (req, res) => {
+    console.log(req);
     let { slug: slugName } = req.query;
     console.log(slugName);
     try {
-      // 1. get all with limit
-      //2. populate category
-
-      //   const movie = await Movie.find({})
-      //     .limit(req.query?.li || 10)
-      //     .populate("category");
       let movie;
       if (slugName) {
         movie = await Movie.find({
           slug: { $regex: ".*" + slugName.replace(/-/g, " ") + ".*" },
+          disabled: false,
         })
           .limit(req.query?.li || 10)
           .populate("category");
       } else {
-        movie = await Movie.find()
+        movie = await Movie.find({
+          disabled: false,
+        })
           .limit(req.query?.li || 10)
           .populate("category");
 
@@ -29,13 +27,14 @@ const movieController = {
       }
       res.status(200).json({
         code: 200,
-        mes: "ok",
+        mes: "lấy movie thành công",
         data: {
           countTotalObject: movie.length,
           movie,
         },
       });
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   },
@@ -47,8 +46,11 @@ const movieController = {
       const movies = await Movie.find({
         $or: [
           { title: { $regex: query, $options: "i" } }, // Tìm theo tên phim
+          { titleWithoutAccent: { $regex: query, $options: "i" } }, // Tìm theo tên phim ko dấu
           { author: { $regex: query, $options: "i" } }, // Tìm theo tên đạo diễn
+          { authorWithoutAccent: { $regex: query, $options: "i" } }, // Tìm theo tên đạo diễn ko dấu
           { actors: { $regex: query, $options: "i" } }, // Tìm theo tên diễn viên
+          { actorsWithoutAccent: { $regex: query, $options: "i" } }, // Tìm theo tên diễn viên ko dấu
         ],
       });
 
@@ -68,7 +70,6 @@ const movieController = {
       res.status(500).json(err);
     }
   },
-
   addMovie: async (req, res) => {
     console.log(">>> addMovie: <<<", req.body);
     const author = req.body.author.split(",");
@@ -106,17 +107,17 @@ const movieController = {
     }
   },
   updateMovie: async (req, res) => {
-    console.log(">>> addMovie: <<<", req.body);
+    console.log(">>> updateMovie: <<<", req.body);
     const author = req.body.author.split(",");
     const actors = req.body.actors.split(",");
     const video = req.body.video.split(",");
     const photo = req.body.photo.split(",");
     const category = req.body.category.map((item) => item.value);
-    // console.log(author, actors, video, photo);
+    console.log(author, actors, video, photo);
     console.log(category);
     try {
       const updatedMovie = await Movie.findOneAndUpdate(
-        { title: req.user.id },
+        { _id: req.body.id },
         {
           ...req.body,
           author,
@@ -133,7 +134,35 @@ const movieController = {
       }
       res.status(200).json({
         message: "Cập nhật phim thành công",
-        data: updatedMovie,
+        // data: updatedMovie,
+      });
+    } catch (err) {
+      console.log("check err", err);
+      // throw new AppError(err.message, err.status);
+      res.status(404).json({
+        code: 404,
+        mes: "Lỗi!!!!",
+        err,
+      });
+    }
+  },
+  disabledMovie: async (req, res) => {
+    console.log(">>> disabledMovie: <<<", req.body);
+    const { movieId, toggleDisable } = req.body;
+    try {
+      const disabledMovie = await Movie.findByIdAndUpdate(
+        { _id: movieId },
+        {
+          disabled: toggleDisable,
+        }
+      );
+      // console.log(disabledMovie);
+      if (!disabledMovie) {
+        throw new AppError("Không có phim để cập nhật", 401);
+      }
+      res.status(200).json({
+        message: "Cập nhật trường disabled thành công",
+        // data: disabledMovie,
       });
     } catch (err) {
       console.log("check err", err);
@@ -147,17 +176,16 @@ const movieController = {
   },
   //DELETE MOVIE
   deleteMovie: async (req, res) => {
-    console.log(req.params);
-    console.log(req.body);
+    console.log(">>> deleteMovie <<<", req.params.id);
     try {
-      const res = await Movie.findByIdAndDelete(req.body.id);
-      // console.log(res);
-      if (!res) {
+      const movieDeleted = await Movie.findByIdAndDelete(req.params.id);
+      console.log(movieDeleted);
+      if (!movieDeleted) {
         throw new AppError("Không có phim để xóa", 401);
       }
-      res.status(200).json("Movie deleted");
+      return res.status(200).json("Movie deleted");
     } catch (err) {
-      // console.log(err);
+      console.log(err);
       res.status(500).json(err);
     }
   },
@@ -267,9 +295,28 @@ const movieController = {
     }
   },
   getSingle: async (req, res) => {
+    console.log(req.params.slug);
     try {
+      const movieSingle = await Movie.find({
+        slug: req.params.slug,
+      }).populate("category");
+      console.log(">>> getSingle: <<<", movieSingle);
+
+      if (!movieSingle) {
+        throw new AppError("Không có phim này", 404);
+      }
+
+      return res.status(200).json({
+        code: 200,
+        mes: "ok",
+        data: {
+          countTotalObject: movieSingle.length,
+          movieSingle,
+        },
+      });
     } catch (err) {
       console.log(err);
+      res.status(500).json(err);
     }
   },
 };

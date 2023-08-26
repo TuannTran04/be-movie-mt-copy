@@ -27,17 +27,17 @@ const storage = getStorage();
 const upload = multer({ storage: multer.memoryStorage() });
 router.post(
   "/photos/upload",
-  upload.array("photos", 12),
+  upload.array("photos", 30),
   async function (req, res, next) {
     try {
-      // console.log("check req multiple",req.files)
+      console.log(">>> check req multiple: <<<", req.files);
       // console.log(req.body)
       // req.files là một mảng của các file `photos`
       // req.body sẽ giữ thông tin gắn kèm (vd: text fields), nếu có
       const dateTime = giveCurrentDateTime();
       let result = [];
       for (const file of req.files) {
-        console.log(file);
+        console.log(">>> file: <<<", file);
         const storageRef = ref(
           storage,
           `many_img/${file.originalname + "       " + dateTime}`
@@ -51,6 +51,13 @@ router.post(
           metadata
         );
 
+        console.log(
+          "print snapshot",
+          snapshot.bytesTransferred,
+          "----",
+          snapshot.totalBytes
+        );
+
         const downloadURL = await getDownloadURL(snapshot.ref);
         result.push({
           name: file.originalname,
@@ -60,10 +67,11 @@ router.post(
       }
 
       return res.json({
-        message: "file uploaded to firebase storage",
+        message: "file photos uploaded to firebase storage",
         data: result,
       });
     } catch (error) {
+      console.log(error);
       return res.status(400).send(error.message);
     }
   }

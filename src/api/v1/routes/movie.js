@@ -21,8 +21,17 @@ router.post("/add-love-movie", movieController.addLoveMovie);
 router.post("/add-bookmark-movie", movieController.addBookmarkMovie);
 router.post("/rating", verifyToken, movieController.rating);
 
-//EDIT MOVIE
-router.put("/update-movie", movieController.updateMovie);
+//UPDATE MOVIE
+router.put(
+  "/update-movie",
+  verifyTokenAndUserAuthorization,
+  movieController.updateMovie
+);
+router.put(
+  "/disabled-movie",
+  verifyTokenAndUserAuthorization,
+  movieController.disabledMovie
+);
 
 //DELETE MOVIE
 router.delete(
