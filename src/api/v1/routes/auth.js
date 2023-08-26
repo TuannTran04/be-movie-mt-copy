@@ -14,6 +14,6 @@ router.post("/login", authController.loginUser);
 router.post("/logout", authController.logOut);
 
 //ChANGE PASS USER
-router.put("/change-pwd-user", authController.updatePwdUser);
+router.put("/forgot-pwd-user", authController.forgotPwdUser);
 
 module.exports = router;

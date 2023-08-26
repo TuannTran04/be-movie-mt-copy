@@ -5,20 +5,18 @@ const movieSchema = new mongoose.Schema(
     title: {
       type: String,
       require: true,
-      min: 6,
     },
+    titleWithoutAccent: { type: String, require: true },
     slug: String,
     desc: {
       type: String,
       require: true,
       min: 6,
     },
-    author: [
-      {
-        type: String,
-        required: true,
-      },
-    ],
+    author: [String],
+    authorWithoutAccent: [String],
+    actors: [String],
+    actorsWithoutAccent: [String],
     photo: [String],
     // category: [String],
     // category: [
@@ -52,7 +50,10 @@ const movieSchema = new mongoose.Schema(
     yearPublish: Number,
     timeVideo: String,
     country: String,
-    actors: [String],
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

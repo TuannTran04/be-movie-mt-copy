@@ -154,7 +154,7 @@ const authController = {
   },
 
   //CHANGE PWD USER
-  updatePwdUser: async (req, res) => {
+  forgotPwdUser: async (req, res) => {
     const { email, password, confirmPassword } = req.body;
     console.log(">>> updatePwdUser :<<<", req.body);
     const salt = await bcrypt.genSalt(10);
