@@ -21,7 +21,9 @@ const movieRoute = require("./src/api/v1/routes/movie");
 const categoryRoute = require("./src/api/v1/routes/category");
 const uploadRouter = require("./src/api/v1/controllers/uploadController");
 const AppError = require("./src/api/v1/utils/appError");
+const {createClient} = require('redis')
 
+const clientRedis = createClient();
 dotenv.config();
 require("express-async-errors");
 
@@ -59,7 +61,7 @@ if (process.env.NODE_ENV === "development") {
 
 // Limit requests from same API
 const limiter = rateLimit({
-  max: 5,
+  max: 50,
   windowMs: 100 * 60 * 1000,
   // message: "Too many requests from this IP, please try again in an hour!",
   handler: function (req, res) {
@@ -107,6 +109,7 @@ app.use("/hello", (req, res) => {
   res.send("hello");
 });
 app.use("/test", (req, res) => {
+
   res.status(200).json({
     mes: "ok",
   });

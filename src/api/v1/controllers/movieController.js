@@ -3,6 +3,29 @@ const User = require("../models/User");
 const AppError = require("../utils/appError");
 const _ = require("lodash");
 const movieController = {
+  updateViews: async (req, res) => {
+    const { movieId } = req.body;
+    try {
+      const film = await Movie.findById({_id:movieId})
+      if(film){
+        // console.log(typeof(film.views))
+          let newViews = film.views + 1;
+          await Movie.updateOne({views: newViews})
+          return res.status(200).json({code:200,mes:"update views successfully"})
+      }
+
+      else throw AppError("do not have film",404)
+     
+    } catch (err) {
+      console.log("check err", err);
+      // throw new AppError(err.message, err.status);
+      res.status(404).json({
+        code: 404,
+        mes: "Lỗi!!!!",
+        err,
+      });
+    }
+  },
   getAllMovies: async (req, res) => {
     console.log(req);
     let { slug: slugName } = req.query;
@@ -23,7 +46,7 @@ const movieController = {
           .limit(req.query?.li || 10)
           .populate("category");
 
-        // console.log(">>> All Movies: <<<", movie[1].category);
+        console.log(">>> All Movies: <<<", movie);
       }
       res.status(200).json({
         code: 200,
