@@ -41,6 +41,10 @@ const userSchema = new mongoose.Schema(
     },
     loveMovie: [{ type: mongoose.Types.ObjectId, ref: "Movie" }],
     markBookMovie: [{ type: mongoose.Types.ObjectId, ref: "Movie" }],
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

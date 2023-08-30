@@ -39,6 +39,10 @@ const movieSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    views: {
+      type: Number,
+      default: 0,
+    },
     listUserRating: [{ name: String, point: Number }],
     quality: {
       type: String,

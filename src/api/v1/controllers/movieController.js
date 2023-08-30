@@ -4,32 +4,106 @@ const AppError = require("../utils/appError");
 const _ = require("lodash");
 const movieController = {
   getAllMovies: async (req, res) => {
-    console.log(req);
-    let { slug: slugName } = req.query;
-    console.log(slugName);
     try {
       let movie;
-      if (slugName) {
-        movie = await Movie.find({
-          slug: { $regex: ".*" + slugName.replace(/-/g, " ") + ".*" },
-          disabled: false,
-        })
-          .limit(req.query?.li || 10)
-          .populate("category");
-      } else {
-        movie = await Movie.find({
-          disabled: false,
-        })
-          .limit(req.query?.li || 10)
-          .populate("category");
 
-        // console.log(">>> All Movies: <<<", movie[1].category);
+      movie = await Movie.find({
+        disabled: false,
+      }).populate("category");
+
+      // Lọc phim trending theo lượt views giảm dần
+      const trending = [...movie].sort((a, b) => b.views - a.views).slice(0, 1);
+
+      // Lọc 10 phim ngẫu nhiên cho watchToday
+      function shuffleArray(array, size) {
+        for (let i = size - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array.slice(0, size);
       }
+      const watchToday = shuffleArray([...movie], 10);
+
+      // Lọc phim mới nhất theo createAt giảm dần
+      const latest = [...movie]
+        .sort((a, b) => b.createdAt - a.createdAt)
+        .slice(0, 10);
+
+      // Lọc phim có top rating trong tuần
+      const oneWeekAgo = new Date();
+      oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+      const topRatingofWeek = [...movie]
+        .filter((item) => new Date(item.createdAt) > oneWeekAgo)
+        .sort((a, b) => b.rating - a.rating)
+        .slice(0, 10);
+
       res.status(200).json({
         code: 200,
         mes: "lấy movie thành công",
         data: {
           countTotalObject: movie.length,
+          movie,
+          trending,
+          watchToday,
+          latest,
+          topRatingofWeek,
+        },
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
+  adminGetMovies: async (req, res) => {
+    let { q: querySearch } = req.query;
+    const { page: currentPage, pageSize } = req.query;
+    const { filter } = req.query;
+    const { filterDisabled, filterSort } = JSON.parse(filter);
+    console.log(currentPage, pageSize, querySearch);
+    console.log(">>> filterDisabled: <<<", filterDisabled);
+    console.log(">>> filterSort: <<<", filterSort);
+    try {
+      let query = {};
+      if (querySearch) {
+        query.$or = [
+          { title: { $regex: querySearch, $options: "i" } },
+          { titleWithoutAccent: { $regex: querySearch, $options: "i" } },
+          { author: { $regex: querySearch, $options: "i" } },
+          { authorWithoutAccent: { $regex: querySearch, $options: "i" } },
+          { actors: { $regex: querySearch, $options: "i" } },
+          { actorsWithoutAccent: { $regex: querySearch, $options: "i" } },
+        ];
+      }
+
+      if (filterDisabled) {
+        query.disabled = filterDisabled;
+      }
+
+      const skip = (parseInt(currentPage) - 1) * parseInt(pageSize);
+
+      const sortOption = {};
+      if (Number(filterSort) === 0) {
+        sortOption.createdAt = -1; // Sắp xếp theo thời gian tạo mới nhất
+      } else if (Number(filterSort) === 1) {
+        sortOption.createdAt = 1; // Sắp xếp theo thời gian tạo cũ nhất
+      }
+
+      const movie = await Movie.find(query)
+        .skip(skip)
+        .limit(parseInt(pageSize))
+        .sort(sortOption)
+        .populate("category");
+      // console.log(">>> SORT <<<", movie);
+
+      const totalCount = await Movie.countDocuments(query);
+      // console.log(totalCount);
+
+      res.status(200).json({
+        code: 200,
+        mes: "Lấy danh sách phim thành công",
+        data: {
+          // countTotalObject: movie.length,
+          totalCount,
           movie,
         },
       });
@@ -67,6 +141,7 @@ const movieController = {
         },
       });
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   },
@@ -294,7 +369,32 @@ const movieController = {
       res.status(500).json(err);
     }
   },
-  getSingle: async (req, res) => {
+  getSingleAdmin: async (req, res) => {
+    console.log(req.params.slug);
+    try {
+      const movieSingle = await Movie.find({
+        slug: req.params.slug,
+      }).populate("category");
+      console.log(">>> getSingle: <<<", movieSingle);
+
+      if (!movieSingle) {
+        throw new AppError("Không có phim này", 404);
+      }
+
+      return res.status(200).json({
+        code: 200,
+        mes: "ok",
+        data: {
+          countTotalObject: movieSingle.length,
+          movieSingle,
+        },
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
+  getSingleUser: async (req, res) => {
     console.log(req.params.slug);
     try {
       const movieSingle = await Movie.find({
