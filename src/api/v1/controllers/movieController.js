@@ -148,7 +148,7 @@ const movieController = {
           { actors: { $regex: query, $options: "i" } }, // Tìm theo tên diễn viên
           { actorsWithoutAccent: { $regex: query, $options: "i" } }, // Tìm theo tên diễn viên ko dấu
         ],
-      });
+      }).limit(10);
 
       if (movies.length === 0) {
         return res.json({ message: "Không có kết quả tìm kiếm" });

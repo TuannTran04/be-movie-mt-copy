@@ -58,8 +58,8 @@ const authController = {
         html: `
         <p>Xin chào ${username}</p>
         <p>Cảm ơn bạn đã sử dụng web xem phim của chúng tôi – đỜ Tôn.</p>
-        <p>Mã OTP của bạn là: ${otp}s</p>
-        <p>Thời gian tồn tại OTP: ${OTP_EXPIRATION_SECONDS}</p>
+        <p>Mã OTP của bạn là: ${otp}</p>
+        <p>Thời gian tồn tại OTP: ${OTP_EXPIRATION_SECONDS}s</p>
         <p>Chúng tôi mong bạn có cuộc trải nghiệm xem phim vui vẻ.</p>
         <p>Trân trọng.</p>
         `, // Nội dung email
