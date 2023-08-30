@@ -42,4 +42,6 @@ router.delete(
   movieController.deleteMovie
 );
 
+router.put("/update-views", movieController.updateViews)
+
 module.exports = router;
