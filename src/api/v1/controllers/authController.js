@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 });
 // Lưu các mã OTP tạm thời
 const otpMap = new Map();
-const OTP_EXPIRATION_SECONDS = 10;
+const OTP_EXPIRATION_SECONDS = 1000;
 console.log(">>> OTP MAP: <<<", otpMap);
 
 const authController = {
