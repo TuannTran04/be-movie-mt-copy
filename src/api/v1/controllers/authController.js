@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 });
 // Lưu các mã OTP tạm thời
 const otpMap = new Map();
-const OTP_EXPIRATION_SECONDS = 1000;
+const OTP_EXPIRATION_SECONDS = 10;
 console.log(">>> OTP MAP: <<<", otpMap);
 
 const authController = {
@@ -260,12 +260,80 @@ const authController = {
       if (!existingUser) {
         return res.status(404).json({ code: 404, mes: "Email không tồn tại" });
       }
-      await User.updateOne({ email }, { password: hashed });
 
-      return res.status(200).json({
-        code: 200,
-        mes: "Thay đổi mật khẩu thành công",
+      //////////////////////////////////////////////////
+      const otp = crypto.randomInt(100000, 999999).toString();
+      // otpMap.set(email, otp);
+      otpMap.set(email, {
+        otp,
+        expiresAt: Date.now() + OTP_EXPIRATION_SECONDS * 1000,
       });
+
+      // Cấu hình email thông báo đến người dùng
+      const mailOptions = {
+        from: "tuantrann0402@gmail.com",
+        to: email, // Địa chỉ email của người dùng
+        subject: "Your OTP for Registration", // Tiêu đề email
+        html: `
+          <p>Cảm ơn bạn đã sử dụng web xem phim của chúng tôi – đỜ Tôn.</p>
+          <p>Mã OTP của bạn là: ${otp}</p>
+          <p>Thời gian tồn tại OTP: ${OTP_EXPIRATION_SECONDS}s</p>
+          <p>Chúng tôi mong bạn có cuộc trải nghiệm xem phim vui vẻ.</p>
+          <p>Trân trọng.</p>
+        `, // Nội dung email
+      };
+
+      // Gửi email thông báo đến người dùng
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("Email sent: " + info.response);
+        }
+      });
+      //////////////////////////////////////////////////
+
+      console.log(">>> OTP MAP: <<<", otpMap);
+      res.status(200).json({ otp: otp, message: "OTP gửi thành công" });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  },
+  forgotPwdUserVerifyOTP: async (req, res) => {
+    const { email, password, otp: userOtp } = req.body;
+    console.log(">>> forgotPwdUserVerifyOTP :<<<", req.body);
+    const salt = await bcrypt.genSalt(10);
+    const hashed = await bcrypt.hash(password, salt);
+
+    try {
+      const existingUser = await User.findOne({ email });
+      if (!existingUser) {
+        return res.status(404).json({ code: 404, mes: "Email không tồn tại" });
+      }
+      console.log(">>> OTP MAP VERIFY: <<<", otpMap);
+
+      const storedOTPInfo = otpMap.get(email);
+      if (!storedOTPInfo) {
+        throw new AppError("Không tìm thấy mã OTP cho email này", 400);
+      }
+      console.log(">>> saveOtp: <<<", storedOTPInfo);
+      const { otp, expiresAt } = storedOTPInfo;
+      const currentTime = Date.now();
+
+      if (userOtp === otp && currentTime <= expiresAt) {
+        //change pwd
+        await User.updateOne({ email }, { password: hashed });
+        otpMap.delete(email);
+
+        return res.status(200).json({
+          code: 200,
+          mes: "Thay đổi mật khẩu thành công",
+        });
+      } else {
+        // Mã OTP không khớp
+        throw new AppError("Mã OTP đã hết hạn hoặc không hợp lệ", 400);
+      }
     } catch (err) {
       console.log(err);
       return res.status(500).json(err);

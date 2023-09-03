@@ -44,27 +44,29 @@ const movieController = {
 
       // Lọc 10 phim cho watchToday
       const watchToday = [...movie]
-        .map((item) => {
-          if (item.isPaid === true) {
-            return item;
-          }
-        })
+        .filter((item) => item.isPaid === true)
         .slice(0, 10);
-      console.log(">>> watchToday <<<", watchToday);
-      console.log(">>> watchToday <<<", watchToday.length);
 
       // Lọc phim mới nhất theo createAt giảm dần
       const latest = [...movie]
         .sort((a, b) => b.createdAt - a.createdAt)
         .slice(0, 10);
 
+      // Lọc phim có giải thưởng
+      const awards = [...movie]
+        .filter((item) => Array.isArray(item.awards) && item.awards.length != 0)
+        .slice(0, 10);
+
       // Lọc phim có top rating trong tuần (đang có bug, phim mới create cũng dc trả về vì updated mới nhất)
       const oneWeekAgo = new Date();
       oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
       const topRatingofWeek = [...movie]
-        .filter((item) => new Date(item.updatedAt) > oneWeekAgo)
+        .filter(
+          (item) => new Date(item.updatedAt) > oneWeekAgo && item.rating != 0
+        )
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 10);
+      console.log(">>> topRatingofWeek <<<", topRatingofWeek);
 
       res.status(200).json({
         code: 200,
@@ -75,8 +77,46 @@ const movieController = {
           trending,
           watchToday,
           latest,
+          awards,
           topRatingofWeek,
         },
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
+  getMoreMovies: async (req, res) => {
+    const { moreFilm, page, pageSize } = req.query;
+    console.log(">>> getMoreMovies <<<", moreFilm, page, pageSize);
+    try {
+      let movie;
+      let query = { disabled: false };
+
+      if (moreFilm === "Xem gì hôm nay") {
+        query.isPaid = true;
+      }
+
+      const skip = (parseInt(page) - 1) * parseInt(pageSize);
+
+      const sortOption = {};
+      if (moreFilm === "Phim mới nhất") {
+        sortOption.createdAt = -1; // Sắp xếp theo thời gian tạo mới nhất
+      }
+
+      movie = await Movie.find(query)
+        .skip(skip)
+        .limit(parseInt(pageSize))
+        .sort(sortOption)
+        .populate("category");
+
+      const totalCount = await Movie.countDocuments(query);
+
+      res.status(200).json({
+        code: 200,
+        mes: "lấy movie thành công",
+        totalCount,
+        data: movie,
       });
     } catch (err) {
       console.log(err);
@@ -218,12 +258,18 @@ const movieController = {
     const actors = req.body.actors.split(",");
     const video = req.body.video.split(",");
     const photo = req.body.photo.split(",");
-    const awards = req.body.awards.split(",");
+    let awards;
+    if (req.body.awards) {
+      awards = req.body.awards.split(",");
+    } else {
+      awards = [];
+    }
+    console.log(">>> awards <<<", awards);
     const category = req.body.category.map((item) => item.value);
     // console.log(author, actors, video, photo);
-    console.log(category);
+    // console.log(category);
     try {
-      const newMovie = await new Movie({
+      const newMovie = new Movie({
         ...req.body,
         author,
         actors,
@@ -256,6 +302,12 @@ const movieController = {
     const actors = req.body.actors.split(",");
     const video = req.body.video.split(",");
     const photo = req.body.photo.split(",");
+    let awards;
+    if (req.body.awards) {
+      awards = req.body.awards.split(",");
+    } else {
+      awards = [];
+    }
     const category = req.body.category.map((item) => item.value);
     console.log(author, actors, video, photo);
     console.log(category);
@@ -268,9 +320,10 @@ const movieController = {
           actors,
           video,
           photo,
+          awards,
           category,
         },
-        { new: true } // Trả về người dùng sau khi cập nhật
+        { new: true }
       );
 
       if (!updatedMovie) {
@@ -502,6 +555,7 @@ const movieController = {
           );
           return res.status(200).json({
             code: 200,
+            message: "Đánh giá phim thành công",
           });
         } else {
           let result = await Movie.updateOne(
@@ -524,13 +578,15 @@ const movieController = {
           );
           return res.status(200).json({
             code: 200,
+            message: "Đánh giá phim thành công",
           });
         }
       }
       return res.status(400).json({
-        mes: "err 2",
+        message: "Đánh giá phim không thành công",
       });
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   },

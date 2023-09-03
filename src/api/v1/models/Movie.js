@@ -18,22 +18,11 @@ const movieSchema = new mongoose.Schema(
     actors: [String],
     actorsWithoutAccent: [String],
     photo: [String],
-    awards: [String],
-    // category: [String],
-    // category: [
-    //   {
-    //     type: mongoose.Schema.ObjectId,
-    //     ref: "Category",
-    //     required: [true, "Phải có category"],
-    //   },
-    // ], // store array of id of category collections
+    awards: {
+      type: [String],
+      default: [],
+    },
     category: [{ type: mongoose.Types.ObjectId, ref: "Category" }],
-    // follows: [
-    //   {
-    //     type: Schema.Types.ObjectId, //HERE
-    //     ref: "User",
-    //   },
-    // ],
     video: [String],
     trailer: [String],
     rating: {
@@ -67,6 +56,12 @@ const movieSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    // follows: [
+    //   {
+    //     type: Schema.Types.ObjectId, //HERE
+    //     ref: "User",
+    //   },
+    // ],
   },
   { timestamps: true }
 );

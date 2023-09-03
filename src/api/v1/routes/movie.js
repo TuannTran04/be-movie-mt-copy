@@ -9,6 +9,7 @@ const router = require("express").Router();
 //GET ALL movies
 // router.get("/", verifyToken, movieController.getAllMovies);
 router.get("/", movieController.getAllMovies);
+router.get("/get-more-movies", movieController.getMoreMovies);
 router.get("/admin-get-movies", movieController.adminGetMovies);
 router.get("/search-movie", movieController.getSearchMovies);
 router.get("/get-category-movie", movieController.getMoviesByCate);

@@ -16,5 +16,6 @@ router.post("/logout", authController.logOut);
 
 //ChANGE PASS USER
 router.put("/forgot-pwd-user", authController.forgotPwdUser);
+router.put("/forgot-pwd-user-verify", authController.forgotPwdUserVerifyOTP);
 
 module.exports = router;
