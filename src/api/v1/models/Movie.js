@@ -18,6 +18,7 @@ const movieSchema = new mongoose.Schema(
     actors: [String],
     actorsWithoutAccent: [String],
     photo: [String],
+    awards: [String],
     // category: [String],
     // category: [
     //   {
@@ -58,9 +59,14 @@ const movieSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    isPaid: {
+      type: Boolean,
+      default: false,
+    },
     views: {
-      type:Number,default:0
-    }
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true }
 );

@@ -8,9 +8,9 @@ const {
 const router = require("express").Router();
 //GET ALL USERS
 router.get("/", verifyTokenAndAdmin, userController.getAllUsers);
-router.get("/get-love-movie", verifyToken, userController.getLoveMovie);
+router.get("/get-favorite-movie", verifyToken, userController.getFavoriteMovie);
 router.get("/get-bookmark-movie", verifyToken, userController.getBookmarkMovie);
-// router.get("/:username", userController.getSingleUser); // => trùng route nếu để ở trên các route có 1 cấp /
+router.get("/:username", userController.getSingleUser); // => trùng route nếu để ở trên các route có 1 cấp /
 
 //UPDATE USER
 router.put("/update-info-user", verifyToken, userController.updateInfoUser);

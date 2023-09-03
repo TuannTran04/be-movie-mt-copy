@@ -24,6 +24,7 @@ const categoryController = {
   getAllCategory: async (req, res) => {
     try {
       const cate = await Category.find().limit(10);
+      // console.log(cate);
       if (!cate) {
         throw new AppError("not have new cate", 401);
       }
