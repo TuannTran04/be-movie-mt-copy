@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const app = express();
+const fs = require('fs')
+const admin = require("firebase-admin");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
@@ -14,7 +16,11 @@ const rateLimit = require("express-rate-limit");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
-
+const serviceAccount = require("./src/config/service-firebase-admin.json");
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  storageBucket: "movie-the-stone.appspot.com", // Thay thế bằng ID ứng dụng Firebase của bạn
+});
 const authRoute = require("./src/api/v1/routes/auth");
 const userRoute = require("./src/api/v1/routes/user");
 const movieRoute = require("./src/api/v1/routes/movie");
@@ -114,6 +120,114 @@ app.use("/test", (req, res) => {
     mes: "ok",
   });
 });
+
+// video streaming
+
+app.get('/',(req,res)=> {
+  res.sendFile(__dirname + "/index.html")
+})
+app.get("/video", (req,res)=>{
+  console.log(req.body)
+  const range = req.headers.range
+  if(!range) {
+    res.status(400).send("requires range header")
+  }
+  const videoPath = __dirname + "/videos/" + "riengminhanh.mp4";
+  const videoSize = fs.statSync(__dirname + "/videos/"+"riengminhanh.mp4").size;
+
+
+  
+  const CHUNK_SIZE = 10 ** 6; //1mb
+  const start = Number(range.replace(/\D/g, ""));
+  const end = Math.min(start + CHUNK_SIZE, videoSize - 1)
+  const contentLength = end - start + 1;
+  const headers = {
+    "Content-Range":`bytes ${start}-${end}/${videoSize}`,
+    "Accept-Ranges":"bytes",
+    "Content-Length":contentLength,
+    "Content-Type":"video/mp4"
+  };
+  res.writeHead(206,headers)
+  const videoStream = fs.createReadStream(videoPath ,{start,end})
+  videoStream.pipe(res)
+})
+// app.get("/video/:videoName", (req, res) => {
+//   const range = req.headers.range;
+//   if (!range) {
+//     res.status(400).send("requires range header");
+//     return;
+//   }
+
+//   const videoName = req.params.videoName;
+//   const videoPath = __dirname + "/videos/" + videoName; // Đường dẫn đến tệp video
+
+//   if (!fs.existsSync(videoPath)) {
+//     res.status(404).send("File not found");
+//     return;
+//   }
+
+//   const videoSize = fs.statSync(videoPath).size;
+
+//   const CHUNK_SIZE = 10 ** 6; //1mb
+//   const start = Number(range.replace(/\D/g, ""));
+//   const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
+//   const contentLength = end - start + 1;
+//   const headers = {
+//     "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+//     "Accept-Ranges": "bytes",
+//     "Content-Length": contentLength,
+//     "Content-Type": "video/mp4",
+//   };
+//   res.writeHead(206, headers);
+//   const videoStream = fs.createReadStream(videoPath, { start, end });
+//   videoStream.pipe(res);
+// });
+app.get("/video/:videoName", async (req, res) => {
+  const range = req.headers.range;
+  if (!range) {
+    res.status(400).send("requires range header");
+    return;
+  }
+
+  const videoName = req.params.videoName // Thay thế bằng tên tệp video trên Firebase Storage
+  const bucket = admin.storage().bucket();
+  const videoFile = bucket.file(videoName);
+
+  try {
+    const [fileExists] = await videoFile.exists();
+    if (!fileExists) {
+      res.status(404).send("File not found");
+      return;
+    }
+
+    const [metadata] = await videoFile.getMetadata();
+    const videoSize = metadata.size;
+
+    const CHUNK_SIZE = 10 ** 6; //1mb
+    const start = Number(range.replace(/\D/g, ""));
+    const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
+    const contentLength = end - start + 1;
+    const headers = {
+      "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+      "Accept-Ranges": "bytes",
+      "Content-Length": contentLength,
+      "Content-Type": "video/mp4",
+    };
+    res.writeHead(206, headers);
+
+    const stream = videoFile.createReadStream({ start, end });
+    stream.on("error", (err) => {
+      console.error("Error streaming video:", err);
+      res.status(500).end();
+    });
+
+    stream.pipe(res);
+  } catch (error) {
+    console.error("Error getting video metadata:", error);
+    res.status(500).end();
+  }
+});
+
 // app.get('/handler', asyncHandler(async (req, res, next) => {
 // 	res.status(200).json({
 //         mes: 'ok'
