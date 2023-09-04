@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "movie-the-stone",
+  "private_key_id": "4ac75b36a70ceced88ac342f607f1155d59a0500",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZdB8ZIaZ0fOFU\nHprXDBhqt9u+h17nR3USTg01qMp6MKrXF8j0KaR2Ts5GQfJXjgn/Ofpvg1pqQZw1\nqrpDzdH0iC1KFPRI1eUpw9FHgQLWkxQOFiRzc92e/ffxCKNaJFX2pBeCEKDUTMtk\nCLlcAgyP24LJV7hrBEYQoT4CI+qQr9WPp/jkgA00GqKsOOO0FGVd7d9fp/vwaQlD\nuCTjkn53lnPadKRk3CQwVWpyRm31BQ8LWPu3H2zT6qRfCNUeJ4cKveVGXaTnUPWi\nryLaQXZTETCrKkzZUkiXBcRVZNKy6nbHs6dOz+gvSIAgdf3ejxL2OgMdCwYsDOPo\nL0c3VIr5AgMBAAECggEAA6IcDuhwBow7m5MzVRp/ofDWfBV48XZRL3AcamQalfYQ\nNK3SDrpPZCam7aeWa/4Ujq4iUBCqxxG3kXH70Lw0oNhRoWY+OqVQQeVirsYqDPnC\nIQYfr8okzs5BgUZ6rDvlL8zIE8VBWqq5zz8SEcZ6/UBWrBSKIUeeABMhnRmKhsZR\nbngXdAup9yWPdIV/JF2oUrqaBU78UsgHG/l63SpM4hbD2O4ZkFnsPN+1/DJQyONG\n9yT/h0QU2wjLuFULxyqrQlvaTp3XCvNs0GnbmiglJi8iSo1U9QNk00Frp/c9mkgP\n1qOtJiaMawlWLrZhUkSO3Z8eOExt3/8EyCwR0xD0gQKBgQD5y2Z6eWQSNB6YWuH1\ntjbjetSBgp8OU/AdVhqDm1yTblzYpxnbhFT0Vis7tznKzba194isxec/tyof8+kO\nYqF9KKfC3byNdNEgjr81cbSKoZB0DcbNuVkw2PnAUPXR0L0wvs0tZiryFU7JkFSu\ng39SHsVMX0FcYpMo4wMdaNW/iQKBgQDe2wuBqM1sqoc9B/DXlHkM5tt4iVYqN6B1\nKY/fyXVDjSow5b+qnNlX4LkPqIJ4yj5AMnLebXP/fwZ6VedoO01co2eSSMyn+nSq\nVQHs7/lT4wAKik5WIYcKf5FL7y7P5jrOK51Zc9HzKML0gYDsE8imYaErxdGSTv6T\nOzZzay+j8QKBgGIWzDQVzQUU8Fq1fXumROGJDz+YEmtm7KgocprxfCXstYrh+1Zn\nHZEg8TMu3QPVSgUkocfuosMzYthPSFo8wttKBq6PsgX+NEzLoSwUbWfuz7Gy4zlP\nqkVzPoeVgyIUDObCVgGY2A5d7aVbBtXMj0epC6LU2O61SsJIeqWm0CC5AoGBAJF7\nT4yqRMh+nmCSMYCadVed0YJjrXNL8xzpL/o4iqu5mORo53GaiSwcENOO/vWZmX/R\nLznTHBmbs//i2nkp1Xv3VGKj0a6LCuQzMFmb4xkHJHy9AxypMH4C/zgiAV5I/vSe\ndk7yFAn3/yUc8aur0p4DN/LaZdBsbzZwPkCkpWoRAoGANja5iSQClH+K906KIyaP\njjGAcxQmT+3OViIxG3NetVEcT6fQVUytLFPenMX8M49kuvWjX3/JWMSsbTbG4GlJ\nbqpa5YaHhn0itA3SCxXxF5+LICou8X7pQpXjoSjvD3P1SVBtxr6f3sNnJ7KMPPzj\n8dS1MAOvIRUlGVqNpmk1mZU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-f9mlc@movie-the-stone.iam.gserviceaccount.com",
+  "client_id": "109792753875642524944",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-f9mlc%40movie-the-stone.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
