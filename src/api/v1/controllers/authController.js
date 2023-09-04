@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 });
 // Lưu các mã OTP tạm thời
 const otpMap = new Map();
-const OTP_EXPIRATION_SECONDS = 10;
+const OTP_EXPIRATION_SECONDS = 1000;
 console.log(">>> OTP MAP: <<<", otpMap);
 
 const authController = {
@@ -50,6 +50,19 @@ const authController = {
         expiresAt: Date.now() + OTP_EXPIRATION_SECONDS * 1000,
       });
 
+      await new Promise((resolve, reject) => {
+        // verify connection configuration
+        transporter.verify(function (error, success) {
+          if (error) {
+            console.log(error);
+            reject(error);
+          } else {
+            console.log("Server is ready to take our messages");
+            resolve(success);
+          }
+        });
+      });
+
       // Cấu hình email thông báo đến người dùng
       const mailOptions = {
         from: "tuantrann0402@gmail.com",
@@ -66,12 +79,25 @@ const authController = {
       };
 
       // Gửi email thông báo đến người dùng
-      transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log("Email sent: " + info.response);
-        }
+      // await transporter.sendMail(mailOptions, function (error, info) {
+      //   if (error) {
+      //     console.log(error);
+      //   } else {
+      //     console.log("Email sent: " + info.response);
+      //   }
+      // });
+
+      await new Promise((resolve, reject) => {
+        transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+            console.error(error);
+            reject(error);
+          } else {
+            console.log(info);
+            console.log("Email sent: " + info.response);
+            resolve(info);
+          }
+        });
       });
       //////////////////////////////////////////////////
 

@@ -10,6 +10,10 @@ const categorySchema = new mongoose.Schema(
       type: String,
       require: true,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

@@ -66,7 +66,7 @@ const movieController = {
         )
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 10);
-      console.log(">>> topRatingofWeek <<<", topRatingofWeek);
+      // console.log(">>> topRatingofWeek <<<", topRatingofWeek);
 
       res.status(200).json({
         code: 200,
@@ -616,7 +616,7 @@ const movieController = {
     }
   },
   getSingleUser: async (req, res) => {
-    console.log(req.params.slug);
+    console.log(">>>getSingleUser<<<", req.params.slug);
     try {
       const movieSingle = await Movie.find({
         slug: req.params.slug,
