@@ -488,6 +488,7 @@ const movieController = {
           movie.listUserRating.length == 0 ||
           movie.listUserRating.findIndex((item) => item.name == nameRoot) == -1
         ) {
+          // this case run when no one rating yet
           await Movie.updateOne(
             { _id: movie._id },
             { $push: { listUserRating: { name: nameRoot, point: pointRoot } } }
@@ -500,8 +501,11 @@ const movieController = {
             { _id: movie._id },
             { rating: avgPoint / movie.listUserRating.length }
           );
+          let updatedMovie = await Movie.findById(req.body.movieId);
+
           return res.status(200).json({
             code: 200,
+            updatedMovie
           });
         } else {
           let result = await Movie.updateOne(
@@ -522,8 +526,12 @@ const movieController = {
             { _id: movie._id },
             { rating: avgPoint / movie.listUserRating.length }
           );
+           let updatedMovie = await Movie.findById(req.body.movieId);
           return res.status(200).json({
             code: 200,
+            updatedMovie,
+            mes2:"case already has userList",
+            mes:"Đánh giá phim thành công"
           });
         }
       }
