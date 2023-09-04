@@ -173,12 +173,12 @@ const authController = {
   //LOGIN
   loginUser: async (req, res) => {
     try {
-      const user = await User.findOne({ username: req.body.username });
+      const user = await User.findOne({ email: req.body.email });
       console.log(">>> USER: <<<", user);
       if (!user) {
         console.log(">>> USER DOESN'T EXIST <<<");
         // return res.status(404).json("Incorrect username");
-        throw new AppError("Tên đăng nhập không đúng", 404);
+        throw new AppError("Tài khoản không tồn tại", 404);
       }
       if (user.disabled) {
         console.log(">>> Tài khoản user bị khóa <<<");
