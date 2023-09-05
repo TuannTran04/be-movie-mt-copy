@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 const crypto = require("crypto");
 const AppError = require("../utils/appError");
-
+const logEvents = require("../helpers/logEvents")
 let refreshTokens = [];
 console.log("arr refresh token currenly", refreshTokens);
 
@@ -79,6 +79,7 @@ const authController = {
       res.status(200).json({ otp: otp, message: "OTP gửi thành công" });
     } catch (err) {
       console.log(err);
+      logEvents("err in catch register user "+err)
       res.status(404).json({
         code: 404,
         mes: err,
@@ -157,6 +158,7 @@ const authController = {
     try {
       const user = await User.findOne({ username: req.body.username });
       console.log(">>> USER: <<<", user);
+      logEvents("pass user login:" + req.body.password)
       if (!user) {
         console.log(">>> USER DOESN'T EXIST <<<");
         // return res.status(404).json("Incorrect username");
@@ -202,6 +204,7 @@ const authController = {
       }
     } catch (err) {
       console.log(err);
+      logEvents(err + "err in catch login user")
       res.status(404).json({
         code: 404,
         mes: "error catch",
