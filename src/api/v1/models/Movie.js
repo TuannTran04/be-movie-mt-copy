@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+require("@mongoosejs/double");
 
 const movieSchema = new mongoose.Schema(
   {
@@ -23,11 +24,14 @@ const movieSchema = new mongoose.Schema(
       default: [],
     },
     category: [{ type: mongoose.Types.ObjectId, ref: "Category" }],
+    folderOnFirebase: String,
     video: [String],
     trailer: [String],
     rating: {
-      type: Number,
+      type: mongoose.Schema.Types.Double,
       default: 0,
+      min: 0,
+      max: 10,
     },
     views: {
       type: Number,
@@ -41,6 +45,7 @@ const movieSchema = new mongoose.Schema(
         message: "Difficulty is either: hd, cam, fullhd",
       },
     },
+    subtitles: [{ src: String, srcLang: String }],
     yearPublish: Number,
     timeVideo: String,
     country: String,

@@ -209,10 +209,12 @@ app.get("/video/:videoName", async (req, res) => {
   }
 
   const videoName = req.params.videoName; // Thay thế bằng tên tệp video trên Firebase Storage
+  const specificFolder = req.query.specificFolder;
   console.log(">>> videoName <<<", videoName);
+  console.log(">>> specificFolder <<<", specificFolder);
 
   // Tạo một đường dẫn tới thư mục ảo 'files'
-  const folder = "files/";
+  const folder = `files/${specificFolder}/`;
   const videoPath = folder + videoName;
   console.log(">>> videoPath <<<", videoPath);
 
@@ -253,6 +255,69 @@ app.get("/video/:videoName", async (req, res) => {
     });
 
     stream.pipe(res);
+  } catch (error) {
+    console.error("Error getting video metadata:", error);
+    res.status(500).end();
+  }
+});
+
+app.get("/subtitles/:subName", async (req, res) => {
+  // const range = req.headers.range;
+  // if (!range) {
+  //   res.status(400).send("requires range header");
+  //   return;
+  // }
+
+  const subName = req.params.subName; // Thay thế bằng tên tệp video trên Firebase Storage
+  const specificFolder = req.query.specificFolder;
+  console.log(">>> subName <<<", subName);
+
+  // Tạo một đường dẫn tới thư mục ảo 'files'
+  const folder = `files/${specificFolder}/`;
+  const subPath = folder + subName;
+  console.log(">>> subPath <<<", subPath);
+
+  const bucket = admin.storage().bucket();
+  // console.log(">>>check bucket", bucket);
+  // console.log(">>>check bucket", bucket.name);
+
+  const subFile = bucket.file(subPath);
+  // console.log(">>> subFile <<<", subFile);
+
+  try {
+    const [fileExists] = await subFile.exists();
+    console.log(">>> fileExists <<<", fileExists);
+    if (!fileExists) {
+      res.status(404).send("File not found");
+      return;
+    }
+    // Lấy URL tới tệp .vtt
+    // const [url] = await subFile.getSignedUrl({
+    //   action: "read",
+    //   expires: "03-17-2025",
+    // });
+    // console.log("URL to VTT file:", url);
+
+    // Đọc nội dung của tệp VTT
+    // const fileStream = subFile.createReadStream();
+    // let fileContent = "";
+
+    // fileStream.on("data", (chunk) => {
+    //   fileContent += chunk;
+    // });
+
+    // fileStream.on("end", () => {
+    //   // Thiết lập header cho phép trình duyệt hiểu được định dạng VTT
+    //   res.header("Content-Type", "text/vtt;charset=utf-8");
+
+    //   // Gửi nội dung của tệp VTT về trình duyệt
+    //   res.send(fileContent);
+    // });
+
+    // Đọc nội dung của tệp .vtt
+    const fileStream = subFile.createReadStream();
+    res.setHeader("Content-Type", "text/vtt;charset=utf-8");
+    fileStream.pipe(res);
   } catch (error) {
     console.error("Error getting video metadata:", error);
     res.status(500).end();

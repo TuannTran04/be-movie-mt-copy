@@ -444,7 +444,7 @@ const movieController = {
         );
         message = "Xóa khỏi danh sách yêu thích thành công";
       } else if (!movieExists) {
-        message = "Phim này không tồn tại";
+        message = "Phim này đã được xóa khỏi danh sách yêu thích";
       }
 
       return res.status(200).json({
@@ -517,7 +517,7 @@ const movieController = {
         );
         message = "Xóa khỏi danh sách xem sau thành công";
       } else if (!movieExists) {
-        message = "Phim này không tồn tại";
+        message = "Phim này đã được xóa khỏi danh sách xem sau";
       }
 
       return res.status(200).json({
@@ -529,74 +529,62 @@ const movieController = {
     }
   },
   rating: async (req, res) => {
-    // slow one step, but not problem
     try {
-      let { name: nameRoot, point: pointRoot } = req.body;
+      const { name: nameRoot, point: pointRoot, movieId } = req.body;
       console.log(">>> rating <<<", req.body);
-      if (_.isNull(nameRoot) && _.isNull(pointRoot))
-        throw new AppError("error params input", 404);
-      let movie = await Movie.findById(req.body.movieId);
-      if (movie) {
-        if (
-          movie.listUserRating.length == 0 ||
-          movie.listUserRating.findIndex((item) => item.name == nameRoot) == -1
-        ) {
-          // this case run when no one rating yet
-          await Movie.updateOne(
-            { _id: movie._id },
-            { $push: { listUserRating: { name: nameRoot, point: pointRoot } } }
-          );
-          let avgPoint = movie.listUserRating.reduce(
-            (acc, cur) => acc + cur.point,
-            0
-          );
-          await Movie.updateOne(
-            { _id: movie._id },
-            { rating: avgPoint / movie.listUserRating.length }
-          );
-          let updatedMovie = await Movie.findById(req.body.movieId);
 
-          return res.status(200).json({
-            code: 200,
-            updatedMovie
-            message: "Đánh giá phim thành công",
-          });
-        } else {
-          let result = await Movie.updateOne(
-            { "listUserRating.name": nameRoot },
-            {
-              $set: {
-                "listUserRating.$.point": pointRoot,
-              },
-            }
-          );
-          console.log(">>> result: <<<", result);
-          let avgPoint = movie.listUserRating.reduce(
-            (acc, cur) => acc + cur.point,
-            0
-          );
-          console.log(">>> avgPoint: <<<", avgPoint);
-          await Movie.updateOne(
-            { _id: movie._id },
-            { rating: avgPoint / movie.listUserRating.length }
-          );
-          let updatedMovie = await Movie.findById(req.body.movieId);
-          return res.status(200).json({
-            code: 200,
-            updatedMovie,
-            mes2:"case already has userList",
-            mes:"Đánh giá phim thành công"
-          });
-        }
+      if (_.isNull(nameRoot) || _.isNull(pointRoot)) {
+        throw new AppError("error params input", 400);
       }
-      return res.status(400).json({
-        message: "Đánh giá phim không thành công",
+
+      let movie = await Movie.findById(movieId);
+
+      if (!movie) {
+        return res.status(400).json({
+          message: "Đánh giá phim không thành công",
+        });
+      }
+
+      const userRatingIndex = movie.listUserRating.findIndex(
+        (item) => item.name === nameRoot
+      );
+
+      // Xử lý khi người dùng chưa rating hoặc đã rating trước đó
+      if (userRatingIndex === -1) {
+        // Người dùng chưa rating
+        movie.listUserRating.push({ name: nameRoot, point: pointRoot });
+      } else {
+        // Người dùng đã rating trước đó
+        movie.listUserRating[userRatingIndex].point = pointRoot;
+      }
+
+      // Tính lại điểm trung bình
+      const totalPoints = movie.listUserRating.reduce(
+        (acc, cur) => acc + cur.point,
+        0
+      );
+      const averageRating = parseFloat(
+        totalPoints / movie.listUserRating.length
+      );
+
+      // Cập nhật điểm trung bình vào trường `rating` của phim
+      movie.rating = averageRating;
+
+      await movie.save();
+
+      const updatedMovie = await Movie.findById(movieId);
+
+      return res.status(200).json({
+        code: 200,
+        message: "Đánh giá phim thành công",
+        updatedMovie,
       });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
     }
   },
+
   getSingleAdmin: async (req, res) => {
     console.log(req.params.slug);
     try {
