@@ -3,6 +3,7 @@ const User = require("../models/User");
 const AppError = require("../utils/appError");
 const _ = require("lodash");
 const { ObjectId } = require("mongodb");
+const logEvents = require("../helpers/logEvents")
 
 const movieController = {
   updateViews: async (req, res) => {
@@ -29,6 +30,7 @@ const movieController = {
   },
   getAllMovies: async (req, res) => {
     try {
+      
       let movie;
 
       movie = await Movie.find({
@@ -83,6 +85,7 @@ const movieController = {
       });
     } catch (err) {
       console.log(err);
+      logEvents(`${req.url} -  ${req.method}` + "err catch get all movies " + err)
       res.status(500).json(err);
     }
   },
