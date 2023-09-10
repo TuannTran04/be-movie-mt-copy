@@ -55,6 +55,22 @@ app.use(cors());
 // }))
 
 app.options("*", cors());
+// app.all("/", function (req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+//   next();
+// });
+// Middleware cho CORS
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    // "https://fe-movie-mt-copy.vercel.app"
+    "*"
+  ); // Thay đổi thành trang web của bạn
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
 // app.options('/api/v1/tours/:id', cors());
 
 // Serving static files
@@ -263,10 +279,6 @@ app.get("/video/:videoName", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("API is running on port 3000");
-});
-
 app.get("/subtitles/:subName", async (req, res) => {
   // const range = req.headers.range;
   // if (!range) {
@@ -328,6 +340,10 @@ app.get("/subtitles/:subName", async (req, res) => {
     console.error("Error getting video metadata:", error);
     res.status(500).end();
   }
+});
+
+app.listen(3000, () => {
+  console.log("API is running on port 3000");
 });
 
 // app.get('/handler', asyncHandler(async (req, res, next) => {
