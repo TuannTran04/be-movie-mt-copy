@@ -17,31 +17,10 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const ffmpeg = require("fluent-ffmpeg");
+const { createClient } = require("redis");
+require("express-async-errors");
 
 const app = express();
-
-// 1) GLOBAL MIDDLEWARES
-// Implement CORS
-app.use(cors());
-// Access-Control-Allow-Origin *
-// api.natours.com, front-end natours.com
-// app.use(cors({
-//   origin: 'https://www.natours.com'
-// }))
-
-app.options("*", cors());
-// Middleware cho CORS
-// Cấu hình CORS
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT,DELETE");
-//   res.setHeader(
-//     "Access-Control-Allow-Headers",
-//     "Content-Type, Authorization, X-Requested-Width"
-//   );
-//   res.setHeader("Access-Control-Allow-Credentials", true);
-//   next();
-// });
 
 const serviceAccount = require("./src/config/service-firebase-admin.json");
 admin.initializeApp({
@@ -56,11 +35,9 @@ const movieRoute = require("./src/api/v1/routes/movie");
 const categoryRoute = require("./src/api/v1/routes/category");
 const uploadRouter = require("./src/api/v1/controllers/uploadController");
 const AppError = require("./src/api/v1/utils/appError");
-const { createClient } = require("redis");
 
 const clientRedis = createClient();
 dotenv.config();
-require("express-async-errors");
 
 mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGODB_URL, {
@@ -70,10 +47,30 @@ mongoose.connect(process.env.MONGODB_URL, {
 });
 app.use(express.static(path.join(__dirname, "public")));
 
+// 1) GLOBAL MIDDLEWARES
+// Implement CORS
+app.use(cors());
+// Access-Control-Allow-Origin *
+// api.natours.com, front-end natours.com
+// app.use(cors({
+//   origin: 'https://www.natours.com'
+// }))
+
+app.options("*", cors());
 // app.options('/api/v1/tours/:id', cors());
 
-// Serving static files
-// app.use(express.static(path.join(__dirname, 'public')));
+// Middleware cho CORS
+// Cấu hình CORS
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT,DELETE");
+//   res.setHeader(
+//     "Access-Control-Allow-Headers",
+//     "Content-Type, Authorization, X-Requested-Width"
+//   );
+//   res.setHeader("Access-Control-Allow-Credentials", true);
+//   next();
+// });
 
 // Set security HTTP headers
 app.use(helmet());
@@ -344,10 +341,6 @@ app.get("/subtitles/:subName", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("API is running on port 3000");
-});
-
 // app.get('/handler', asyncHandler(async (req, res, next) => {
 // 	res.status(200).json({
 //         mes: 'ok'
@@ -374,6 +367,10 @@ app.all("*", (req, res, next) => {
 });
 
 // app.use(globalErrorHandler);
+
+// app.listen(3000, () => {
+//   console.log("API is running on port 3000");
+// });
 
 mongoose.connection.once("open", () => {
   console.log("Connected to MongoDB");
