@@ -47,7 +47,11 @@ mongoose.connect(process.env.MONGODB_URL, {
 app.use(express.static(path.join(__dirname, "public")));
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://fe-movie-mt-copy.vercel.app",
+  })
+);
 // Access-Control-Allow-Origin *
 // api.natours.com, front-end natours.com
 // app.use(cors({
@@ -55,11 +59,6 @@ app.use(cors());
 // }))
 
 app.options("*", cors());
-// app.all("/", function (req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "X-Requested-With");
-//   next();
-// });
 // Middleware cho CORS
 app.use((req, res, next) => {
   res.setHeader(
