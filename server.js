@@ -17,8 +17,16 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const ffmpeg = require("fluent-ffmpeg");
+const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const app = express();
+
+// creating a proxy middleware
+// function for the path /api
+const apiProxy = createProxyMiddleware("/video/:videoName", {
+  target: "https://fe-movie-mt-copy.vercel.app",
+  changeOrigin: true,
+});
 
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
@@ -224,7 +232,7 @@ app.get("/video", (req, res) => {
 //   const videoStream = fs.createReadStream(videoPath, { start, end });
 //   videoStream.pipe(res);
 // });
-app.get("/video/:videoName", async (req, res) => {
+app.get("/video/:videoName", apiProxy, async (req, res) => {
   const range = req.headers.range;
   if (!range) {
     res.status(400).send("requires range header");
