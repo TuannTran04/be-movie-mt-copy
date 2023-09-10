@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const app = express();
 const fs = require("fs");
 const admin = require("firebase-admin");
 const dotenv = require("dotenv");
@@ -18,6 +17,37 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const ffmpeg = require("fluent-ffmpeg");
+
+const app = express();
+
+// 1) GLOBAL MIDDLEWARES
+// Implement CORS
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+    optionsSuccessStatus: 204,
+  })
+);
+// Access-Control-Allow-Origin *
+// api.natours.com, front-end natours.com
+// app.use(cors({
+//   origin: 'https://www.natours.com'
+// }))
+
+// app.options("*", cors());
+// Middleware cho CORS
+// Cấu hình CORS
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT,DELETE");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Authorization, X-Requested-Width"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+});
 
 const serviceAccount = require("./src/config/service-firebase-admin.json");
 admin.initializeApp({
@@ -45,30 +75,7 @@ mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
 });
 app.use(express.static(path.join(__dirname, "public")));
-// 1) GLOBAL MIDDLEWARES
-// Implement CORS
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
-    optionsSuccessStatus: 204,
-  })
-);
-// Access-Control-Allow-Origin *
-// api.natours.com, front-end natours.com
-// app.use(cors({
-//   origin: 'https://www.natours.com'
-// }))
 
-// app.options("*", cors());
-// Middleware cho CORS
-// Cấu hình CORS
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT,DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
-});
 // app.options('/api/v1/tours/:id', cors());
 
 // Serving static files
@@ -257,7 +264,7 @@ app.get("/video/:videoName", async (req, res) => {
     const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
     const contentLength = end - start + 1;
     const headers = {
-      "Access-Control-Allow-Origin": "https://fe-movie-mt-copy.vercel.app",
+      "Access-Control-Allow-Origin": "*",
       "Content-Range": `bytes ${start}-${end}/${videoSize}`,
       "Accept-Ranges": "bytes",
       "Content-Length": contentLength,
