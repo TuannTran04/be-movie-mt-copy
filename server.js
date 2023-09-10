@@ -22,13 +22,13 @@ const app = express();
 
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
-    optionsSuccessStatus: 204,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "*",
+//     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+//     optionsSuccessStatus: 204,
+//   })
+// );
 // Access-Control-Allow-Origin *
 // api.natours.com, front-end natours.com
 // app.use(cors({
