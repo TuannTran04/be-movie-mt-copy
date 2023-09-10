@@ -50,6 +50,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(
   cors({
     origin: "https://fe-movie-mt-copy.vercel.app",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    optionsSuccessStatus: 204,
   })
 );
 // Access-Control-Allow-Origin *
@@ -66,7 +68,7 @@ app.use((req, res, next) => {
     "Access-Control-Allow-Origin",
     "https://fe-movie-mt-copy.vercel.app"
   ); // Thay đổi thành trang web của bạn
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT,DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
@@ -258,12 +260,18 @@ app.get("/video/:videoName", async (req, res) => {
     const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
     const contentLength = end - start + 1;
     const headers = {
+      "Access-Control-Allow-Origin": "https://fe-movie-mt-copy.vercel.app",
       "Content-Range": `bytes ${start}-${end}/${videoSize}`,
       "Accept-Ranges": "bytes",
       "Content-Length": contentLength,
       "Content-Type": "video/mp4",
     };
     res.writeHead(206, headers);
+
+    // res.header(
+    //   "Access-Control-Allow-Origin",
+    //   "https://fe-movie-mt-copy.vercel.app"
+    // );
 
     const stream = videoFile.createReadStream({ start, end });
     stream.on("error", (err) => {
