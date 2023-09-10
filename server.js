@@ -263,6 +263,7 @@ app.get("/video/:videoName", async (req, res) => {
     const start = Number(range.replace(/\D/g, ""));
     const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
     const contentLength = end - start + 1;
+
     const headers = {
       "Access-Control-Allow-Origin": "*",
       "Content-Range": `bytes ${start}-${end}/${videoSize}`,
@@ -270,12 +271,8 @@ app.get("/video/:videoName", async (req, res) => {
       "Content-Length": contentLength,
       "Content-Type": "video/mp4",
     };
+    res.header("Access-Control-Allow-Origin", "*");
     res.writeHead(206, headers);
-
-    // res.header(
-    //   "Access-Control-Allow-Origin",
-    //   "https://fe-movie-mt-copy.vercel.app"
-    // );
 
     const stream = videoFile.createReadStream({ start, end });
     stream.on("error", (err) => {
