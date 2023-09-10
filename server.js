@@ -29,7 +29,7 @@ app.use(cors());
 //   origin: 'https://www.natours.com'
 // }))
 
-// app.options("*", cors());
+app.options("*", cors());
 // Middleware cho CORS
 // Cấu hình CORS
 // app.use((req, res, next) => {
