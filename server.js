@@ -49,8 +49,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // Implement CORS
 app.use(
   cors({
-    origin: "https://fe-movie-mt-copy.vercel.app",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    origin: "*",
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
     optionsSuccessStatus: 204,
   })
 );
@@ -60,14 +60,11 @@ app.use(
 //   origin: 'https://www.natours.com'
 // }))
 
-app.options("*", cors());
+// app.options("*", cors());
 // Middleware cho CORS
 // Cấu hình CORS
 app.use((req, res, next) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://fe-movie-mt-copy.vercel.app"
-  ); // Thay đổi thành trang web của bạn
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT,DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
