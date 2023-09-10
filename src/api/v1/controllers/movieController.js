@@ -3,7 +3,7 @@ const User = require("../models/User");
 const AppError = require("../utils/appError");
 const _ = require("lodash");
 const { ObjectId } = require("mongodb");
-const logEvents = require("../helpers/logEvents")
+const logEvents = require("../helpers/logEvents");
 
 const movieController = {
   updateViews: async (req, res) => {
@@ -30,7 +30,6 @@ const movieController = {
   },
   getAllMovies: async (req, res) => {
     try {
-      
       let movie;
 
       movie = await Movie.find({
@@ -47,6 +46,7 @@ const movieController = {
       // Lọc 10 phim cho watchToday
       const watchToday = [...movie]
         .filter((item) => item.isPaid === true)
+        .sort((a, b) => b.createdAt - a.createdAt)
         .slice(0, 10);
 
       // Lọc phim mới nhất theo createAt giảm dần
@@ -85,7 +85,9 @@ const movieController = {
       });
     } catch (err) {
       console.log(err);
-      logEvents(`${req.url} -  ${req.method}` + "err catch get all movies " + err)
+      logEvents(
+        `${req.url} -  ${req.method}` + "err catch get all movies " + err
+      );
       res.status(500).json(err);
     }
   },
@@ -259,15 +261,26 @@ const movieController = {
     console.log(">>> addMovie: <<<", req.body);
     const author = req.body.author.split(",");
     const actors = req.body.actors.split(",");
-    const video = req.body.video.split(",");
     const photo = req.body.photo.split(",");
+    let video;
+    if (req.body.video) {
+      video = req.body.video.split(",");
+    } else {
+      video = [];
+    }
     let awards;
     if (req.body.awards) {
       awards = req.body.awards.split(",");
     } else {
       awards = [];
     }
-    console.log(">>> awards <<<", awards);
+    // console.log(">>> awards <<<", awards);
+    // let subtitles;
+    // if (req.body.subtitles) {
+    //   subtitles = req.body.subtitles.split(",");
+    // } else {
+    //   subtitles = [];
+    // }
     const category = req.body.category.map((item) => item.value);
     // console.log(author, actors, video, photo);
     // console.log(category);
@@ -287,7 +300,7 @@ const movieController = {
       const movie = await newMovie.save();
       res.status(200).json({
         message: "Thêm phim thành công",
-        data: movie,
+        // data: movie,
       });
     } catch (err) {
       console.log("check err", err);
@@ -303,8 +316,13 @@ const movieController = {
     console.log(">>> updateMovie: <<<", req.body);
     const author = req.body.author.split(",");
     const actors = req.body.actors.split(",");
-    const video = req.body.video.split(",");
     const photo = req.body.photo.split(",");
+    let video;
+    if (req.body.video) {
+      video = req.body.video.split(",");
+    } else {
+      video = [];
+    }
     let awards;
     if (req.body.awards) {
       awards = req.body.awards.split(",");

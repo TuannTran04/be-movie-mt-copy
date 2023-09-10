@@ -38,6 +38,7 @@ router.put(
   verifyTokenAndUserAuthorization,
   movieController.disabledMovie
 );
+router.put("/update-views", movieController.updateViews);
 
 //DELETE MOVIE
 router.delete(
@@ -45,7 +46,5 @@ router.delete(
   verifyTokenAndUserAuthorization,
   movieController.deleteMovie
 );
-
-router.put("/update-views", movieController.updateViews);
 
 module.exports = router;

@@ -7,7 +7,7 @@ const admin = require("firebase-admin");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
-const createError = require('http-errors')
+const createError = require("http-errors");
 // const asyncHandler = require('express-async-handler')
 var morgan = require("morgan");
 const helmet = require("helmet");
@@ -17,7 +17,8 @@ const rateLimit = require("express-rate-limit");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
-//cái này của ai, cua t
+const ffmpeg = require("fluent-ffmpeg");
+
 const serviceAccount = require("./src/config/service-firebase-admin.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -262,6 +263,10 @@ app.get("/video/:videoName", async (req, res) => {
   }
 });
 
+app.listen(3000, () => {
+  console.log("API is running on port 3000");
+});
+
 app.get("/subtitles/:subName", async (req, res) => {
   // const range = req.headers.range;
   // if (!range) {
@@ -287,7 +292,7 @@ app.get("/subtitles/:subName", async (req, res) => {
 
   try {
     const [fileExists] = await subFile.exists();
-    console.log(">>> fileExists <<<", fileExists);
+    console.log(">>> fileExists sub <<<", fileExists);
     if (!fileExists) {
       res.status(404).send("File not found");
       return;
@@ -331,7 +336,6 @@ app.get("/subtitles/:subName", async (req, res) => {
 //     })
 //     // next()
 // }))
-
 
 //catch errors
 app.use((req, res, next) => {

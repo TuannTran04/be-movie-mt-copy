@@ -86,19 +86,41 @@ router.post(
 
 router.post("/", upload.single("filename"), async (req, res) => {
   console.log(">>> Req File Upload: <<<", req.file);
+  const { folderOnFirebase } = req.body;
+
   // console.log(">>> req.file.originalname: <<<", req.file.originalname);
   try {
     const dateTime = giveCurrentDateTime();
-    const folderSpecificFilm =
-      req.file.originalname.replace(/\.[^/.]+$/, "") + "_" + dateTime;
-    const newFileName =
-      req.file.originalname.replace(/\.[^/.]+$/, "") + "_" + dateTime + ".mp4";
+    let folderSpecificFilm;
+    if (folderOnFirebase) {
+      folderSpecificFilm = folderOnFirebase;
+    } else {
+      folderSpecificFilm =
+        req.file.originalname.replace(/\.[^/.]+$/, "") + "_" + dateTime;
+    }
+
+    // const newFileName =
+    //   req.file.originalname.replace(/\.[^/.]+$/, "") + "_" + dateTime + ".mp4";
+
+    function removeAccentsAndNormalize(inputString) {
+      // Loại bỏ dấu accent
+      const normalizedString = inputString
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      // Loại bỏ khoảng trống và các ký tự đặc biệt, chỉ giữ lại chữ cái và số
+      const cleanString = normalizedString.replace(/[^a-zA-Z0-9]+/g, "");
+      // Chuyển đổi thành dạng viết thường
+      const lowercasedString = cleanString.toLowerCase();
+      return lowercasedString;
+    }
+
+    const fileNameEncode = decodeURIComponent(req.file.originalname);
 
     const storageRef = ref(
       storage,
-      `files/${folderSpecificFilm}/${newFileName}`
+      `files/${folderSpecificFilm}/${fileNameEncode}`
     );
-    console.log("storage", storageRef);
+    // console.log("storage", storageRef);
     // Create file metadata including the content type
     const metadata = {
       contentType: req.file.mimetype,
@@ -124,8 +146,8 @@ router.post("/", upload.single("filename"), async (req, res) => {
     console.log("File successfully uploaded.");
     return res.json({
       message: "file uploaded to firebase storage",
-      // name: req.file.originalname,
-      name: newFileName,
+      name: fileNameEncode,
+      // name: newFileName,
       folderSpecificFilm,
       type: req.file.mimetype,
       downloadURL: downloadURL,
@@ -157,18 +179,14 @@ router.post(
           file.originalname.replace(/\.[^/.]+$/, "") + "_" + dateTime + ".vtt";
         const storageRef = ref(
           storage,
-          `files/${folderOnFirebase}/${newFileName}`
+          `files/${folderOnFirebase}/${file.originalname}`
         );
 
-        // const metadata = {
-        //   contentType: "text/vtt",
-        //   contentEncoding: "UTF-8",
-        // };
         // const metadata = {
         //   contentType: file.mimetype,
         // };
         const metadata = {
-          contentType: "text/vtt; charset=utf-8", // Đặt contentType và charset
+          contentType: "text/vtt; charset=utf-8",
         };
 
         // const snapshot = await uploadBytesResumable(

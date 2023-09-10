@@ -19,6 +19,8 @@ const movieSchema = new mongoose.Schema(
     actors: [String],
     actorsWithoutAccent: [String],
     photo: [String],
+    thumbnail: [String],
+    banner: [String],
     awards: {
       type: [String],
       default: [],
@@ -26,6 +28,7 @@ const movieSchema = new mongoose.Schema(
     category: [{ type: mongoose.Types.ObjectId, ref: "Category" }],
     folderOnFirebase: String,
     video: [String],
+    sources: [{ srcVideo: String, typeVideo: String, sizeVideo: Number }],
     trailer: [String],
     rating: {
       type: mongoose.Schema.Types.Double,
@@ -38,14 +41,10 @@ const movieSchema = new mongoose.Schema(
       default: 0,
     },
     listUserRating: [{ name: String, point: Number }],
-    quality: {
-      type: String,
-      enum: {
-        values: ["hd", "cam", "fullhd"],
-        message: "Difficulty is either: hd, cam, fullhd",
-      },
-    },
-    subtitles: [{ src: String, srcLang: String }],
+    quality: String,
+    subtitles: [
+      { subtitle: String, langSubtitle: String, labelSubtitle: String },
+    ],
     yearPublish: Number,
     timeVideo: String,
     country: String,
