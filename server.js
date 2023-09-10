@@ -60,13 +60,13 @@ app.use(
 
 app.options("*", cors());
 // Middleware cho CORS
+// Cấu hình CORS
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    // "https://fe-movie-mt-copy.vercel.app"
-    "*"
+    "https://fe-movie-mt-copy.vercel.app"
   ); // Thay đổi thành trang web của bạn
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
