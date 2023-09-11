@@ -103,16 +103,15 @@ router.get("/video/:videoName", async (req, res) => {
       "Content-Length": contentLength,
       "Content-Type": "video/mp4",
     };
-    // res.header("Access-Control-Allow-Origin", "*");
     res.writeHead(206, headers);
 
     const stream = videoFile.createReadStream({ start, end });
+
+    stream.pipe(res);
     stream.on("error", (err) => {
       console.error("Error streaming video:", err);
       res.status(500).end();
     });
-
-    stream.pipe(res);
   } catch (error) {
     console.error("Error getting video metadata:", error);
     res.status(500).end();
