@@ -123,8 +123,8 @@ router.post("/", upload.single("filename"), async (req, res) => {
     // console.log("storage", storageRef);
     // Create file metadata including the content type
     const metadata = {
-      // contentType: req.file.mimetype,
-      contentType: "video/webm",
+      contentType: req.file.mimetype,
+      // contentType: "video/webm",
     };
 
     // Upload the file in the bucket storage

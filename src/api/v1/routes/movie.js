@@ -83,26 +83,32 @@ router.get("/video/:videoName", async (req, res) => {
     const [fileExists] = await videoFile.exists();
     console.log(">>> fileExists <<<", fileExists);
     if (!fileExists) {
-      console.log(">>> fileExists <<<", fileExists);
+      // console.log(">>> fileExists <<<", fileExists);
       res.status(404).send("File not found");
       return;
     }
 
     const [metadata] = await videoFile.getMetadata();
     const videoSize = metadata.size;
+    const videoType = metadata.contentType;
+    console.log(">>> videoType <<<", videoType);
+
+    console.log(">>> range <<<", range);
 
     const CHUNK_SIZE = 10 ** 6; //1mb
     const start = Number(range.replace(/\D/g, ""));
+    console.log(">>> start <<<", start);
     const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
+    console.log(">>> end <<<", end);
     const contentLength = end - start + 1;
 
     const headers = {
-      "Access-Control-Allow-Origin": "*",
       "Content-Range": `bytes ${start}-${end}/${videoSize}`,
       "Accept-Ranges": "bytes",
       "Content-Length": contentLength,
-      "Content-Type": "video/webm",
+      "Content-Type": videoType,
     };
+
     res.writeHead(206, headers);
 
     const stream = videoFile.createReadStream({ start, end });
