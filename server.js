@@ -49,7 +49,12 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
-app.use(cors());
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 // Access-Control-Allow-Origin *
 // api.natours.com, front-end natours.com
 // app.use(cors({
@@ -63,7 +68,10 @@ app.options("*", cors());
 // Cấu hình CORS
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
   res.setHeader(
     "Access-Control-Allow-Headers",
     "Content-Type, Range, Authorization, X-Requested-Width"
