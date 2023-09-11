@@ -101,7 +101,7 @@ router.get("/video/:videoName", async (req, res) => {
       "Content-Range": `bytes ${start}-${end}/${videoSize}`,
       "Accept-Ranges": "bytes",
       "Content-Length": contentLength,
-      "Content-Type": "video/mp4",
+      "Content-Type": "video/webm",
     };
     res.writeHead(206, headers);
 
