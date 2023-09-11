@@ -85,9 +85,9 @@ const movieController = {
       });
     } catch (err) {
       console.log(err);
-      logEvents(
-        `${req.url} -  ${req.method}` + "err catch get all movies " + err
-      );
+      // logEvents(
+      //   `${req.url} -  ${req.method}` + "err catch get all movies " + err
+      // );
       res.status(500).json(err);
     }
   },
@@ -640,6 +640,7 @@ const movieController = {
       // console.log(">>> getSingle: <<<", movieSingle);
 
       if (!movieSingle) {
+        console.log("Không có phim này");
         throw new AppError("Không có phim này", 404);
       }
 

@@ -97,7 +97,7 @@ const authController = {
       res.status(200).json({ otp: otp, message: "OTP gửi thành công" });
     } catch (err) {
       console.log(err);
-      logEvents("err in catch register user " + err);
+      // logEvents("err in catch register user " + err);
       res.status(404).json({
         code: 404,
         mes: err,

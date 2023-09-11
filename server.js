@@ -61,16 +61,16 @@ app.options("*", cors());
 
 // Middleware cho CORS
 // Cấu hình CORS
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT,DELETE");
-//   res.setHeader(
-//     "Access-Control-Allow-Headers",
-//     "Content-Type, Authorization, X-Requested-Width"
-//   );
-//   res.setHeader("Access-Control-Allow-Credentials", true);
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Range, Authorization, X-Requested-Width"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+});
 
 // Set security HTTP headers
 app.use(helmet());
@@ -243,6 +243,7 @@ app.get("/video/:videoName", async (req, res) => {
     const [fileExists] = await videoFile.exists();
     console.log(">>> fileExists <<<", fileExists);
     if (!fileExists) {
+      console.log(">>> fileExists <<<", fileExists);
       res.status(404).send("File not found");
       return;
     }
