@@ -237,69 +237,6 @@ app.get("/video", (req, res) => {
 //   const videoStream = fs.createReadStream(videoPath, { start, end });
 //   videoStream.pipe(res);
 // });
-app.get("/video/:videoName", async (req, res) => {
-  const range = req.headers.range;
-  if (!range) {
-    res.status(400).send("requires range header");
-    return;
-  }
-
-  const videoName = req.params.videoName; // Thay thế bằng tên tệp video trên Firebase Storage
-  const specificFolder = req.query.specificFolder;
-  console.log(">>> videoName <<<", videoName);
-  console.log(">>> specificFolder <<<", specificFolder);
-
-  // Tạo một đường dẫn tới thư mục ảo 'files'
-  const folder = `files/${specificFolder}/`;
-  const videoPath = folder + videoName;
-  console.log(">>> videoPath <<<", videoPath);
-
-  const bucket = admin.storage().bucket();
-  // console.log(">>>check bucket", bucket);
-  // console.log(">>>check bucket", bucket.name);
-
-  const videoFile = bucket.file(videoPath);
-  // console.log(">>> videoFile <<<", videoFile);
-
-  try {
-    const [fileExists] = await videoFile.exists();
-    console.log(">>> fileExists <<<", fileExists);
-    if (!fileExists) {
-      console.log(">>> fileExists <<<", fileExists);
-      res.status(404).send("File not found");
-      return;
-    }
-
-    const [metadata] = await videoFile.getMetadata();
-    const videoSize = metadata.size;
-
-    const CHUNK_SIZE = 10 ** 6; //1mb
-    const start = Number(range.replace(/\D/g, ""));
-    const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
-    const contentLength = end - start + 1;
-
-    const headers = {
-      "Access-Control-Allow-Origin": "*",
-      "Content-Range": `bytes ${start}-${end}/${videoSize}`,
-      "Accept-Ranges": "bytes",
-      "Content-Length": contentLength,
-      "Content-Type": "video/mp4",
-    };
-    // res.header("Access-Control-Allow-Origin", "*");
-    res.writeHead(206, headers);
-
-    const stream = videoFile.createReadStream({ start, end });
-    stream.on("error", (err) => {
-      console.error("Error streaming video:", err);
-      res.status(500).end();
-    });
-
-    stream.pipe(res);
-  } catch (error) {
-    console.error("Error getting video metadata:", error);
-    res.status(500).end();
-  }
-});
 
 app.get("/subtitles/:subName", async (req, res) => {
   // const range = req.headers.range;
