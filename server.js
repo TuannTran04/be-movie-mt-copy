@@ -64,6 +64,20 @@ app.use(cors(corsOptions));
 app.options("*", cors());
 // app.options('/api/v1/tours/:id', cors());
 
+app.all("/", function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Range, Authorization, X-Requested-Width"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+});
+
 // Middleware cho CORS
 // Cấu hình CORS
 app.use((req, res, next) => {
