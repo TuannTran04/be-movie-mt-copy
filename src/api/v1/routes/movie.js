@@ -96,26 +96,26 @@ router.get("/video/:videoName", async (req, res) => {
 
     console.log(">>> range <<<", range);
 
-    const CHUNK_SIZE = 10 ** 6; //1mb
-    const start = Number(range.replace(/\D/g, ""));
-    console.log(">>> start <<<", start);
-    const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
-    console.log(">>> end <<<", end);
-    const contentLength = end - start + 1;
-
-    // const parts = range.replace(/bytes=/, "").split("-");
-    // const start = parseInt(parts[0], 10);
+    // const CHUNK_SIZE = 10 ** 6; //1mb
+    // const start = Number(range.replace(/\D/g, ""));
     // console.log(">>> start <<<", start);
-    // const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
+    // const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
     // console.log(">>> end <<<", end);
-    // const chunkSize = end - start + 1;
-    // console.log(">>> chunkSize <<<", chunkSize);
+    // const contentLength = end - start + 1;
+
+    const parts = range.replace(/\D/g, "").split("-");
+    const start = parseInt(parts[0], 10);
+    console.log(">>> start <<<", start);
+    const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
+    console.log(">>> end <<<", end);
+    const chunkSize = end - start + 1;
+    console.log(">>> chunkSize <<<", chunkSize);
 
     const headers = {
       "Access-Control-Allow-Origin": "*",
       "Content-Range": `bytes ${start}-${end}/${videoSize}`,
       "Accept-Ranges": "bytes",
-      "Content-Length": contentLength,
+      "Content-Length": chunkSize,
       "Content-Type": videoType,
     };
 
@@ -125,6 +125,7 @@ router.get("/video/:videoName", async (req, res) => {
 
     stream.pipe(res);
     stream.on("error", (err) => {
+      console.log(">>> err <<<", err);
       console.error("Error streaming video:", err);
       res.status(500).end();
     });
