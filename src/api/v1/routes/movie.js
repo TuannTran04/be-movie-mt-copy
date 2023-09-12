@@ -112,6 +112,7 @@ router.get("/video/:videoName", async (req, res) => {
     console.log(">>> chunkSize <<<", chunkSize);
 
     const headers = {
+      "Access-Control-Allow-Origin": "*",
       "Content-Range": `bytes ${start}-${end}/${videoSize}`,
       "Accept-Ranges": "bytes",
       "Content-Length": chunkSize,

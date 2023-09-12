@@ -61,7 +61,7 @@ app.use(cors(corsOptions));
 //   origin: 'https://www.natours.com'
 // }))
 
-// app.options("*", cors());
+app.options("*", cors());
 // app.options('/api/v1/tours/:id', cors());
 
 // app.all("/", function (req, res, next) {
@@ -80,19 +80,19 @@ app.use(cors(corsOptions));
 
 // Middleware cho CORS
 // Cấu hình CORS
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, OPTIONS"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Range, Authorization, X-Requested-Width"
-  );
-  res.setHeader("Access-Control-Allow-Credentials", true);
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   res.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "GET, POST, PUT, DELETE, OPTIONS"
+//   );
+//   res.setHeader(
+//     "Access-Control-Allow-Headers",
+//     "Content-Type, Range, Authorization, X-Requested-Width"
+//   );
+//   res.setHeader("Access-Control-Allow-Credentials", true);
+//   next();
+// });
 
 // Set security HTTP headers
 app.use(helmet());
