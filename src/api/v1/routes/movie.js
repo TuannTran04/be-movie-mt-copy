@@ -57,6 +57,7 @@ router.delete(
 
 router.get("/video/:videoName", async (req, res) => {
   const range = req.headers.range;
+  console.log(">>> check range <<<", range);
   if (!range) {
     res.status(400).send("requires range header");
     return;
@@ -95,17 +96,25 @@ router.get("/video/:videoName", async (req, res) => {
 
     console.log(">>> range <<<", range);
 
-    const CHUNK_SIZE = 10 ** 6; //1mb
-    const start = Number(range.replace(/\D/g, ""));
+    // const CHUNK_SIZE = 10 ** 6; //1mb
+    // const start = Number(range.replace(/\D/g, ""));
+    // console.log(">>> start <<<", start);
+    // const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
+    // console.log(">>> end <<<", end);
+    // const contentLength = end - start + 1;
+
+    const parts = range.replace(/bytes=/, "").split("-");
+    const start = parseInt(parts[0], 10);
     console.log(">>> start <<<", start);
-    const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
+    const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
     console.log(">>> end <<<", end);
-    const contentLength = end - start + 1;
+    const chunkSize = end - start + 1;
+    console.log(">>> chunkSize <<<", chunkSize);
 
     const headers = {
       "Content-Range": `bytes ${start}-${end}/${videoSize}`,
       "Accept-Ranges": "bytes",
-      "Content-Length": contentLength,
+      "Content-Length": chunkSize,
       "Content-Type": videoType,
     };
 
@@ -133,12 +142,12 @@ router.get("/subtitles/:subName", async (req, res) => {
 
   const subName = req.params.subName; // Thay thế bằng tên tệp video trên Firebase Storage
   const specificFolder = req.query.specificFolder;
-  console.log(">>> subName <<<", subName);
+  // console.log(">>> subName <<<", subName);
 
   // Tạo một đường dẫn tới thư mục ảo 'files'
   const folder = `files/${specificFolder}/`;
   const subPath = folder + subName;
-  console.log(">>> subPath <<<", subPath);
+  // console.log(">>> subPath <<<", subPath);
 
   const bucket = admin.storage().bucket();
   // console.log(">>>check bucket", bucket);
@@ -149,7 +158,7 @@ router.get("/subtitles/:subName", async (req, res) => {
 
   try {
     const [fileExists] = await subFile.exists();
-    console.log(">>> fileExists sub <<<", fileExists);
+    // console.log(">>> fileExists sub <<<", fileExists);
     if (!fileExists) {
       res.status(404).send("File not found");
       return;
