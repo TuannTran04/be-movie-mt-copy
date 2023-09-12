@@ -93,7 +93,6 @@ router.get("/video/:videoName", async (req, res) => {
     const videoSize = metadata.size;
     const videoType = metadata.contentType;
     console.log(">>> videoType <<<", videoType);
-
     console.log(">>> range <<<", range);
 
     // const CHUNK_SIZE = 10 ** 6; //1mb
@@ -103,32 +102,53 @@ router.get("/video/:videoName", async (req, res) => {
     // console.log(">>> end <<<", end);
     // const contentLength = end - start + 1;
 
-    const parts = range.replace(/\D/g, "").split("-");
-    const start = parseInt(parts[0], 10);
-    console.log(">>> start <<<", start);
-    const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
-    console.log(">>> end <<<", end);
-    const chunkSize = end - start + 1;
-    console.log(">>> chunkSize <<<", chunkSize);
+    // const headers = {
+    //   "Access-Control-Allow-Origin": "*",
+    //   "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+    //   "Accept-Ranges": "bytes",
+    //   "Content-Length": contentLength,
+    //   "Content-Type": videoType,
+    // };
 
-    const headers = {
-      "Access-Control-Allow-Origin": "*",
-      "Content-Range": `bytes ${start}-${end}/${videoSize}`,
-      "Accept-Ranges": "bytes",
-      "Content-Length": chunkSize,
-      "Content-Type": videoType,
-    };
+    // res.writeHead(206, headers);
 
-    res.writeHead(206, headers);
+    // const stream = videoFile.createReadStream({ start, end });
 
-    const stream = videoFile.createReadStream({ start, end });
+    // stream.pipe(res);
+    // stream.on("error", (err) => {
+    //   console.log(">>> err <<<", err);
+    //   console.error("Error streaming video:", err);
+    //   res.status(500).end();
+    // });
 
-    stream.pipe(res);
-    stream.on("error", (err) => {
-      console.log(">>> err <<<", err);
-      console.error("Error streaming video:", err);
-      res.status(500).end();
-    });
+    if (range) {
+      const parts = range.replace(/bytes=/, "").split("-");
+      console.log(">>> parts <<<", parts);
+      const start = parseInt(parts[0], 10);
+      console.log(">>> start <<<", start);
+      const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
+      console.log(">>> end <<<", end);
+
+      const chunkSize = end - start + 1;
+      const file = videoFile.createReadStream({ start, end });
+      const headers = {
+        "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+        "Accept-Ranges": "bytes",
+        "Content-Length": chunkSize,
+        "Content-Type": "video/mp4",
+      };
+
+      res.writeHead(206, headers);
+      file.pipe(res);
+    } else {
+      const headers = {
+        "Content-Length": videoSize,
+        "Content-Type": "video/mp4",
+      };
+
+      res.writeHead(200, headers);
+      videoFile.createReadStream().pipe(res);
+    }
   } catch (error) {
     console.error("Error getting video metadata:", error);
     res.status(500).end();
