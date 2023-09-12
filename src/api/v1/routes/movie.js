@@ -129,10 +129,13 @@ router.get("/video/:videoName", async (req, res) => {
       const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
       console.log(">>> end <<<", end);
 
-      const chunkSize = end - start + 1;
+      const CHUNK_SIZE = 10 ** 6; // 1MB
+      const chunkSize = Math.min(end - start + 1, CHUNK_SIZE);
+      // const chunkSize = end - start + 1;
+
       const file = videoFile.createReadStream({ start, end });
       const headers = {
-        "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+        "Content-Range": `bytes ${start}-${start + chunkSize - 1}/${videoSize}`,
         "Accept-Ranges": "bytes",
         "Content-Length": chunkSize,
         "Content-Type": "video/mp4",
