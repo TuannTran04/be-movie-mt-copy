@@ -54,14 +54,14 @@ const corsOptions = {
   credentials: true,
   optionSuccessStatus: 200,
 };
-app.use(cors());
+app.use(cors(corsOptions));
 // Access-Control-Allow-Origin *
 // api.natours.com, front-end natours.com
 // app.use(cors({
 //   origin: 'https://www.natours.com'
 // }))
 
-app.options("*", cors());
+// app.options("*", cors());
 // app.options('/api/v1/tours/:id', cors());
 
 // app.all("/", function (req, res, next) {
