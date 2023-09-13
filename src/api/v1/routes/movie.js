@@ -146,8 +146,8 @@ router.get("/video/:videoName", async (req, res) => {
 
       const file = videoFile.createReadStream({ start, end });
       const headers = {
-        // "Content-Range": `bytes ${start}-${start + chunkSize - 1}/${videoSize}`,
-        "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+        "Content-Range": `bytes ${start}-${start + chunkSize - 1}/${videoSize}`,
+        // "Content-Range": `bytes ${start}-${end}/${videoSize}`,
         "Accept-Ranges": "bytes",
         "Content-Length": chunkSize,
         "Content-Type": "video/mp4",
