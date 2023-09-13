@@ -126,12 +126,22 @@ router.get("/video/:videoName", async (req, res) => {
       console.log(">>> parts <<<", parts);
       const start = parseInt(parts[0], 10);
       console.log(">>> start <<<", start);
+      // const end =  parts[1] ? parseInt(parts[1], 10) : Math.min(start + CHUNK_SIZE, videoSize - 1);
       const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
       console.log(">>> end <<<", end);
 
       const CHUNK_SIZE = 10 ** 6; // 1MB
-      const chunkSize = Math.min(end - start + 1, CHUNK_SIZE);
+      // const chunkSize = Math.min(end - start + 1, CHUNK_SIZE);
       // const chunkSize = end - start + 1;
+
+      // const MAX_CHUNK_SIZE = 2.5 * 1024 * 1024; // 10MB - Kích thước tối đa cho một chunk
+
+      // let chunkSize = end - start + 1;
+      // if (chunkSize > MAX_CHUNK_SIZE) {
+      //   chunkSize = MAX_CHUNK_SIZE;
+      // }
+
+      const chunkSize = Math.min(end - start + 1, 3 * 1024 * 1024);
 
       const file = videoFile.createReadStream({ start, end });
       const headers = {
@@ -147,6 +157,86 @@ router.get("/video/:videoName", async (req, res) => {
       const headers = {
         "Content-Length": videoSize,
         "Content-Type": "video/mp4",
+      };
+
+      res.writeHead(200, headers);
+      videoFile.createReadStream().pipe(res);
+    }
+  } catch (error) {
+    console.error("Error getting video metadata:", error);
+    res.status(500).end();
+  }
+});
+
+router.get("/videoHLS/:videoName", async (req, res) => {
+  const range = req.headers.range;
+  console.log(">>> check range <<<", range);
+  if (!range) {
+    console.log("khong co range");
+    res.status(400).send("requires range header");
+    return;
+  }
+
+  const videoName = req.params.videoName; // Thay thế bằng tên tệp video trên Firebase Storage
+  const specificFolder = req.query.specificFolder;
+  console.log(">>> videoName <<<", videoName);
+  console.log(">>> specificFolder <<<", specificFolder);
+
+  // Tạo một đường dẫn tới thư mục ảo 'files'
+  const folder = `files/${specificFolder}/`;
+  const videoPath = folder + videoName;
+  console.log(">>> videoPath <<<", videoPath);
+
+  const bucket = admin.storage().bucket();
+  // console.log(">>>check bucket", bucket);
+  // console.log(">>>check bucket", bucket.name);
+
+  const videoFile = bucket.file(videoPath);
+  // console.log(">>> videoFile <<<", videoFile);
+
+  try {
+    const [fileExists] = await videoFile.exists();
+    console.log(">>> fileExists <<<", fileExists);
+    if (!fileExists) {
+      // console.log(">>> fileExists <<<", fileExists);
+      res.status(404).send("File not found");
+      return;
+    }
+
+    const [metadata] = await videoFile.getMetadata();
+    const videoSize = metadata.size;
+    const videoType = metadata.contentType;
+    console.log(">>> videoType <<<", videoType);
+    console.log(">>> range <<<", range);
+
+    if (range) {
+      const parts = range.replace(/bytes=/, "").split("-");
+      console.log(">>> parts <<<", parts);
+      const start = parseInt(parts[0], 10);
+      console.log(">>> start <<<", start);
+      // const end =  parts[1] ? parseInt(parts[1], 10) : Math.min(start + CHUNK_SIZE, videoSize - 1);
+      const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
+      console.log(">>> end <<<", end);
+
+      const CHUNK_SIZE = 10 ** 6; // 1MB
+
+      const chunkSize = Math.min(end - start + 1, CHUNK_SIZE);
+      // const chunkSize = end - start + 1;
+
+      const file = videoFile.createReadStream({ start, end });
+      const headers = {
+        "Content-Range": `bytes ${start}-${start + chunkSize - 1}/${videoSize}`,
+        "Accept-Ranges": "bytes",
+        "Content-Length": chunkSize,
+        "Content-Type": videoType,
+      };
+
+      res.writeHead(206, headers);
+      file.pipe(res);
+    } else {
+      const headers = {
+        "Content-Length": videoSize,
+        "Content-Type": videoType,
       };
 
       res.writeHead(200, headers);
