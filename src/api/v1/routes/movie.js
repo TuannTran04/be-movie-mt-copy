@@ -8,11 +8,6 @@ const router = require("express").Router();
 
 const admin = require("firebase-admin");
 const serviceAccount = require("../../../config/service-firebase-admin.json");
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-//   storageBucket: "movie-the-stone-d9f38.appspot.com", // Thay thế bằng ID ứng dụng Firebase của bạn
-//   // databaseURL: "https://movie-the-stone-d9f38-default-rtdb.firebaseio.com",
-// });
 
 //GET ALL movies
 // router.get("/", verifyToken, movieController.getAllMovies);
@@ -90,36 +85,12 @@ router.get("/video/:videoName", async (req, res) => {
     }
 
     const [metadata] = await videoFile.getMetadata();
+    // console.log(">>> metadata <<<", metadata);
     const videoSize = metadata.size;
     const videoType = metadata.contentType;
     console.log(">>> videoType <<<", videoType);
+    console.log(">>> videoSize <<<", videoSize);
     console.log(">>> range <<<", range);
-
-    // const CHUNK_SIZE = 10 ** 6; //1mb
-    // const start = Number(range.replace(/\D/g, ""));
-    // console.log(">>> start <<<", start);
-    // const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
-    // console.log(">>> end <<<", end);
-    // const contentLength = end - start + 1;
-
-    // const headers = {
-    //   "Access-Control-Allow-Origin": "*",
-    //   "Content-Range": `bytes ${start}-${end}/${videoSize}`,
-    //   "Accept-Ranges": "bytes",
-    //   "Content-Length": contentLength,
-    //   "Content-Type": videoType,
-    // };
-
-    // res.writeHead(206, headers);
-
-    // const stream = videoFile.createReadStream({ start, end });
-
-    // stream.pipe(res);
-    // stream.on("error", (err) => {
-    //   console.log(">>> err <<<", err);
-    //   console.error("Error streaming video:", err);
-    //   res.status(500).end();
-    // });
 
     if (range) {
       const parts = range.replace(/bytes=/, "").split("-");
@@ -131,18 +102,9 @@ router.get("/video/:videoName", async (req, res) => {
       console.log(">>> end <<<", end);
 
       const CHUNK_SIZE = 10 ** 6; // 1MB
-      // const chunkSize = Math.min(end - start + 1, CHUNK_SIZE);
-      // const chunkSize = end - start + 1;
 
-      // const MAX_CHUNK_SIZE = 2.5 * 1024 * 1024; // 10MB - Kích thước tối đa cho một chunk
-
-      // let chunkSize = end - start + 1;
-      // if (chunkSize > MAX_CHUNK_SIZE) {
-      //   chunkSize = MAX_CHUNK_SIZE;
-      // }
-
-      // const chunkSize = Math.min(end - start + 1, 3 * 1024 * 1024);
-      const chunkSize = end - start + 1;
+      const chunkSize = Math.min(end - start + 1, 3 * 1024 * 1024);
+      // const chunkSize = end - start + 1; => không chunk từng phần
 
       const file = videoFile.createReadStream({ start, end });
       const headers = {
@@ -170,31 +132,22 @@ router.get("/video/:videoName", async (req, res) => {
   }
 });
 
-router.get("/videoHLS/:videoName", async (req, res) => {
-  const range = req.headers.range;
-  console.log(">>> check range <<<", range);
-  if (!range) {
-    console.log("khong co range");
-    res.status(400).send("requires range header");
-    return;
-  }
-
+router.get("/videoHLS/:specificFolder/:videoName", async (req, res) => {
   const videoName = req.params.videoName; // Thay thế bằng tên tệp video trên Firebase Storage
-  const specificFolder = req.query.specificFolder;
+  // const specificFolder = req.query.specificFolder;
+  const specificFolder = req.params.specificFolder;
   console.log(">>> videoName <<<", videoName);
   console.log(">>> specificFolder <<<", specificFolder);
 
   // Tạo một đường dẫn tới thư mục ảo 'files'
-  const folder = `files/${specificFolder}/`;
+  // const folder = `files/${specificFolder}/`;
+  const folder = `${specificFolder}/`;
   const videoPath = folder + videoName;
+  // const videoPath = "test_hls/" + videoName;
   console.log(">>> videoPath <<<", videoPath);
 
   const bucket = admin.storage().bucket();
-  // console.log(">>>check bucket", bucket);
-  // console.log(">>>check bucket", bucket.name);
-
   const videoFile = bucket.file(videoPath);
-  // console.log(">>> videoFile <<<", videoFile);
 
   try {
     const [fileExists] = await videoFile.exists();
@@ -206,35 +159,19 @@ router.get("/videoHLS/:videoName", async (req, res) => {
     }
 
     const [metadata] = await videoFile.getMetadata();
+
     const videoSize = metadata.size;
     const videoType = metadata.contentType;
     console.log(">>> videoType <<<", videoType);
-    console.log(">>> range <<<", range);
 
-    if (range) {
-      const parts = range.replace(/bytes=/, "").split("-");
-      console.log(">>> parts <<<", parts);
-      const start = parseInt(parts[0], 10);
-      console.log(">>> start <<<", start);
-      // const end =  parts[1] ? parseInt(parts[1], 10) : Math.min(start + CHUNK_SIZE, videoSize - 1);
-      const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
-      console.log(">>> end <<<", end);
+    if (true) {
+      res.writeHead(200, {
+        "Content-Type": "application/x-mpegURL",
+        "Content-Length": videoSize.toString(),
+      });
 
-      const CHUNK_SIZE = 10 ** 6; // 1MB
-
-      const chunkSize = Math.min(end - start + 1, CHUNK_SIZE);
-      // const chunkSize = end - start + 1;
-
-      const file = videoFile.createReadStream({ start, end });
-      const headers = {
-        "Content-Range": `bytes ${start}-${start + chunkSize - 1}/${videoSize}`,
-        "Accept-Ranges": "bytes",
-        "Content-Length": chunkSize,
-        "Content-Type": videoType,
-      };
-
-      res.writeHead(206, headers);
-      file.pipe(res);
+      const readStream = videoFile.createReadStream();
+      readStream.pipe(res);
     } else {
       const headers = {
         "Content-Length": videoSize,
@@ -245,10 +182,69 @@ router.get("/videoHLS/:videoName", async (req, res) => {
       videoFile.createReadStream().pipe(res);
     }
   } catch (error) {
-    console.error("Error getting video metadata:", error);
-    res.status(500).end();
+    console.error("Lỗi khi tải tệp HLS từ Firebase Storage:", error);
+    res.status(500).send("Lỗi khi tải tệp HLS từ Firebase Storage");
   }
 });
+
+router.get(
+  "/videoHLS/:specificFolder/:childFolder/:videoName",
+  async (req, res) => {
+    const videoName = req.params.videoName; // Thay thế bằng tên tệp video trên Firebase Storage
+    // const specificFolder = req.query.specificFolder;
+    const childFolder = req.params.childFolder;
+    const specificFolder = req.params.specificFolder;
+    console.log(">>> videoName <<<", videoName);
+    console.log(">>> specificFolder <<<", specificFolder);
+
+    // Tạo một đường dẫn tới thư mục ảo 'files'
+    // const folder = `files/${specificFolder}/`;
+    const folder = `${specificFolder}/${childFolder}/`;
+    const videoPath = folder + videoName;
+    // const videoPath = "test_hls/" + videoName;
+    console.log(">>> videoPath <<<", videoPath);
+
+    const bucket = admin.storage().bucket();
+    const videoFile = bucket.file(videoPath);
+
+    try {
+      const [fileExists] = await videoFile.exists();
+      console.log(">>> fileExists <<<", fileExists);
+      if (!fileExists) {
+        // console.log(">>> fileExists <<<", fileExists);
+        res.status(404).send("File not found");
+        return;
+      }
+
+      const [metadata] = await videoFile.getMetadata();
+
+      const videoSize = metadata.size;
+      const videoType = metadata.contentType;
+      console.log(">>> videoType <<<", videoType);
+
+      if (true) {
+        res.writeHead(200, {
+          "Content-Type": "application/x-mpegURL",
+          "Content-Length": videoSize.toString(),
+        });
+
+        const readStream = videoFile.createReadStream();
+        readStream.pipe(res);
+      } else {
+        const headers = {
+          "Content-Length": videoSize,
+          "Content-Type": videoType,
+        };
+
+        res.writeHead(200, headers);
+        videoFile.createReadStream().pipe(res);
+      }
+    } catch (error) {
+      console.error("Lỗi khi tải tệp HLS từ Firebase Storage:", error);
+      res.status(500).send("Lỗi khi tải tệp HLS từ Firebase Storage");
+    }
+  }
+);
 
 router.get("/subtitles/:subName", async (req, res) => {
   // const range = req.headers.range;
