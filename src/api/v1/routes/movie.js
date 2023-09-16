@@ -93,20 +93,21 @@ router.get("/video/:videoName", async (req, res) => {
     console.log(">>> range <<<", range);
 
     if (range) {
+      const CHUNK_SIZE = 2 * 1024 * 1024;
+
       const parts = range.replace(/bytes=/, "").split("-");
       console.log(">>> parts <<<", parts);
       const start = parseInt(parts[0], 10);
       console.log(">>> start <<<", start);
-      // const end =  parts[1] ? parseInt(parts[1], 10) : Math.min(start + CHUNK_SIZE, videoSize - 1);
+      // const end = parts[1]
+      //   ? parseInt(parts[1], 10)
+      //   : Math.min(start + CHUNK_SIZE, videoSize - 1);
       const end = parts[1] ? parseInt(parts[1], 10) : videoSize - 1;
       console.log(">>> end <<<", end);
 
-      const CHUNK_SIZE = 10 ** 6; // 1MB
+      const chunkSize = Math.min(end - start + 1, CHUNK_SIZE);
+      // const chunkSize = end - start + 1;
 
-      const chunkSize = Math.min(end - start + 1, 3 * 1024 * 1024);
-      // const chunkSize = end - start + 1; => không chunk từng phần
-
-      const file = videoFile.createReadStream({ start, end });
       const headers = {
         "Content-Range": `bytes ${start}-${start + chunkSize - 1}/${videoSize}`,
         // "Content-Range": `bytes ${start}-${end}/${videoSize}`,
@@ -115,6 +116,7 @@ router.get("/video/:videoName", async (req, res) => {
         "Content-Type": "video/mp4",
       };
 
+      const file = videoFile.createReadStream({ start, end });
       res.writeHead(206, headers);
       file.pipe(res);
     } else {
