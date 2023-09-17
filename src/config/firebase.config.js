@@ -16,12 +16,12 @@ dotenv.config();
 
 module.exports = {
   firebaseConfig: {
-    apiKey: "AIzaSyDNilMeQPya4r4vlKTSiYwWPVOg_ho99Dg",
-    authDomain: "shotflix-2.firebaseapp.com",
-    projectId: "shotflix-2",
-    storageBucket: "shotflix-2.appspot.com",
-    messagingSenderId: "1040231264333",
-    appId: "1:1040231264333:web:224dc77744985e37ac6c04",
-    measurementId: "G-3YMWGLN8X7",
+    apiKey: "AIzaSyAOrOeERcX7KOMEKrfSw2mrWmQr2e4oPMU",
+    authDomain: "shotflix-ae87c.firebaseapp.com",
+    projectId: "shotflix-ae87c",
+    storageBucket: "shotflix-ae87c.appspot.com",
+    messagingSenderId: "277694494848",
+    appId: "1:277694494848:web:0337676ce08289a34d4e65",
+    measurementId: "G-2Q6YM7R6MZ",
   },
 };

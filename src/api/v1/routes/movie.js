@@ -142,8 +142,8 @@ router.get("/videoHLS/:specificFolder/:videoName", async (req, res) => {
   console.log(">>> specificFolder <<<", specificFolder);
 
   // Tạo một đường dẫn tới thư mục ảo 'files'
-  // const folder = `files/${specificFolder}/`;
-  const folder = `${specificFolder}/`;
+  const folder = `files/${specificFolder}/`;
+  // const folder = `${specificFolder}/`;
   const videoPath = folder + videoName;
   // const videoPath = "test_hls/" + videoName;
   console.log(">>> videoPath <<<", videoPath);
@@ -192,6 +192,12 @@ router.get("/videoHLS/:specificFolder/:videoName", async (req, res) => {
 router.get(
   "/videoHLS/:specificFolder/:childFolder/:videoName",
   async (req, res) => {
+    // const range = req.headers.range;
+    // console.log(">>> check range <<<", range);
+    // if (!range) {
+    //   res.status(400).send("requires range header");
+    //   return;
+    // }
     const videoName = req.params.videoName; // Thay thế bằng tên tệp video trên Firebase Storage
     // const specificFolder = req.query.specificFolder;
     const childFolder = req.params.childFolder;
@@ -200,8 +206,74 @@ router.get(
     console.log(">>> specificFolder <<<", specificFolder);
 
     // Tạo một đường dẫn tới thư mục ảo 'files'
-    // const folder = `files/${specificFolder}/`;
-    const folder = `${specificFolder}/${childFolder}/`;
+    const folder = `files/${specificFolder}/${childFolder}/`;
+    // const folder = `${specificFolder}/${childFolder}/`;
+    const videoPath = folder + videoName;
+    // const videoPath = "test_hls/" + videoName;
+    console.log(">>> videoPath <<<", videoPath);
+
+    const bucket = admin.storage().bucket();
+    const videoFile = bucket.file(videoPath);
+
+    try {
+      const [fileExists] = await videoFile.exists();
+      console.log(">>> fileExists <<<", fileExists);
+      if (!fileExists) {
+        // console.log(">>> fileExists <<<", fileExists);
+        res.status(404).send("File not found");
+        return;
+      }
+
+      const [metadata] = await videoFile.getMetadata();
+
+      const videoSize = metadata.size;
+      const videoType = metadata.contentType;
+      console.log(">>> videoType <<<", videoType);
+
+      if (true) {
+        res.writeHead(200, {
+          "Content-Type": "application/x-mpegURL",
+          "Content-Length": videoSize.toString(),
+        });
+
+        const readStream = videoFile.createReadStream();
+        readStream.pipe(res);
+      } else {
+        const headers = {
+          "Content-Length": videoSize,
+          "Content-Type": videoType,
+        };
+
+        res.writeHead(200, headers);
+        videoFile.createReadStream().pipe(res);
+      }
+    } catch (error) {
+      console.error("Lỗi khi tải tệp HLS từ Firebase Storage:", error);
+      res.status(500).send("Lỗi khi tải tệp HLS từ Firebase Storage");
+    }
+  }
+);
+
+router.get(
+  "/videoHLS/:specificFolder/:childFolder/:childFolder_2/:videoName",
+  async (req, res) => {
+    // const range = req.headers.range;
+    // console.log(">>> check range <<<", range);
+    // if (!range) {
+    //   res.status(400).send("requires range header");
+    //   return;
+    // }
+    const videoName = req.params.videoName; // Thay thế bằng tên tệp video trên Firebase Storage
+    // const specificFolder = req.query.specificFolder;
+    const childFolder = req.params.childFolder;
+    const childFolder_2 = req.params.childFolder_2;
+    const specificFolder = req.params.specificFolder;
+    console.log(">>> videoName <<<", videoName);
+    console.log(">>> specificFolder <<<", specificFolder);
+
+    // Tạo một đường dẫn tới thư mục ảo 'files'
+    const folder = `files/${specificFolder}/${childFolder}/${childFolder_2}/`;
+    // const folder = `${specificFolder}/${childFolder}/`;
     const videoPath = folder + videoName;
     // const videoPath = "test_hls/" + videoName;
     console.log(">>> videoPath <<<", videoPath);
