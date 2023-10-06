@@ -125,21 +125,24 @@ app.options("*", cors());
 // Set security HTTP headers
 app.use(helmet());
 
-const io = require("socket.io")(httpServer, {
-  cors: {
-    // origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
-    origin: "*",
-  },
-});
-global._io = io;
-global._io.on("connection", CommentServices.connection);
-
 // Development logging
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 // :method :url :status :response-time ms - :res[content-length]
 // app.use(morgan("combined"))
+
+// SOCKET
+const io = require("socket.io")(httpServer, {
+  cors: {
+    // origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  },
+});
+global._io = io;
+global._io.on("connection", CommentServices.connection);
 
 // Limit requests from same API
 const limiter = rateLimit({
