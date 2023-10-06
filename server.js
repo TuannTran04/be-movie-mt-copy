@@ -17,10 +17,43 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const ffmpeg = require("fluent-ffmpeg");
-const { createClient } = require("redis");
+// const { createClient } = require("redis");
 require("express-async-errors");
+// const socketIo = require("socket.io");
+// const socketManager = require("./src/api/v1/utils/socketRT");
+const CommentServices = require("./src/api/v1/services/comment");
 
 const app = express();
+const httpServer = require("http").createServer(app); // Tạo HTTP server
+const io = require("socket.io")(httpServer, {
+  cors: {
+    origin: "http://localhost:3001",
+  },
+});
+global._io = io;
+global._io.on("connection", CommentServices.connection);
+// Cấu hình Socket.IO
+// io.on("connection", (socket) => {
+//   console.log("A user connected");
+
+//   // Xử lý bình luận ở đây
+//   socket.on("comment", (data) => {
+//     // Xử lý bình luận và gửi lại cho tất cả người dùng khác
+//     io.emit("newComment", data);
+//   });
+
+//   // // Xử lý bình luận ở đây
+//   // socket.on("ping", (n) => {
+//   //   console.log(n);
+//   // });
+
+//   socket.on("disconnect", () => {
+//     console.log("A user disconnected");
+//   });
+// });
+
+// Khởi tạo và cấu hình socketManager
+// socketManager.initializeSocket(io);
 
 const serviceAccount = require("./src/config/service-firebase-admin.json");
 admin.initializeApp({
@@ -33,10 +66,11 @@ const authRoute = require("./src/api/v1/routes/auth");
 const userRoute = require("./src/api/v1/routes/user");
 const movieRoute = require("./src/api/v1/routes/movie");
 const categoryRoute = require("./src/api/v1/routes/category");
+const commentRoute = require("./src/api/v1/routes/comment");
 const uploadRouter = require("./src/api/v1/controllers/uploadController");
 const AppError = require("./src/api/v1/utils/appError");
 
-const clientRedis = createClient();
+// const clientRedis = createClient();
 dotenv.config();
 
 mongoose.set("strictQuery", false);
@@ -149,6 +183,7 @@ app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/movie", movieRoute);
 app.use("/api/v1/category", categoryRoute);
+app.use("/api/v1/comment", commentRoute);
 app.use("/upload", uploadRouter);
 app.use("/hello", (req, res) => {
   res.send("hello");
@@ -272,5 +307,5 @@ app.all("*", (req, res, next) => {
 
 mongoose.connection.once("open", () => {
   console.log("Connected to MongoDB");
-  app.listen(8000, () => console.log(`Server running on port 8000`));
+  httpServer.listen(8000, () => console.log(`Server running on port 8000`));
 });

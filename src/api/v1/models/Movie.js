@@ -60,6 +60,8 @@ const movieSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    comment: [{ type: mongoose.Types.ObjectId, ref: "Comment" }],
+
     // follows: [
     //   {
     //     type: Schema.Types.ObjectId, //HERE
