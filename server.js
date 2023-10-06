@@ -82,7 +82,7 @@ const corsOptions = {
   credentials: true,
   optionSuccessStatus: 200,
 };
-app.use(cors());
+app.use(cors(corsOptions));
 // Access-Control-Allow-Origin *
 // api.natours.com, front-end natours.com
 // app.use(cors({
@@ -137,6 +137,17 @@ const io = require("socket.io")(httpServer, {
   cors: {
     // origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
     origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    handlePreflightRequest: (req, res) => {
+      const headers = {
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Allow-Origin": "*", //or the specific origin you want to give access to,
+        "Access-Control-Allow-Credentials": true,
+      };
+      res.writeHead(200, headers);
+      res.end();
+    },
+    credentials: true,
   },
 });
 global._io = io;
