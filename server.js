@@ -133,23 +133,30 @@ if (process.env.NODE_ENV === "development") {
 // app.use(morgan("combined"))
 
 // SOCKET
+// const io = require("socket.io")(httpServer, {
+//   cors: {
+//     // origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
+//     origin: "*:*",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     handlePreflightRequest: (req, res) => {
+//       const headers = {
+//         "Access-Control-Allow-Headers": "Content-Type, Authorization",
+//         "Access-Control-Allow-Origin": "*", //or the specific origin you want to give access to,
+//         "Access-Control-Allow-Credentials": true,
+//       };
+//       res.writeHead(200, headers);
+//       res.end();
+//     },
+//     credentials: true,
+//   },
+// });
 const io = require("socket.io")(httpServer, {
   cors: {
-    // origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
-    origin: "*:*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    handlePreflightRequest: (req, res) => {
-      const headers = {
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        "Access-Control-Allow-Origin": "*", //or the specific origin you want to give access to,
-        "Access-Control-Allow-Credentials": true,
-      };
-      res.writeHead(200, headers);
-      res.end();
-    },
-    credentials: true,
+    origin: "*",
   },
 });
+io.set("origins", "*:*");
+io.origins("*:*"); // for latest version
 global._io = io;
 global._io.on("connection", CommentServices.connection);
 
