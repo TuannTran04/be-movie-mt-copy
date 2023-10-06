@@ -82,14 +82,14 @@ const corsOptions = {
   credentials: true,
   optionSuccessStatus: 200,
 };
-app.use(cors(corsOptions));
+app.use(cors());
 // Access-Control-Allow-Origin *
 // api.natours.com, front-end natours.com
 // app.use(cors({
 //   origin: 'https://www.natours.com'
 // }))
 
-app.options("*", cors());
+// app.options("*", cors());
 // app.options('/api/v1/tours/:id', cors());
 
 // app.all("/", function (req, res, next) {
@@ -137,8 +137,6 @@ const io = require("socket.io")(httpServer, {
   cors: {
     // origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
     origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
   },
 });
 global._io = io;
