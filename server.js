@@ -136,7 +136,7 @@ if (process.env.NODE_ENV === "development") {
 const io = require("socket.io")(httpServer, {
   cors: {
     // origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
-    origin: "*",
+    origin: "*:*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     handlePreflightRequest: (req, res) => {
       const headers = {
