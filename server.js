@@ -25,13 +25,7 @@ const CommentServices = require("./src/api/v1/services/comment");
 
 const app = express();
 const httpServer = require("http").createServer(app); // Tạo HTTP server
-const io = require("socket.io")(httpServer, {
-  cors: {
-    origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
-  },
-});
-global._io = io;
-global._io.on("connection", CommentServices.connection);
+
 // Cấu hình Socket.IO
 // io.on("connection", (socket) => {
 //   console.log("A user connected");
@@ -130,6 +124,14 @@ app.options("*", cors());
 
 // Set security HTTP headers
 app.use(helmet());
+
+const io = require("socket.io")(httpServer, {
+  cors: {
+    origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
+  },
+});
+global._io = io;
+global._io.on("connection", CommentServices.connection);
 
 // Development logging
 if (process.env.NODE_ENV === "development") {
