@@ -128,7 +128,7 @@ app.use(helmet());
 const io = require("socket.io")(httpServer, {
   cors: {
     // origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
-    origin: "https://fe-shotflix.vercel.app/",
+    origin: "*",
   },
 });
 global._io = io;
