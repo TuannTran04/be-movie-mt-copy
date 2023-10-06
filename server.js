@@ -27,7 +27,7 @@ const app = express();
 const httpServer = require("http").createServer(app); // Tạo HTTP server
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: "http://localhost:3001",
+    origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
   },
 });
 global._io = io;
