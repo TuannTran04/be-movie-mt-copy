@@ -155,9 +155,11 @@ const io = require("socket.io")(httpServer, {
     origin: "*",
   },
 });
-io.set("origins", "*:*");
-io.origins("*:*"); // for latest version
+// io.set("origins", "*:*");
+// io.origins("*:*"); // for latest version
 global._io = io;
+global._io.set("origins", "*:*");
+global._io.origins("*:*");
 global._io.on("connection", CommentServices.connection);
 
 // Limit requests from same API
