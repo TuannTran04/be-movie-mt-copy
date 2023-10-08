@@ -152,8 +152,8 @@ if (process.env.NODE_ENV === "development") {
 // });
 const io = require("socket.io")(httpServer, {
   cors: {
-    // origin: "*",
-    origin: "https://fe-shotflix.vercel.app",
+    origin: "*",
+    // origin: "https://fe-shotflix.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },

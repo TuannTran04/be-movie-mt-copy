@@ -71,11 +71,9 @@ const commentController = {
         },
       ]);
 
-      // Gửi sự kiện Socket.io cho tất cả các clients khi có comment mới
-      _io.emit("new-comment", populatedComment);
-
       res.status(200).json({
         message: "Thêm bình luận thành công",
+        data: populatedComment,
       });
     } catch (err) {
       console.log("check err", err);
@@ -119,10 +117,9 @@ const commentController = {
         },
       ]);
 
-      _io.emit("new-reply-comment", populatedComment);
-
       res.status(200).json({
         message: "Trả lời bình luận thành công",
+        data: populatedComment,
       });
     } catch (err) {
       console.log("check err", err);
@@ -163,10 +160,9 @@ const commentController = {
         },
       ]);
 
-      _io.emit("comment-updated", populatedComment);
-
       res.status(200).json({
         message: "Chỉnh sửa bình luận thành công",
+        data: populatedComment,
       });
     } catch (err) {
       console.log("check err", err);
@@ -203,10 +199,9 @@ const commentController = {
         },
       ]);
 
-      _io.emit("reply-comment-updated", populatedComment);
-
       res.status(200).json({
         message: "Chỉnh sửa bình luận thành công",
+        data: populatedComment,
       });
     } catch (err) {
       console.log("check err", err);
@@ -230,9 +225,10 @@ const commentController = {
         throw new AppError("Không có bình luận để xóa", 401);
       }
 
-      _io.emit("comment-deleted", req.params.commentId);
-
-      return res.status(200).json("Đã xóa bình luận");
+      return res.status(200).json({
+        message: "Đã xóa bình luận",
+        data: req.params.commentId,
+      });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -256,9 +252,11 @@ const commentController = {
       }
 
       console.log(">>> deleteReplyComment 2 <<<", commentId, commentParentId);
-      _io.emit("reply-comment-deleted", { commentId, commentParentId });
 
-      return res.status(200).json("Đã xóa bình luận");
+      return res.status(200).json({
+        message: "Đã xóa bình luận",
+        data: { commentId, commentParentId },
+      });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
