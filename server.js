@@ -61,6 +61,7 @@ const userRoute = require("./src/api/v1/routes/user");
 const movieRoute = require("./src/api/v1/routes/movie");
 const categoryRoute = require("./src/api/v1/routes/category");
 const commentRoute = require("./src/api/v1/routes/comment");
+const notifyRoute = require("./src/api/v1/routes/notification");
 const uploadRouter = require("./src/api/v1/controllers/uploadController");
 const AppError = require("./src/api/v1/utils/appError");
 
@@ -209,6 +210,7 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/movie", movieRoute);
 app.use("/api/v1/category", categoryRoute);
 app.use("/api/v1/comment", commentRoute);
+app.use("/api/v1/notify", notifyRoute);
 app.use("/upload", uploadRouter);
 app.use("/hello", (req, res) => {
   res.send("hello");
