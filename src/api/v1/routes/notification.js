@@ -8,6 +8,10 @@ const router = require("express").Router();
 
 //GET ALL NOTIFY BY USER ID
 router.get("/:recipientId", notifyController.getAllNotifyByUserId);
+router.get(
+  "/get-unread-notify/:recipientId",
+  notifyController.getAllUnreadNotifyByUserId
+);
 
 router.post("/add-notify", notifyController.addNotify);
 // router.post("/add-reply-comment", notifyController.addReplyComment);

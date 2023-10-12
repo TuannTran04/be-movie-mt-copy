@@ -168,7 +168,8 @@ router.get("/videoHLS/:specificFolder/:videoName", async (req, res) => {
 
     if (true) {
       res.writeHead(200, {
-        "Content-Type": "application/x-mpegURL",
+        // "Content-Type": "application/x-mpegURL",
+        "Content-Type": videoType.toString(),
         "Content-Length": videoSize.toString(),
       });
 

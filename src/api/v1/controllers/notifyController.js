@@ -9,14 +9,20 @@ const commentController = {
   getAllNotifyByUserId: async (req, res) => {
     const { recipientId } = req.params;
     console.log(">>> getAllNotifyByUserId <<<", recipientId);
+    const { page, batchSize } = req.query;
+    console.log(">>> getAllNotifyByUserId <<<", page, batchSize);
     try {
       let query = {};
       if (recipientId) {
         query.recipient = new ObjectId(recipientId);
       }
 
+      const skip = (parseInt(page) - 1) * parseInt(batchSize);
+
       const notifyByRecipientId = await Notification.find(query)
         .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(parseInt(batchSize))
         .populate({
           path: "movie", // Field cần populate
           select: "slug photo", // Chỉ lấy trường 'username' và 'avatar' của user
@@ -30,10 +36,44 @@ const commentController = {
           select: "username avatar", // Chỉ lấy trường 'username' và 'avatar' của user
         });
 
+      const unreadNotifyCount = await Notification.countDocuments({
+        recipient: new ObjectId(recipientId),
+        read: false,
+      });
+      const totalCount = await Notification.countDocuments(query);
+
       res.status(200).json({
         code: 200,
         mes: "lấy comment thành công",
         data: notifyByRecipientId,
+        count: { unreadNotifyCount, totalCount },
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
+  getAllUnreadNotifyByUserId: async (req, res) => {
+    const { recipientId } = req.params;
+    console.log(">>> getAllUnreadNotifyByUserId <<<", recipientId);
+    const { page, batchSize } = req.query;
+    console.log(">>> getAllUnreadNotifyByUserId <<<", page, batchSize);
+    try {
+      let query = {};
+      if (recipientId) {
+        query.recipient = new ObjectId(recipientId);
+      }
+
+      const unreadNotifyCount = await Notification.countDocuments({
+        recipient: new ObjectId(recipientId),
+        read: false,
+      });
+      const totalCount = await Notification.countDocuments(query);
+
+      res.status(200).json({
+        code: 200,
+        mes: "lấy số lượng thành công",
+        data: { unreadNotifyCount, totalCount },
       });
     } catch (err) {
       console.log(err);

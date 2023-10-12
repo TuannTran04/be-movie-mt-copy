@@ -8,7 +8,7 @@ let userId = "";
 class SocketServices {
   //connection socket
   connection(socket) {
-    console.log(`User CONNECT id is ${socket.id}`);
+    // console.log(`User CONNECT id is ${socket.id}`);
     // console.log(`User CONNECT id is ${socket}`);
 
     // Lấy token từ header của handshake
@@ -33,7 +33,7 @@ class SocketServices {
         );
         userId = decodedToken.id;
         // console.log(userId);
-        console.log(decodedToken);
+        // console.log(decodedToken);
 
         if (userId) {
           // Lưu thông tin kết nối socket của người dùng
@@ -41,11 +41,11 @@ class SocketServices {
           connectedUsers.set(userId, socket);
         }
 
-        console.log(
-          ">>> connectedUsers socket <<<",
-          // Object.keys(connectedUsers).length
-          connectedUsers.size
-        );
+        // console.log(
+        //   ">>> connectedUsers socket <<<",
+        //   // Object.keys(connectedUsers).length
+        //   connectedUsers.size
+        // );
         // console.log(">>> connectedUsers socket <<<", connectedUsers);
         // console.log(">>> connectedUsers socket <<<", connectedUsers[userId]);
       } catch (error) {
@@ -57,9 +57,9 @@ class SocketServices {
     }
 
     socket.on("disconnect", () => {
-      console.log(`User disconnect id is ${socket.id}`);
+      // console.log(`User disconnect id is ${socket.id}`);
 
-      console.log("disconnect", userId);
+      // console.log("disconnect", userId);
       if (false) {
         // Thực hiện các xử lý sau khi người dùng bị ngắt kết nối
         // Ví dụ: xóa người dùng khỏi danh sách connectedUsers
