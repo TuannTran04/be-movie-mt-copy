@@ -68,12 +68,16 @@ const commentController = {
         recipient: new ObjectId(recipientId),
         read: false,
       });
+      const unseenNotifyCount = await Notification.countDocuments({
+        recipient: new ObjectId(recipientId),
+        seen: false,
+      });
       const totalCount = await Notification.countDocuments(query);
 
       res.status(200).json({
         code: 200,
         mes: "lấy số lượng thành công",
-        data: { unreadNotifyCount, totalCount },
+        data: { unreadNotifyCount, unseenNotifyCount, totalCount },
       });
     } catch (err) {
       console.log(err);
@@ -170,6 +174,35 @@ const commentController = {
       res.status(200).json({
         message: "Chỉnh sửa thành công",
         data: populatedNotify,
+      });
+    } catch (err) {
+      console.log("check err", err);
+      // throw new AppError(err.message, err.status);
+      res.status(404).json({
+        code: 404,
+        mes: "Lỗi!!!!",
+        err,
+      });
+    }
+  },
+  updateNotifySeen: async (req, res) => {
+    console.log(">>> updateNotifySeen: <<<", req.body);
+    const { userId } = req.body;
+    try {
+      const updatedNotifySeen = await Notification.updateMany(
+        { recipient: userId },
+        { $set: { seen: true } },
+        { new: true }
+      );
+
+      console.log(updatedNotifySeen);
+
+      if (!updatedNotifySeen) {
+        throw new AppError("Không có thông báo để cập nhật", 401);
+      }
+
+      res.status(200).json({
+        message: "Chỉnh sửa thành công",
       });
     } catch (err) {
       console.log("check err", err);

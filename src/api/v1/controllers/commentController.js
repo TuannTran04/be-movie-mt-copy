@@ -5,44 +5,41 @@ const AppError = require("../utils/appError");
 const _ = require("lodash");
 const { ObjectId } = require("mongodb");
 
-// const { io } = require("../../../../server");
-
-// Cấu hình Socket.IO
-// const io = require("socket.io")();
-// io.on("connection", (client) => {
-//   console.log(client);
-// });
-// io.listen(8000);
-
-// const socketManager = require("../utils/socketRT");
-
 const commentController = {
   getAllCommentByMovieId: async (req, res) => {
     const { movieId } = req.params;
     console.log(">>> getAllCommentByMovieId <<<", movieId);
+    const { page, batchSize } = req.query;
+    console.log(">>> getAllCommentByMovieId <<<", page, batchSize);
     try {
       let query = {};
       if (movieId) {
         query.movie = new ObjectId(movieId);
       }
 
+      const skip = (parseInt(page) - 1) * parseInt(batchSize);
+
       const commentsByMovieId = await Comment.find(query)
         .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(parseInt(batchSize))
         .populate({
           path: "user", // Field cần populate
-          select: "username avatar", // Chỉ lấy trường 'username' và 'avatar' của user
+          select: "username avatar isAdmin", // Chỉ lấy trường 'username' và 'avatar' của user
         })
         .populate({
           path: "replies.user", // Field cần populate cho các user trong replies
-          select: "username avatar", // Chỉ lấy trường 'username' và 'avatar' của user
+          select: "username avatar isAdmin", // Chỉ lấy trường 'username' và 'avatar' của user
         });
 
       // _io.emit("cmt", "haha");
+      const totalCount = await Comment.countDocuments(query);
 
       res.status(200).json({
         code: 200,
         mes: "lấy comment thành công",
         data: commentsByMovieId,
+        count: totalCount,
       });
     } catch (err) {
       console.log(err);
@@ -67,7 +64,7 @@ const commentController = {
       const populatedComment = await Comment.populate(comment, [
         {
           path: "user",
-          select: "username avatar",
+          select: "username avatar isAdmin",
         },
       ]);
 
@@ -109,11 +106,11 @@ const commentController = {
       const populatedComment = await Comment.populate(comment, [
         {
           path: "user",
-          select: "username avatar",
+          select: "username avatar isAdmin",
         },
         {
           path: "replies.user",
-          select: "username avatar",
+          select: "username avatar isAdmin",
         },
       ]);
 
@@ -152,11 +149,11 @@ const commentController = {
       const populatedComment = await Comment.populate(updatedComment, [
         {
           path: "user",
-          select: "username avatar",
+          select: "username avatar isAdmin",
         },
         {
           path: "replies.user",
-          select: "username avatar",
+          select: "username avatar isAdmin",
         },
       ]);
 
@@ -191,11 +188,11 @@ const commentController = {
       const populatedComment = await Comment.populate(comment, [
         {
           path: "user",
-          select: "username avatar",
+          select: "username avatar isAdmin",
         },
         {
           path: "replies.user",
-          select: "username avatar",
+          select: "username avatar isAdmin",
         },
       ]);
 

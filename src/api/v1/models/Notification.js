@@ -23,6 +23,10 @@ const notificationSchema = new mongoose.Schema(
       type: Boolean,
       default: false, // Ban đầu thông báo chưa đọc
     },
+    seen: {
+      type: Boolean,
+      default: false, // Ban đầu thông báo chưa xem
+    },
   },
   { timestamps: true }
 );

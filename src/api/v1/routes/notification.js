@@ -18,6 +18,7 @@ router.post("/add-notify", notifyController.addNotify);
 
 // //UPDATE NOTIFY
 router.put("/update-notify-read", notifyController.updateNotifyRead);
+router.put("/update-notify-seen", notifyController.updateNotifySeen);
 // router.put("/update-reply-comment", notifyController.updateReplyComment);
 
 // //DELETE COMMENT
