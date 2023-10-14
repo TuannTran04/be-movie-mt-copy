@@ -52,7 +52,7 @@ const httpServer = require("http").createServer(app); // Tạo HTTP server
 const serviceAccount = require("./src/config/service-firebase-admin.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  storageBucket: "prj-cv-film.appspot.com", // Thay thế bằng ID ứng dụng Firebase của bạn
+  storageBucket: "shotflix-ae87c.appspot.com", // Thay thế bằng ID ứng dụng Firebase của bạn
   // databaseURL: "https://movie-the-stone-d9f38-default-rtdb.firebaseio.com",
 });
 
