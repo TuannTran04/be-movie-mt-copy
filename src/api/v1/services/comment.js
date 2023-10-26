@@ -50,7 +50,7 @@ class SocketServices {
         // console.log(">>> connectedUsers socket <<<", connectedUsers[userId]);
       } catch (error) {
         // Xử lý lỗi xác thực token
-        console.error("Lỗi xác thực token:", error);
+        console.error("Lỗi xác thực token cmt:", error);
         socket.disconnect(); // Ngắt kết nối
         return;
       }
@@ -78,9 +78,9 @@ class SocketServices {
       console.log(`data is:::${data}`);
       socket.broadcast.emit("new-comment-user", data);
     });
-    socket.on("new-reply-comment", (data) => {
-      console.log(`data is:::${data}`);
-      socket.broadcast.emit("new-reply-comment-user", data);
+    socket.on("new-reply-comment", (data, commentId) => {
+      console.log(`data is:::${data}, ${commentId}`);
+      socket.broadcast.emit("new-reply-comment-user", data, commentId);
     });
     socket.on("comment-updated", (data) => {
       console.log(`data is:::${data}`);

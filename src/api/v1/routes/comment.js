@@ -8,6 +8,10 @@ const router = require("express").Router();
 
 //GET ALL COMMENT BY MOVIE ID
 router.get("/:movieId", commentController.getAllCommentByMovieId);
+router.get(
+  "/:commentId/reply-comment",
+  commentController.getReplyCommentByCommentId
+);
 
 router.post("/add-comment", commentController.addComment);
 router.post("/add-reply-comment", commentController.addReplyComment);

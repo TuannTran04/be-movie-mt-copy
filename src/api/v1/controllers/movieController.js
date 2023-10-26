@@ -4,30 +4,101 @@ const AppError = require("../utils/appError");
 const _ = require("lodash");
 const { ObjectId } = require("mongodb");
 const logEvents = require("../helpers/logEvents");
+// const redis = require("../connections/init.redis");
 
 const movieController = {
   updateViews: async (req, res) => {
-    const { movieId } = req.body;
+    const { movieId, userId, durationVideo } = req.body;
+    console.log(">>> updateViews movieId <<<", movieId);
+    console.log(">>> updateViews userId <<<", userId);
+    console.log(">>> updateViews durationVideo <<<", durationVideo);
+
     try {
-      const film = await Movie.findById({ _id: movieId });
-      if (film) {
-        // console.log(typeof(film.views))
-        let newViews = film.views + 1;
-        await Movie.updateOne({ views: newViews });
-        return res
-          .status(200)
-          .json({ code: 200, mes: "update views successfully" });
-      } else throw AppError("do not have film", 404);
+      // Tìm bản ghi phim theo ID và tăng trường views lên 1
+      const updatedViewsMovie = await Movie.findOneAndUpdate(
+        { _id: movieId },
+        { $inc: { views: 1 } }, // Tăng trường views lên 1
+        { new: true } // Trả về bản ghi đã được cập nhật
+      );
+
+      if (!updatedViewsMovie) {
+        throw new Error("Không tìm thấy bản ghi phim");
+      }
+
+      return res
+        .status(200)
+        .json({ code: 200, mes: "Cập nhật lượt xem thành công" });
     } catch (err) {
-      console.log("check err", err);
-      // throw new AppError(err.message, err.status);
+      console.log("Lỗi khi cập nhật lượt xem:", err);
       res.status(404).json({
         code: 404,
-        mes: "Lỗi!!!!",
-        err,
+        mes: "Lỗi khi cập nhật lượt xem",
+        err: err.message,
       });
     }
   },
+  // updateViews: async (req, res) => {
+  //   const { movieId, userId, durationVideo } = req.body;
+  //   console.log(">>> updateViews movieId <<<", movieId);
+  //   console.log(">>> updateViews userId <<<", userId);
+  //   console.log(">>> updateViews durationVideo <<<", durationVideo);
+  //   const key = `video::${movieId}`;
+  //   try {
+  //     // Kiểm tra sự tồn tại của key trong Redis
+  //     redis.exists(key, async (err, result) => {
+  //       if (err) {
+  //         console.log("Lỗi khi kiểm tra sự tồn tại của key:", err);
+  //         throw new AppError(err, 401);
+  //       } else {
+  //         if (result === 1) {
+  //           console.log("Key tồn tại trong Redis");
+
+  //           const keyUserId = `user:${userId}-${key}`;
+  //           const isOk = await redis.set(
+  //             keyUserId,
+  //             "hits",
+  //             "NX",
+  //             "EX",
+  //             parseInt(durationVideo / 2)
+  //             // 60
+  //           );
+
+  //           console.log(">>> keyUserId <<<", isOk);
+
+  //           if (isOk === "OK") {
+  //             await redis.incrby(`${key}`, 1);
+  //             let viewsRedis = await redis.get(`${key}`);
+  //             console.log(">>> keyVideoId after OK <<<", viewsRedis);
+  //             viewsRedis = parseInt(viewsRedis);
+
+  //             const updatedViewsMovie = await Movie.findOneAndUpdate(
+  //               { _id: movieId },
+  //               {
+  //                 $set: { views: viewsRedis },
+  //               }
+  //             );
+  //             console.log(">>> updatedViewsMovie <<<", updatedViewsMovie);
+  //           }
+
+  //           return res
+  //             .status(200)
+  //             .json({ code: 200, mes: "update views successfully" });
+  //         } else {
+  //           console.log("Key không tồn tại trong Redis");
+  //           throw new AppError("Không có phim để cập nhật", 401);
+  //         }
+  //       }
+  //     });
+  //   } catch (err) {
+  //     console.log("check err", err);
+  //     // throw new AppError(err.message, err.status);
+  //     res.status(404).json({
+  //       code: 404,
+  //       mes: "Lỗi!!!!",
+  //       err,
+  //     });
+  //   }
+  // },
   getAllMovies: async (req, res) => {
     try {
       let movie;
@@ -297,7 +368,11 @@ const movieController = {
       if (!newMovie) {
         throw new AppError("not have new movie", 401);
       }
+
       const movie = await newMovie.save();
+      const keyVideoId = await redis.set(`video::${movie._id}`, 0);
+
+      console.log(">>> keyVideoId <<<", keyVideoId);
       res.status(200).json({
         message: "Thêm phim thành công",
         // data: movie,

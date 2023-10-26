@@ -21,6 +21,10 @@ const commentSchema = new mongoose.Schema(
         createdAt: { type: Date },
       },
     ],
+    repliesCount: {
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true }
 );

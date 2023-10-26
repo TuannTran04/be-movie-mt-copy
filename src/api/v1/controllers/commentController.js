@@ -27,12 +27,17 @@ const commentController = {
           path: "user", // Field cần populate
           select: "username avatar isAdmin", // Chỉ lấy trường 'username' và 'avatar' của user
         })
+        // .lean();
         .populate({
           path: "replies.user", // Field cần populate cho các user trong replies
           select: "username avatar isAdmin", // Chỉ lấy trường 'username' và 'avatar' của user
         });
 
-      // _io.emit("cmt", "haha");
+      // Reset field 'replies' to an empty array for each comment
+      // commentsByMovieId.forEach((comment) => {
+      //   comment.replies = [];
+      // });
+
       const totalCount = await Comment.countDocuments(query);
 
       res.status(200).json({
@@ -40,6 +45,43 @@ const commentController = {
         mes: "lấy comment thành công",
         data: commentsByMovieId,
         count: totalCount,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
+  getReplyCommentByCommentId: async (req, res) => {
+    const { commentId } = req.params;
+    console.log(">>> getReplyCommentByCommentId <<<", commentId);
+    const { page } = req.query;
+    console.log(">>> getReplyCommentByCommentId <<<", page);
+    try {
+      let query = {};
+      if (commentId) {
+        query._id = new ObjectId(commentId);
+      }
+
+      const startIndex = (parseInt(page) - 1) * 1; // Lấy 1 phần tử tại vị trí chỉ định
+      // const endIndex = startIndex + 1;
+      // const replies = comment.replies.slice(startIndex, endIndex);
+      // console.log(startIndex, endIndex);
+
+      const comment = await Comment.findById(query, {
+        replies: { $slice: [startIndex, 1] },
+      }).populate({
+        path: "replies.user", // Field cần populate cho các user trong replies
+        select: "username avatar isAdmin", // Chỉ lấy trường 'username' và 'avatar' của user
+      });
+      const { replies, ...others } = comment._doc;
+
+      console.log(">>> replies: <<<", comment);
+
+      res.status(200).json({
+        code: 200,
+        mes: "lấy comment thành công",
+        data: replies,
+        // count: totalCount,
       });
     } catch (err) {
       console.log(err);
@@ -95,7 +137,7 @@ const commentController = {
       // Tìm comment dựa trên ID và thêm reply vào mảng replies của comment
       const comment = await Comment.findByIdAndUpdate(
         commentId,
-        { $push: { replies: reply } },
+        { $push: { replies: reply }, $inc: { repliesCount: 1 } },
         { new: true }
       );
 
@@ -113,10 +155,12 @@ const commentController = {
           select: "username avatar isAdmin",
         },
       ]);
+      // const replyComment = populatedComment.replies[comment.replies.length - 1];
 
       res.status(200).json({
         message: "Trả lời bình luận thành công",
         data: populatedComment,
+        // commentId: commentId,
       });
     } catch (err) {
       console.log("check err", err);
@@ -240,6 +284,7 @@ const commentController = {
         commentParentId,
         {
           $pull: { replies: { _id: commentId } }, // Xóa reply từ mảng replies
+          $inc: { repliesCount: -1 },
         },
         { new: true } // Trả về comment sau khi đã xóa reply
       );
