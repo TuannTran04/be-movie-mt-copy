@@ -80,11 +80,38 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
+// const corsOptions = {
+//   origin: "*",
+//   credentials: true,
+//   // optionSuccessStatus: 200,
+// };
+const allowedOrigins = [
+  "http://localhost:3001",
+  "http://localhost:3002",
+  "https://fe-shotflix.vercel.app/",
+  "https://fe-shotflix.vercel.app",
+];
 const corsOptions = {
-  origin: "*",
-  credentials: true,
-  optionSuccessStatus: 200,
+  origin: (origin, callback) => {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  optionsSuccessStatus: 200,
 };
+
+const credentials = (req, res, next) => {
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Credentials", true);
+  }
+  next();
+};
+
+app.use(credentials);
+
 app.use(cors(corsOptions));
 // Access-Control-Allow-Origin *
 // api.natours.com, front-end natours.com
@@ -111,19 +138,19 @@ app.use(cors(corsOptions));
 
 // Middleware cho CORS
 // Cấu hình CORS
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, OPTIONS"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Range, Authorization, X-Requested-Width"
-  );
-  res.setHeader("Access-Control-Allow-Credentials", true);
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   res.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "GET, POST, PUT, DELETE, OPTIONS"
+//   );
+//   res.setHeader(
+//     "Access-Control-Allow-Headers",
+//     "Content-Type, Range, Authorization, X-Requested-Width"
+//   );
+//   res.setHeader("Access-Control-Allow-Credentials", true);
+//   next();
+// });
 
 // Set security HTTP headers
 app.use(helmet());
@@ -153,18 +180,18 @@ if (process.env.NODE_ENV === "development") {
 //     credentials: true,
 //   },
 // });
-const io = require("socket.io")(httpServer, {
-  cors: {
-    origin: "*",
-    // origin: "https://fe-shotflix.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  },
-});
-// io.set("origins", "*:*");
-// io.origins("*:*"); // for latest version
-global._io = io;
-global._io.on("connection", CommentServices.connection);
+// const io = require("socket.io")(httpServer, {
+//   cors: {
+//     origin: "*",
+//     // origin: "https://fe-shotflix.vercel.app",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   },
+// });
+// // io.set("origins", "*:*");
+// // io.origins("*:*"); // for latest version
+// global._io = io;
+// global._io.on("connection", CommentServices.connection);
 
 // Limit requests from same API
 const limiter = rateLimit({

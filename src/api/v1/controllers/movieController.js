@@ -370,7 +370,7 @@ const movieController = {
       }
 
       const movie = await newMovie.save();
-      const keyVideoId = await redis.set(`video::${movie._id}`, 0);
+      // const keyVideoId = await redis.set(`video::${movie._id}`, 0);
 
       console.log(">>> keyVideoId <<<", keyVideoId);
       res.status(200).json({
