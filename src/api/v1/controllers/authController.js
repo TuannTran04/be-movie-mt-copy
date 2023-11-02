@@ -158,7 +158,7 @@ const authController = {
         isAdmin: user.isAdmin,
       },
       process.env.JWT_ACCESS_KEY,
-      { expiresIn: "10s" }
+      { expiresIn: "1d" }
     );
   },
 
@@ -260,14 +260,15 @@ const authController = {
         });
 
         // console.log(">>> USER _DOC: <<<", user._doc);
-        const { password, ...others } = foundUser._doc;
+        const { password, refreshToken, loveMovie, markBookMovie, ...others } =
+          foundUser._doc;
         return res.status(200).json({
           code: 200,
           mes: "Đăng nhập thành công",
           data: {
             ...others,
             accessToken,
-            newRefreshToken,
+            // newRefreshToken,
           },
         });
       }

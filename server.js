@@ -180,18 +180,19 @@ if (process.env.NODE_ENV === "development") {
 //     credentials: true,
 //   },
 // });
-// const io = require("socket.io")(httpServer, {
-//   cors: {
-//     origin: "*",
-//     // origin: "https://fe-shotflix.vercel.app",
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-//   },
-// });
-// // io.set("origins", "*:*");
-// // io.origins("*:*"); // for latest version
-// global._io = io;
-// global._io.on("connection", CommentServices.connection);
+
+const io = require("socket.io")(httpServer, {
+  cors: {
+    origin: "*",
+    // origin: "https://fe-shotflix.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  },
+});
+// io.set("origins", "*:*");
+// io.origins("*:*"); // for latest version
+global._io = io;
+global._io.on("connection", CommentServices.connection);
 
 // Limit requests from same API
 const limiter = rateLimit({

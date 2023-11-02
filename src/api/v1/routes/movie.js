@@ -28,7 +28,7 @@ router.post("/add-favorite-movie", movieController.addFavoriteMovie);
 router.post("/delete-favorite-movie", movieController.deleteFavoriteMovie);
 router.post("/add-bookmark-movie", movieController.addBookmarkMovie);
 router.post("/delete-bookmark-movie", movieController.deleteBookmarkMovie);
-router.put("/rating", verifyToken, movieController.rating);
+router.post("/rating", verifyToken, movieController.rating);
 
 //UPDATE MOVIE
 router.put(

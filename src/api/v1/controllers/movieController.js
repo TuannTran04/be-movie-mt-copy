@@ -483,11 +483,12 @@ const movieController = {
     }
   },
   addFavoriteMovie: async (req, res) => {
-    let { userId, movieId, isLove } = req.body;
+    let { userId, movieId } = req.body;
     console.log(">>> addFavoriteMovie: <<<", req.body);
     try {
       let result;
       let message;
+      let newMovie;
 
       const user = await User.findOne({ _id: userId });
       if (!user) {
@@ -501,6 +502,7 @@ const movieController = {
           { _id: userId },
           { $push: { loveMovie: movieId } }
         );
+        newMovie = await Movie.findOne({ _id: movieId });
         message = "Thêm vào danh sách yêu thích thành công";
       } else if (movieExists) {
         // result = await User.updateOne(
@@ -511,6 +513,7 @@ const movieController = {
       }
 
       return res.status(200).json({
+        newMovie,
         result,
         message,
       });
@@ -558,6 +561,7 @@ const movieController = {
     try {
       let result;
       let message;
+      let newMovie;
 
       const user = await User.findOne({ _id: userId });
       if (!user) {
@@ -573,6 +577,7 @@ const movieController = {
           { _id: userId },
           { $push: { markBookMovie: movieId } }
         );
+        newMovie = await Movie.findOne({ _id: movieId });
         message = "Thêm vào danh sách xem sau thành công";
       } else if (movieExists) {
         // result = await User.updateOne(
@@ -583,6 +588,7 @@ const movieController = {
       }
 
       return res.status(200).json({
+        newMovie,
         result,
         message,
       });
