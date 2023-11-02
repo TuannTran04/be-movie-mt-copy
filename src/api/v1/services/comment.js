@@ -65,7 +65,7 @@ class SocketServices {
         // console.log(">>> connectedUsers socket <<<", connectedUsers[userId]);
       } catch (error) {
         // Xử lý lỗi xác thực token
-        console.error("Lỗi xác thực token cmt service:", error);
+        console.error("Lỗi xác thực token cmt servicee:", error);
         socket.disconnect(); // Ngắt kết nối
         return;
       }
