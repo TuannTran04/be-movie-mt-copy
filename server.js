@@ -165,34 +165,14 @@ if (process.env.NODE_ENV === "development") {
 // SOCKET
 // const io = require("socket.io")(httpServer, {
 //   cors: {
-//     // origin: ["http://localhost:3001", "https://fe-shotflix.vercel.app"],
-//     origin: "*:*",
+//     origin: "*",
+//     // origin: "https://fe-shotflix.vercel.app",
 //     methods: ["GET", "POST", "PUT", "DELETE"],
-//     handlePreflightRequest: (req, res) => {
-//       const headers = {
-//         "Access-Control-Allow-Headers": "Content-Type, Authorization",
-//         "Access-Control-Allow-Origin": "*", //or the specific origin you want to give access to,
-//         "Access-Control-Allow-Credentials": true,
-//       };
-//       res.writeHead(200, headers);
-//       res.end();
-//     },
 //     credentials: true,
 //   },
 // });
-
-const io = require("socket.io")(httpServer, {
-  cors: {
-    origin: "*",
-    // origin: "https://fe-shotflix.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  },
-});
-// io.set("origins", "*:*");
-// io.origins("*:*"); // for latest version
-global._io = io;
-global._io.on("connection", CommentServices.connection);
+// global._io = io;
+// global._io.on("connection", CommentServices.connection);
 
 // Limit requests from same API
 const limiter = rateLimit({

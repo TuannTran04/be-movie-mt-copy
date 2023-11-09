@@ -28,6 +28,7 @@ router.post("/add-favorite-movie", movieController.addFavoriteMovie);
 router.post("/delete-favorite-movie", movieController.deleteFavoriteMovie);
 router.post("/add-bookmark-movie", movieController.addBookmarkMovie);
 router.post("/delete-bookmark-movie", movieController.deleteBookmarkMovie);
+
 router.post("/rating", verifyToken, movieController.rating);
 
 //UPDATE MOVIE
@@ -383,5 +384,175 @@ router.get("/subtitles/:subName", async (req, res) => {
     res.status(500).end();
   }
 });
+
+router.get("/poster/:specificFolder/:imgName", async (req, res) => {
+  const imgName = req.params.imgName; // Thay thế bằng tên tệp video trên Firebase Storage
+  // const specificFolder = req.query.specificFolder;
+  const specificFolder = req.params.specificFolder;
+  console.log(">>> imgName <<<", imgName);
+  console.log(">>> specificFolder <<<", specificFolder);
+
+  // Tạo một đường dẫn tới thư mục ảo 'files'
+  const folder = `files/${specificFolder}/`;
+  const imgPath = folder + imgName;
+  console.log(">>> imgPath <<<", imgPath);
+
+  const bucket = admin.storage().bucket();
+  const videoFile = bucket.file(imgPath);
+
+  try {
+    const [fileExists] = await videoFile.exists();
+    console.log(">>> fileExists <<<", fileExists);
+    if (!fileExists) {
+      console.log(">>> fileExists <<<", fileExists);
+      res.status(404).send("File not found");
+      return;
+    }
+
+    const [metadata] = await videoFile.getMetadata();
+
+    const videoSize = metadata.size;
+    const videoType = metadata.contentType;
+    console.log(">>> videoType <<<", videoType);
+
+    if (true) {
+      res.writeHead(200, {
+        // "Content-Type": "application/x-mpegURL",
+        "Content-Type": videoType.toString(),
+        "Content-Length": videoSize.toString(),
+      });
+
+      const readStream = videoFile.createReadStream();
+      readStream.pipe(res);
+    } else {
+      const headers = {
+        "Content-Length": videoSize,
+        "Content-Type": videoType,
+      };
+
+      res.writeHead(200, headers);
+      videoFile.createReadStream().pipe(res);
+    }
+  } catch (error) {
+    console.error("Lỗi khi tải tệp HLS từ Firebase Storage:", error);
+    res.status(500).send("Lỗi khi tải tệp HLS từ Firebase Storage");
+  }
+});
+
+router.get("/poster/:specificFolder/:imgFile/:imgName", async (req, res) => {
+  // const specificFolder = req.query.specificFolder;
+  const specificFolder = req.params.specificFolder;
+  const imgFile = req.params.imgFile;
+  const imgName = req.params.imgName;
+  console.log(">>> imgName <<<", imgName);
+  console.log(">>> specificFolder <<<", specificFolder);
+
+  // Tạo một đường dẫn tới thư mục ảo 'files'
+  const folder = `files/${specificFolder}/${imgFile}/`;
+
+  const imgPath = folder + imgName;
+  console.log(">>> imgPath <<<", imgPath);
+
+  const bucket = admin.storage().bucket();
+  const videoFile = bucket.file(imgPath);
+
+  try {
+    const [fileExists] = await videoFile.exists();
+    console.log(">>> fileExists <<<", fileExists);
+    if (!fileExists) {
+      console.log(">>> fileExists <<<", fileExists);
+      res.status(404).send("File not found");
+      return;
+    }
+
+    const [metadata] = await videoFile.getMetadata();
+
+    const videoSize = metadata.size;
+    const videoType = metadata.contentType;
+    console.log(">>> videoType <<<", videoType);
+
+    if (true) {
+      res.writeHead(200, {
+        // "Content-Type": "application/x-mpegURL",
+        "Content-Type": videoType.toString(),
+        "Content-Length": videoSize.toString(),
+      });
+
+      const readStream = videoFile.createReadStream();
+      readStream.pipe(res);
+    } else {
+      const headers = {
+        "Content-Length": videoSize,
+        "Content-Type": videoType,
+      };
+
+      res.writeHead(200, headers);
+      videoFile.createReadStream().pipe(res);
+    }
+  } catch (error) {
+    console.error("Lỗi khi tải tệp HLS từ Firebase Storage:", error);
+    res.status(500).send("Lỗi khi tải tệp HLS từ Firebase Storage");
+  }
+});
+
+router.get(
+  "/poster/:specificFolder/:imgFile/:imgFile2/:imgName",
+  async (req, res) => {
+    // const specificFolder = req.query.specificFolder;
+    const specificFolder = req.params.specificFolder;
+    const imgFile = req.params.imgFile;
+    const imgFile2 = req.params.imgFile2;
+    const imgName = req.params.imgName;
+    console.log(">>> imgName <<<", imgName);
+    console.log(">>> specificFolder <<<", specificFolder);
+
+    // Tạo một đường dẫn tới thư mục ảo 'files'
+    const folder = `files/${specificFolder}/${imgFile}/${imgFile2}/`;
+
+    const imgPath = folder + imgName;
+    console.log(">>> imgPath <<<", imgPath);
+
+    const bucket = admin.storage().bucket();
+    const videoFile = bucket.file(imgPath);
+
+    try {
+      const [fileExists] = await videoFile.exists();
+      console.log(">>> fileExists <<<", fileExists);
+      if (!fileExists) {
+        console.log(">>> fileExists <<<", fileExists);
+        res.status(404).send("File not found");
+        return;
+      }
+
+      const [metadata] = await videoFile.getMetadata();
+
+      const videoSize = metadata.size;
+      const videoType = metadata.contentType;
+      console.log(">>> videoType <<<", videoType);
+
+      if (true) {
+        res.writeHead(200, {
+          // "Content-Type": "application/x-mpegURL",
+          "Content-Type": videoType.toString(),
+          "Content-Length": videoSize.toString(),
+        });
+
+        const readStream = videoFile.createReadStream();
+        readStream.pipe(res);
+      } else {
+        const headers = {
+          "Content-Length": videoSize,
+          "Content-Type": videoType,
+        };
+
+        res.writeHead(200, headers);
+        videoFile.createReadStream().pipe(res);
+      }
+    } catch (error) {
+      console.error("Lỗi khi tải tệp HLS từ Firebase Storage:", error);
+      res.status(500).send("Lỗi khi tải tệp HLS từ Firebase Storage");
+    }
+  }
+);
 
 module.exports = router;
