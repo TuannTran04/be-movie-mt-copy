@@ -90,6 +90,7 @@ const allowedOrigins = [
   "http://localhost:3002",
   "https://fe-shotflix.vercel.app/",
   "https://fe-shotflix.vercel.app",
+  "https://hungry-birds-fold.loca.lt",
 ];
 const corsOptions = {
   origin: (origin, callback) => {
