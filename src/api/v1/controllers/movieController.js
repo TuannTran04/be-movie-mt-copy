@@ -99,6 +99,24 @@ const movieController = {
   //     });
   //   }
   // },
+
+  getAllMoviesSiteMap: async (req, res) => {
+    try {
+      let movie = await Movie.find({
+        disabled: false,
+      });
+      // console.log(">>> getAllMovies <<<", movie);
+
+      res.status(200).json({
+        code: 200,
+        mes: "lấy movie thành công",
+        movie,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
   getAllMovies: async (req, res) => {
     try {
       let movie;
@@ -169,14 +187,22 @@ const movieController = {
       let movie;
       let query = { disabled: false };
 
-      if (moreFilm === "Xem gì hôm nay") {
+      if (
+        moreFilm === "Xem gì hôm nay" ||
+        moreFilm === "xem-gi-hom-nay" ||
+        moreFilm === "xem gi hom nay"
+      ) {
         query.isPaid = true;
       }
 
       const skip = (parseInt(page) - 1) * parseInt(pageSize);
 
       const sortOption = {};
-      if (moreFilm === "Phim mới nhất") {
+      if (
+        moreFilm === "Phim mới nhất" ||
+        moreFilm === "phim-moi-nhat" ||
+        moreFilm === "phim moi nhat"
+      ) {
         sortOption.createdAt = -1; // Sắp xếp theo thời gian tạo mới nhất
       }
 
@@ -263,6 +289,7 @@ const movieController = {
     console.log(">>> search query: <<<", query);
     try {
       const movies = await Movie.find({
+        disabled: false,
         $or: [
           { title: { $regex: query, $options: "i" } }, // Tìm theo tên phim
           { titleWithoutAccent: { $regex: query, $options: "i" } }, // Tìm theo tên phim ko dấu

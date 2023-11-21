@@ -12,6 +12,7 @@ const serviceAccount = require("../../../config/service-firebase-admin.json");
 //GET ALL movies
 // router.get("/", verifyToken, movieController.getAllMovies);
 router.get("/", movieController.getAllMovies);
+router.get("/get-all-movies-sitemap", movieController.getAllMoviesSiteMap);
 router.get("/get-more-movies", movieController.getMoreMovies);
 router.get("/admin-get-movies", movieController.adminGetMovies);
 router.get("/search-movie", movieController.getSearchMovies);
