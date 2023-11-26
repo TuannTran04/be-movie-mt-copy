@@ -94,6 +94,10 @@ const allowedOrigins = [
   "https://fe-shotflix-ar.vercel.app/",
   "http://14.225.207.61:3001",
   "http://14.225.207.61:3001/",
+  "http://shotflix.vn",
+  "http://shotflix.vn/",
+  "https://shotflix.vn",
+  "https://shotflix.vn/",
   // "https://afraid-goats-switch.loca.lt",
 ];
 const corsOptions = {
