@@ -64,6 +64,7 @@ const movieRoute = require("./src/api/v1/routes/movie");
 const categoryRoute = require("./src/api/v1/routes/category");
 const commentRoute = require("./src/api/v1/routes/comment");
 const notifyRoute = require("./src/api/v1/routes/notification");
+const infoShotflixRoute = require("./src/api/v1/routes/infoShotflix");
 const uploadRouter = require("./src/api/v1/controllers/uploadController");
 const AppError = require("./src/api/v1/utils/appError");
 
@@ -96,6 +97,10 @@ const allowedOrigins = [
   "http://14.225.207.61:3001/",
   "http://shotflix.vn",
   "http://shotflix.vn/",
+  "http://www.shotflix.vn",
+  "http://www.shotflix.vn/",
+  "https://www.shotflix.vn",
+  "https://www.shotflix.vn/",
   "https://shotflix.vn",
   "https://shotflix.vn/",
   // "https://afraid-goats-switch.loca.lt",
@@ -230,15 +235,16 @@ app.use("/api/v1/movie", movieRoute);
 app.use("/api/v1/category", categoryRoute);
 app.use("/api/v1/comment", commentRoute);
 app.use("/api/v1/notify", notifyRoute);
+app.use("/api/v1/info_shotflix", infoShotflixRoute);
 app.use("/upload", uploadRouter);
-app.use("/hello", (req, res) => {
-  res.send("hello");
-});
-app.use("/test", (req, res) => {
-  res.status(200).json({
-    mes: "ok",
-  });
-});
+// app.use("/hello", (req, res) => {
+//   res.send("hello");
+// });
+// app.use("/test", (req, res) => {
+//   res.status(200).json({
+//     mes: "ok",
+//   });
+// });
 
 // video streaming
 
@@ -246,47 +252,47 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/video", (req, res) => {
-  const videoPath = __dirname + "/videos/" + "sauchiatay.mp4";
-  console.log(videoPath);
-  // Kiểm tra sự tồn tại của tệp video
-  if (!fs.existsSync(videoPath)) {
-    res.status(404).send("Video not found");
-    return;
-  }
-  const videoSize = fs.statSync(videoPath).size;
+// app.get("/video", (req, res) => {
+//   const videoPath = __dirname + "/videos/" + "sauchiatay.mp4";
+//   console.log(videoPath);
+//   // Kiểm tra sự tồn tại của tệp video
+//   if (!fs.existsSync(videoPath)) {
+//     res.status(404).send("Video not found");
+//     return;
+//   }
+//   const videoSize = fs.statSync(videoPath).size;
 
-  const range = req.headers.range;
-  console.log(">>> range <<<", range);
-  if (!range) {
-    res.status(400).send("requires range header");
-  }
+//   const range = req.headers.range;
+//   console.log(">>> range <<<", range);
+//   if (!range) {
+//     res.status(400).send("requires range header");
+//   }
 
-  const CHUNK_SIZE = 10 ** 6; //1mb
-  const start = Number(range.replace(/\D/g, ""));
-  const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
-  const contentLength = end - start + 1;
+//   const CHUNK_SIZE = 10 ** 6; //1mb
+//   const start = Number(range.replace(/\D/g, ""));
+//   const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
+//   const contentLength = end - start + 1;
 
-  // Tạo header cho response
-  const headers = {
-    "Content-Range": `bytes ${start}-${end}/${videoSize}`,
-    "Accept-Ranges": "bytes",
-    "Content-Length": contentLength,
-    "Content-Type": "video/mp4",
-  };
+//   // Tạo header cho response
+//   const headers = {
+//     "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+//     "Accept-Ranges": "bytes",
+//     "Content-Length": contentLength,
+//     "Content-Type": "video/mp4",
+//   };
 
-  // Thiết lập header và status code
-  res.writeHead(206, headers);
+//   // Thiết lập header và status code
+//   res.writeHead(206, headers);
 
-  try {
-    // Đọc tệp video và stream đến client
-    const videoStream = fs.createReadStream(videoPath, { start, end });
-    videoStream.pipe(res);
-  } catch (err) {
-    console.error("Error streaming video:", err);
-    res.status(500).send("Error streaming video");
-  }
-});
+//   try {
+//     // Đọc tệp video và stream đến client
+//     const videoStream = fs.createReadStream(videoPath, { start, end });
+//     videoStream.pipe(res);
+//   } catch (err) {
+//     console.error("Error streaming video:", err);
+//     res.status(500).send("Error streaming video");
+//   }
+// });
 
 // app.get("/video/:videoName", (req, res) => {
 //   const range = req.headers.range;

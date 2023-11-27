@@ -326,7 +326,9 @@ const movieController = {
       //   // Nếu cateId không hợp lệ, trả về lỗi Bad Request
       //   return res.status(400).json({ error: "Invalid cateId" });
       // }
-      let query = {};
+      let query = {
+        disabled: false,
+      };
       if (cateId) {
         query.category = new ObjectId(cateId);
       }
