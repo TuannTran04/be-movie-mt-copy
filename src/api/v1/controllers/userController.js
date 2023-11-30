@@ -163,6 +163,19 @@ const userController = {
       res.status(500).json(err);
     }
   },
+  getFavoriteAndBookmarkMovie: async (req, res) => {
+    try {
+      console.log(">>> getFavoriteAndBookmarkMovie <<<", req.user.id);
+      const user = await User.findById(req.user.id)
+        .populate(["loveMovie", "markBookMovie"])
+        .select("loveMovie markBookMovie");
+      // console.log(">>> GET BOOKMARK MOVIE: <<<", user);
+      return res.status(200).json(user);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  },
 
   getSingleUser: async (req, res) => {
     console.log(">>> getSingleUser <<<", req.params.username);

@@ -5,7 +5,7 @@ const { ObjectId } = require("mongodb");
 
 const commentController = {
   getInfoShotflix: async (req, res) => {
-    console.log(">>> getInfoShotflix ;<<<", req.body);
+    // console.log(">>> getInfoShotflix ;<<<", req.body);
     try {
       let query = {};
       //   if (recipientId) {

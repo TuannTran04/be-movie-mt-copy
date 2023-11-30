@@ -10,6 +10,11 @@ const router = require("express").Router();
 router.get("/", verifyTokenAndAdmin, userController.getAllUsers);
 router.get("/get-favorite-movie", verifyToken, userController.getFavoriteMovie);
 router.get("/get-bookmark-movie", verifyToken, userController.getBookmarkMovie);
+router.get(
+  "/get-favorite-bookmark-movie",
+  verifyToken,
+  userController.getFavoriteAndBookmarkMovie
+);
 router.get("/:username", userController.getSingleUser); // => trùng route nếu để ở trên các route có 1 cấp /
 
 //UPDATE USER

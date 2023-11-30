@@ -158,7 +158,7 @@ const authController = {
         isAdmin: user.isAdmin,
       },
       process.env.JWT_ACCESS_KEY,
-      { expiresIn: "1d" }
+      { expiresIn: "24000s" }
     );
   },
 
@@ -180,7 +180,7 @@ const authController = {
       const cookies = req.cookies;
       console.log(`cookie available at login: ${JSON.stringify(cookies)}`);
 
-      const foundUser = await User.findOne({ email: req.body.email });
+      const foundUser = await User.findOne({ email: req.body.email }).exec();
       // console.log(">>> USER: <<<", user);
       // logEvents("pass user login:" + req.body.password)
       if (!foundUser) {
@@ -222,9 +222,9 @@ const authController = {
 
         if (cookies?.refreshTokenJWT) {
           console.log(">>> Scenario added here: <<<");
-          /* 
-                Scenario added here: 
-                    1) User logs in but never uses RT and does not logout 
+          /*
+                Scenario added here:
+                    1) User logs in but never uses RT and does not logout
                     2) RT is stolen
                     3) If 1 & 2, reuse detection is needed to clear all RTs when user logs in
                 */
@@ -301,7 +301,7 @@ const authController = {
     });
 
     const foundUser = await User.findOne({
-      refreshToken: refreshToken.toString(),
+      refreshToken: refreshToken,
     }).exec();
     console.log(" >>> foundUser BEFORE check exist client <<<", refreshToken);
     console.log(" >>> foundUser BEFORE check exist <<<", foundUser);
@@ -336,6 +336,7 @@ const authController = {
     const newRefreshTokenArray = foundUser.refreshToken.filter(
       (rt) => rt !== refreshToken
     );
+    console.log(">>> Filter old RT 339: <<<", newRefreshTokenArray);
 
     // if (!refreshTokens.includes(refreshToken)) {
     //   console.log("Refresh token is not valid, not my token");
@@ -347,10 +348,10 @@ const authController = {
         ">>> DK when verify RF foundUser._id <<<",
         foundUser._id.toString()
       );
-      console.log(">>> DK when verify RF user._id <<<", user.id);
+      console.log(">>> DK when verify RF user._id <<<", user?.id);
       console.log(
         ">>> DK when verify RF <<<",
-        foundUser._id.toString() !== user.id
+        foundUser._id.toString() !== user?.id
       );
       console.log(">>> err when verify RF <<<", err);
       if (err) {
@@ -366,7 +367,7 @@ const authController = {
       }
       // refreshTokens = refreshTokens.filter((token) => token !== refreshToken);
 
-      console.log(">>> requestRefreshToken: <<<", user);
+      console.log(">>> requestRefreshToken 369: <<<", user);
       //create new access token, refresh token and send to user
 
       const newAccessToken = jwt.sign(
@@ -376,7 +377,7 @@ const authController = {
           isAdmin: user.isAdmin,
         },
         process.env.JWT_ACCESS_KEY,
-        { expiresIn: "10s" }
+        { expiresIn: "24000s" }
       );
 
       // const newRefreshToken = authController.generateRefreshToken(user);
@@ -390,24 +391,33 @@ const authController = {
         process.env.JWT_REFRESH_KEY,
         { expiresIn: "1d" }
       );
-      console.log(">>> requestRefreshToken: <<<", newRefreshToken);
+      console.log(">>> requestRefreshToken 393: <<<", newRefreshToken);
 
       // Saving refreshToken with current user
       foundUser.refreshToken = [...newRefreshTokenArray, newRefreshToken];
+
+      console.log(">>> Saving refreshToken 398 <<<", [
+        ...newRefreshTokenArray,
+        newRefreshToken,
+      ]);
       const result = await foundUser.save();
 
       // refreshTokens.push(newRefreshToken);
-      res.cookie("refreshTokenJWT", newRefreshToken, {
-        httpOnly: true,
-        secure: true,
-        // path: "/",
-        sameSite: "None",
-        maxAge: 24 * 60 * 60 * 1000,
-      });
-      res.status(200).json({
-        accessToken: newAccessToken,
-        // refreshToken: newRefreshToken,
-      });
+      if (result) {
+        console.log(">>> result 401 <<<", result);
+
+        res.cookie("refreshTokenJWT", newRefreshToken, {
+          httpOnly: true,
+          secure: true,
+          // path: "/",
+          sameSite: "None",
+          maxAge: 24 * 60 * 60 * 1000,
+        });
+        res.status(200).json({
+          accessToken: newAccessToken,
+          // refreshToken: newRefreshToken,
+        });
+      }
     });
   },
 
