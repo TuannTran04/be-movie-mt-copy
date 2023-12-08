@@ -1,6 +1,6 @@
 const User = require("../models/User");
 const { initializeApp } = require("firebase/app");
-
+const sharp = require("sharp");
 const config = require("../../../config/firebase.config");
 const admin = require("firebase-admin");
 const app = initializeApp(config.firebaseConfig);
@@ -89,9 +89,14 @@ const userController = {
       if (req.file) {
         // Upload file to Firebase Storage
         const newFileName = `imgUser/${username}/${req.file.originalname}`;
-
         const file = bucket.file(newFileName);
-        await file.save(req.file.buffer, { contentType: req.file.mimetype });
+
+        // Sử dụng sharp để giảm dung lượng của ảnh
+        const resizedBuffer = await sharp(req.file.buffer)
+          .resize({ width: 500, height: 700 }) // Điều chỉnh kích thước theo ý muốn
+          .toBuffer();
+
+        await file.save(resizedBuffer, { contentType: req.file.mimetype });
         avatarURL = await file.getSignedUrl({
           action: "read",
           expires: "03-09-2491",
@@ -117,7 +122,9 @@ const userController = {
         return res.status(404).json({ mes: "User not found" });
       }
 
-      const { password, ...others } = updatedUser._doc;
+      // const { password, ...others } = updatedUser._doc;
+      const { password, refreshToken, loveMovie, markBookMovie, ...others } =
+        updatedUser._doc;
 
       return res.status(200).json({
         code: 200,
