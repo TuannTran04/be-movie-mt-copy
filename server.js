@@ -4,7 +4,6 @@ const cors = require("cors");
 const fs = require("fs");
 const admin = require("firebase-admin");
 const dotenv = require("dotenv");
-const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const createError = require("http-errors");
 // const asyncHandler = require('express-async-handler')
@@ -22,7 +21,9 @@ require("express-async-errors");
 // const socketManager = require("./src/api/v1/utils/socketRT");
 const CommentServices = require("./src/api/v1/services/comment");
 // const redisClient = Redis.createClient();
+dotenv.config();
 
+const mongoose = require("./src/api/v1/connections/init.db");
 const app = express();
 const httpServer = require("http").createServer(app); // Tạo HTTP server
 
@@ -42,18 +43,11 @@ const notifyRoute = require("./src/api/v1/routes/notification");
 const infoShotflixRoute = require("./src/api/v1/routes/infoShotflix");
 const uploadRouter = require("./src/api/v1/controllers/uploadController");
 const AppError = require("./src/api/v1/utils/appError");
+const { result } = require("lodash");
+const { error } = require("console");
 
 // const clientRedis = createClient();
-dotenv.config();
 const PORT = process.env.PORT || 5000;
-
-mongoose.set("strictQuery", false);
-mongoose.connect(process.env.MONGODB_URL, {
-  dbName: "movieDB",
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-});
-app.use(express.static(path.join(__dirname, "public")));
 
 const allowedOrigins = [
   "http://localhost:3001",
@@ -93,6 +87,7 @@ const credentials = (req, res, next) => {
   next();
 };
 
+app.use(express.static(path.join(__dirname, "public")));
 app.use(credentials);
 app.use(cors(corsOptions));
 app.use(helmet()); // Set security HTTP headers
@@ -180,6 +175,6 @@ app.all("*", (req, res, next) => {
 });
 
 mongoose.connection.once("open", () => {
-  console.log("Connected to MongoDB");
+  console.log("Connected to open MongoDB");
   httpServer.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });
