@@ -1,4 +1,10 @@
 const User = require("../models/User");
+const { initializeApp } = require("firebase/app");
+
+const config = require("../../../config/firebase.config");
+const admin = require("firebase-admin");
+const app = initializeApp(config.firebaseConfig);
+const bucket = admin.storage().bucket();
 
 const userController = {
   //GET ALL USER
@@ -66,8 +72,34 @@ const userController = {
   updateInfoUser: async (req, res) => {
     const { username, givenName, familyName, email, national, avatar } =
       req.body;
-    console.log("test log update");
+    // console.log("test log update", req.body);
+    // console.log(">>> check req multiple: <<<", req.file);
+
     try {
+      let avatarURL = null;
+
+      // if (avatar) {
+      //   const newFileName = `imgUser/${username}/${avatar}`;
+
+      //   const existingFile = bucket.file(newFileName);
+      //   // Delete the existing file from Firebase Storage
+      //   await existingFile.delete();
+      // }
+
+      if (req.file) {
+        // Upload file to Firebase Storage
+        const newFileName = `imgUser/${username}/${req.file.originalname}`;
+
+        const file = bucket.file(newFileName);
+        await file.save(req.file.buffer, { contentType: req.file.mimetype });
+        avatarURL = await file.getSignedUrl({
+          action: "read",
+          expires: "03-09-2491",
+        });
+      }
+      console.log("test log update", avatarURL);
+      console.log("test log update", avatarURL?.[0] ?? avatar);
+
       const updatedUser = await User.findOneAndUpdate(
         { _id: req.user.id },
         {
@@ -76,7 +108,7 @@ const userController = {
           familyName,
           email,
           national,
-          avatar,
+          avatar: avatarURL?.[0] ?? avatar,
         },
         { new: true } // Trả về người dùng sau khi cập nhật
       );

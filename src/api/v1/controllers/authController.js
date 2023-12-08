@@ -30,16 +30,19 @@ const authController = {
       if (!email) throw new AppError("lỗi không có email", 401);
       if (!password) throw new AppError("lỗi không có password", 401);
 
-      // check email, username exist
-      const existingEmail = await User.findOne({ email });
-      if (existingEmail) {
-        console.log("Email đã tồn tại");
-        throw new AppError("Email đã tồn tại", 401);
-      }
-      const existingUsername = await User.findOne({ username });
-      if (existingUsername) {
-        console.log("Username đã tồn tại");
-        throw new AppError("Username đã tồn tại", 401);
+      // Check if email or username already exist
+      const existingUser = await User.findOne({
+        $or: [{ email }, { username }],
+      });
+
+      if (existingUser) {
+        if (existingUser.email === email) {
+          console.log("Email đã tồn tại");
+          throw new AppError("Email đã tồn tại", 401);
+        } else {
+          console.log("Username đã tồn tại");
+          throw new AppError("Username đã tồn tại", 401);
+        }
       }
 
       //////////////////////////////////////////////////

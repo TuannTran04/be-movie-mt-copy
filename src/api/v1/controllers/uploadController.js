@@ -17,20 +17,15 @@ const {
   uploadBytesResumable,
   updateMetadata,
 } = require("firebase/storage");
+const router = express.Router();
 const multer = require("multer");
 const config = require("../../../config/firebase.config");
-
+// const serviceAccount = require("../../../config/service-firebase-admin.json");
 const admin = require("firebase-admin");
-const serviceAccount = require("../../../config/service-firebase-admin.json");
-
-const router = express.Router();
-
 //Initialize a firebase application
 const app = initializeApp(config.firebaseConfig);
 // const analytics = getAnalytics(app);
-
 const bucket = admin.storage().bucket();
-
 // Initialize Cloud Storage and get a reference to the service
 const storage = getStorage();
 

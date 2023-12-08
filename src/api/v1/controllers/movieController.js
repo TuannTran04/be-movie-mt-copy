@@ -186,24 +186,27 @@ const movieController = {
     try {
       let movie;
       let query = { disabled: false };
+      let shouldReturnResults = false;
 
-      if (
-        moreFilm === "Xem gì hôm nay" ||
-        moreFilm === "xem-gi-hom-nay" ||
-        moreFilm === "xem gi hom nay"
-      ) {
+      if (moreFilm === "xem-gi-hom-nay") {
         query.isPaid = true;
+        shouldReturnResults = true;
       }
 
       const skip = (parseInt(page) - 1) * parseInt(pageSize);
 
       const sortOption = {};
-      if (
-        moreFilm === "Phim mới nhất" ||
-        moreFilm === "phim-moi-nhat" ||
-        moreFilm === "phim moi nhat"
-      ) {
+      if (moreFilm === "phim-moi-nhat") {
         sortOption.createdAt = -1; // Sắp xếp theo thời gian tạo mới nhất
+        shouldReturnResults = true;
+      }
+
+      if (!shouldReturnResults) {
+        // Nếu không có điều kiện nào đúng, không trả về kết quả, báo lỗi không có
+        return res.status(404).json({
+          code: 404,
+          mes: "Không có trang này",
+        });
       }
 
       movie = await Movie.find(query)
@@ -672,7 +675,7 @@ const movieController = {
 
       if (!movie) {
         return res.status(400).json({
-          message: "Đánh giá phim không thành công",
+          message: "Đánh giá phim không thành công, không có phim này",
         });
       }
 
@@ -724,7 +727,7 @@ const movieController = {
       }).populate("category");
       console.log(">>> getSingle: <<<", movieSingle);
 
-      if (!movieSingle) {
+      if (movieSingle.length === 0) {
         throw new AppError("Không có phim này", 404);
       }
 
@@ -746,10 +749,12 @@ const movieController = {
     try {
       const movieSingle = await Movie.find({
         slug: req.params.slug,
+        disabled: false,
       }).populate("category");
-      // console.log(">>> getSingle: <<<", movieSingle);
+      console.log(">>> getSingle: <<<", movieSingle);
+      console.log(">>> getSingle: <<<", Boolean(movieSingle));
 
-      if (!movieSingle) {
+      if (movieSingle.length === 0) {
         console.log("Không có phim này");
         throw new AppError("Không có phim này", 404);
       }

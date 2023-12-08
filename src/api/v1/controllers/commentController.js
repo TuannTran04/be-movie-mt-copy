@@ -92,6 +92,9 @@ const commentController = {
     console.log(">>> addComment: <<<", req.body);
     const { userId: user, movieId: movie, text } = req.body;
     try {
+      if (!user || !movie || !text) {
+        throw new AppError("Thiếu trường dữ liệu", 401);
+      }
       const newComment = new Comment({
         user,
         movie,
