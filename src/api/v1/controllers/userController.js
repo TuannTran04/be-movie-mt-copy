@@ -1,6 +1,6 @@
 const User = require("../models/User");
 const { initializeApp } = require("firebase/app");
-const sharp = require("sharp");
+// const sharp = require("sharp");
 const config = require("../../../config/firebase.config");
 const admin = require("firebase-admin");
 const app = initializeApp(config.firebaseConfig);
