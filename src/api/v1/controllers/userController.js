@@ -1,6 +1,6 @@
 const User = require("../models/User");
 const { initializeApp } = require("firebase/app");
-// const sharp = require("sharp");
+const sharp = require("sharp");
 const config = require("../../../config/firebase.config");
 const admin = require("firebase-admin");
 const app = initializeApp(config.firebaseConfig);
@@ -73,7 +73,7 @@ const userController = {
     const { username, givenName, familyName, email, national, avatar } =
       req.body;
     // console.log("test log update", req.body);
-    console.log(">>> check req multiple: <<<", req.file);
+    // console.log(">>> check req multiple: <<<", req.file);
 
     try {
       let avatarURL = null;
@@ -91,12 +91,12 @@ const userController = {
         const newFileName = `imgUser/${username}/${req.file.originalname}`;
         const file = bucket.file(newFileName);
 
-        // // Sử dụng sharp để giảm dung lượng của ảnh
-        // const resizedBuffer = await sharp(req.file.buffer)
-        //   .resize({ width: 500, height: 700 }) // Điều chỉnh kích thước theo ý muốn
-        //   .toBuffer();
+        // Sử dụng sharp để giảm dung lượng của ảnh
+        const resizedBuffer = await sharp(req.file.buffer)
+          .resize({ width: 500, height: 700 }) // Điều chỉnh kích thước theo ý muốn
+          .toBuffer();
 
-        await file.save(req.file.buffer, { contentType: req.file.mimetype });
+        await file.save(resizedBuffer, { contentType: req.file.mimetype });
         avatarURL = await file.getSignedUrl({
           action: "read",
           expires: "03-09-2491",

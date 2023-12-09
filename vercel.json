@@ -1,10 +1,16 @@
 {
   "version": 2,
-  "builds": [{ "src": "./server.js", "use": "@vercel/node" }],
+  "builds": [{ "src": "./server.js", "use": "@now/node16" }],
   "routes": [
     {
       "src": "/api/.*",
       "dest": "server.js"
     }
-  ]
+  ],
+  "functions": {
+    "api/upload": {
+      "runtime": "node@16",
+      "memory": 1024
+    }
+  }
 }
