@@ -1137,3 +1137,7 @@
 29-03-2024	16:51:46 ----- idError--- f31063c7-de87-4e0c-ba6a-125b62f83e04 --- /api/v1/movie/get-category-movie?cateId=64e30a69e2032779af0a65e2&page=1&pageSize=30 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
 29-03-2024	16:52:06 ----- idError--- 662a0ead-f71b-4265-a623-7f815dc193a3 --- /api/v1/movie/get-category-movie?cateId=64e30a69e2032779af0a65e2&page=1&pageSize=30 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
 29-03-2024	16:52:33 ----- idError--- 064cfdf8-0634-4129-a0a7-24ab7cdff912 --- /api/v1/movie/get-category-movie?cateId=64e30a69e2032779af0a65e2&page=1&pageSize=30 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-03-2024	21:43:49 ----- idError--- 6c4de956-5282-44bc-bfee-c491015d0e00 --- /api/v1/movie/user/nang-am-xa-dan --- GET --- Cannot access 'movieSingle' before initialization
+29-03-2024	21:43:49 ----- idError--- f7ea11dd-75d2-4893-a99c-00cccfe85cf9 --- /api/v1/movie/user/nang-am-xa-dan --- GET --- Cannot access 'movieSingle' before initialization
+29-03-2024	21:53:09 ----- idError--- 379af7c5-e4e2-4f3b-915f-43a580878ed7 --- /api/v1/movie/user/nang-am-xa-dan --- GET --- keyMovieBySlug is not defined
+29-03-2024	21:53:09 ----- idError--- 1d387d25-d8b2-48a8-aadb-99badfef0df3 --- /api/v1/movie/user/nang-am-xa-dan --- GET --- keyMovieBySlug is not defined

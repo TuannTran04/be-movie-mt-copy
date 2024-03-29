@@ -366,7 +366,7 @@ class MovieService {
   };
 
   static getSingleUser = async ({ slug }) => {
-    const keyMovieBySlug = `movieSingle::${movieSingle[0]._id}-${slug}`;
+    const keyMovieBySlug = `movieSingle:${slug}`;
 
     let singleFilmCache = await getKeyString(keyMovieBySlug);
     if (singleFilmCache !== null) {
