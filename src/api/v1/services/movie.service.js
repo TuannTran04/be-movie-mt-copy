@@ -389,8 +389,10 @@ class MovieService {
       throw new BadRequestError("Không có phim này", 404);
     }
 
+    const keyMovieBySlug = `movieSingle::${movieSingle[0]._id}-${slug}`;
+
     await setKeyString({
-      key: "dataSingleFilmUserCache",
+      key: keyMovieBySlug,
       value: {
         countTotalObject: movieSingle.length,
         movieSingle,
