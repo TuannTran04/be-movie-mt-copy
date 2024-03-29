@@ -19,8 +19,8 @@ const {
 } = require("firebase/storage");
 const router = express.Router();
 const multer = require("multer");
-const config = require("../../../config/firebase.config");
-// const serviceAccount = require("../../../config/service-firebase-admin.json");
+const config = require("../../../configs/firebase.config");
+// const serviceAccount = require("../../../configs/service-firebase-admin.json");
 const admin = require("firebase-admin");
 //Initialize a firebase application
 const app = initializeApp(config.firebaseConfig);

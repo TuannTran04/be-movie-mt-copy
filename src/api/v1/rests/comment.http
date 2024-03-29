@@ -1,0 +1,4 @@
+@url_dev=http://localhost:8000/api/v1/comment
+
+### get all cate
+GET {{url_dev}}/65378ec448da1a2e3c5d8dc0?page=1&batchSize=3

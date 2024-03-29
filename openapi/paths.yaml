@@ -1,0 +1,209 @@
+openapi: 3.0.3
+info:
+  title: Swagger Shotflix
+  description: |-
+    This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about
+    Swagger at [https://swagger.io](https://swagger.io).
+
+    _If you're looking for the Swagger 2.0/OAS 2.0 version of Petstore, then click [here](https://editor.swagger.io/?url=https://petstore.swagger.io/v2/swagger.yaml).
+
+    Some useful links:
+    - [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
+    - [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+  version: 1.0.11
+servers:
+  - url: http://localhost:8000/api/
+    description: Development Server
+tags:
+  - name: auth
+    description: Các API liên quan đến auth
+paths:
+  /auth/register:
+    post:
+      tags:
+        - auth
+      summary: Khởi tạo đăng ký gửi OTP
+      description: Đăng ký tài khoản vào hệ thống
+      operationId: register
+      requestBody:
+        description: Thông tin đăng ký
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterBody"
+        required: true
+      responses:
+        "200":
+          description: Khởi tạo đăng ký thành công
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessRegister"
+        "401":
+          description: User already registered!
+        "404":
+          description: Not found
+        "500":
+          description: Internal server error
+  /auth/register/verify:
+    post:
+      tags:
+        - auth
+      summary: Đăng ký
+      description: Đăng ký tài khoản vào hệ thống
+      operationId: registerVerify
+      requestBody:
+        description: Thông tin đăng ký
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterVerifyBody"
+        required: true
+      responses:
+        "201":
+          description: Đăng ký thành công
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessRegisterVerify"
+        "401":
+          description: Không tìm thấy mã OTP cho email này
+        "404":
+          description: Mã OTP đã hết hạn hoặc không hợp lệ
+        "500":
+          description: Internal server error
+  /auth/login:
+    post:
+      tags:
+        - auth
+      summary: Đăng nhập
+      description: Đăng nhập tài khoản
+      operationId: login
+      requestBody:
+        description: Thông tin đăng nhập
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginBody"
+        required: true
+      responses:
+        "200":
+          description: Đăng nhập thành công
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessLogin"
+        "403":
+          description: Tài khoản không tồn tại
+        "500":
+          description: Internal server error
+  /auth/logout:
+    get:
+      tags:
+        - auth
+      summary: Đăng xuất
+      description: Đăng xuất tài khoản
+      operationId: logout
+      security:
+        - cookieAuth: []
+      responses:
+        "200":
+          description: Đăng xuất thành công
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Logout Success
+                  status:
+                    type: number
+                    example: 200
+                  metadata:
+                    type: object
+                    example: null
+        "401":
+          description: You're not authenticated
+        "403":
+          description: Fobidden
+        "500":
+          description: Internal server error
+  /auth/forgot-pwd-user:
+    put:
+      tags:
+        - auth
+      summary: Khởi tạo quên mật khẩu
+      description: Khởi tạo đổi mật khẩu tài khoản
+      operationId: forgotPwd
+      requestBody:
+        description: Thông tin tài khoản quên mật khẩu
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ForgotPwdBody"
+        required: true
+      responses:
+        "200":
+          description: Khởi tạo quên mật khẩu thành công
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessForgotPwdBody"
+        "403":
+          description: User Not Registered
+        "500":
+          description: Internal server error
+  /auth/forgot-pwd-user-verify:
+    put:
+      tags:
+        - auth
+      summary: Xác nhận OTP để đổi mật khẩu
+      description: Đổi mật khẩu tài khoản
+      operationId: forgotPwdVerify
+      requestBody:
+        description: Thông tin tài khoản quên mật khẩu
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ForgotPwdVerifyBody"
+        required: true
+      responses:
+        "200":
+          description: Đổi mật khẩu thành công
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessForgotPwdVerify"
+        "401":
+          description: Không tìm thấy mã OTP cho email này
+        "403":
+          description: User Not Registered
+        "404":
+          description: Mã OTP đã hết hạn hoặc không hợp lệ
+        "500":
+          description: Internal server error
+  /auth/refresh:
+    get:
+      tags:
+        - auth
+      summary: Yêu cần làm mới token
+      description: Làm mới token
+      operationId: refreshToken
+      security:
+        - cookieAuth: []
+      responses:
+        "200":
+          description: Đổi mật khẩu thành công
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessForgotPwdVerify"
+        "401":
+          description: Không tìm thấy mã OTP cho email này
+        "403":
+          description: User Not Registered
+        "404":
+          description: Mã OTP đã hết hạn hoặc không hợp lệ
+        "500":
+          description: Internal server error

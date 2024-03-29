@@ -1,0 +1,6 @@
+@url_dev=http://localhost:8000/api/v1/user
+
+### get all cate
+GET {{url_dev}}/check-fav-mark/admin_dev_tuan😋/65378ec448da1a2e3c5d8dc0
+
+

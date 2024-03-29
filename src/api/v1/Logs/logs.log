@@ -1,1 +1,1139 @@
 05-09-2023	31:24:13 ----- pass user login hotrankienquan144@gmail.com05-09-2023	13:25:02 ----- pass user login hotrankienquan144@gmail.com05-09-2023	13:25:24 ----- pass user login hotrankienquan144@gmail.com
+13-12-2023	14:25:13 ----- /api/v1/moviee --- GET --- Not found!
+13-12-2023	14:25:38 ----- /api/v1/moviecc --- GET --- Not found!
+13-12-2023	14:30:57 ----- idError---8e833d30-c51f-454e-a905-1ceb650d440a---/api/v1/moviecc --- GET --- Not found!
+13-12-2023	14:31:06 ----- idError---9c91cc20-2de7-44de-a69e-ab9274301bdb---/api/v1/moviecc --- GET --- Not found!
+13-12-2023	14:31:37 ----- idError---8ae7b6db-abcf-4857-a8a2-d74cb47cfa5b --- /api/v1/moviecc --- GET --- Not found!
+13-12-2023	14:31:51 ----- idError--- 80809ebb-3a6a-4efd-a520-5e0d5ad0da89 --- /api/v1/moviecc --- GET --- Not found!
+13-12-2023	15:57:55 ----- idError--- 0ee7d5c7-29d6-423f-a16a-8effe4f4d918 --- /api/v1/get-all-movies-sitemap --- GET --- Not found!
+14-12-2023	22:33:15 ----- idError--- e711021c-83ac-4156-b0b5-73b34df4fdea --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+14-12-2023	22:37:17 ----- idError--- 8988b698-3b8f-43be-a5d9-35585dc50ffa --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+14-12-2023	22:39:30 ----- idError--- 5de0d167-a05d-4559-9505-2044b84041ea --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+14-12-2023	22:39:52 ----- idError--- 5e4e61fb-16cf-40e4-a78b-af2b370c5746 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+18-12-2023	16:29:31 ----- idError--- ea1ed9cc-3be0-45ca-9e56-174ba57c045c --- /api/v1/auth/refresh --- GET --- Cannot destructure property 'code' of '(intermediate value)' as it is undefined.
+18-12-2023	16:33:09 ----- idError--- 7bc5dff3-0e7d-444f-865a-a1da8a3c5541 --- /api/v1/auth/refresh --- GET --- Cannot destructure property 'code' of '(intermediate value)' as it is undefined.
+18-12-2023	16:37:31 ----- idError--- c8181055-48d9-4d56-b776-517b3e2951b0 --- /api/v1/auth/refresh --- GET --- Cannot destructure property 'code' of '(intermediate value)' as it is undefined.
+18-12-2023	16:39:52 ----- idError--- 10c91d0c-4151-4fbb-9d37-e1c9364fe4ac --- /api/v1/auth/refresh --- GET --- Cannot destructure property 'code' of '(intermediate value)' as it is undefined.
+18-12-2023	16:48:40 ----- idError--- 08a46093-33dc-415a-8fe2-3d7f052e8196 --- /api/v1/auth/refresh --- GET --- Cannot destructure property 'code' of '(intermediate value)' as it is undefined.
+21-12-2023	12:14:08 ----- idError--- 93609d37-369d-4696-a1df-71a38804f2da --- /api/v1/auth/login --- POST --- Unexpected token } in JSON at position 64
+24-12-2023	08:56:02 ----- idError--- e79a72b7-a066-4e7b-8e37-61a3928b1dbc --- / --- GET --- ENOENT: no such file or directory, stat 'D:\File Fullstack Web\fun_prj_code\PRJ_FILM\be-movie-mt\src\api\v1\routes\index.html'
+24-12-2023	08:56:05 ----- idError--- cecc4a1f-a40a-4b65-b513-68414658774d --- / --- GET --- ENOENT: no such file or directory, stat 'D:\File Fullstack Web\fun_prj_code\PRJ_FILM\be-movie-mt\src\api\v1\routes\index.html'
+24-12-2023	08:57:08 ----- idError--- a50fdc4f-10ed-4297-b0ec-f5514f846602 --- / --- GET --- Forbidden
+24-12-2023	08:58:16 ----- idError--- af425a34-4d52-4466-8754-20253f890758 --- / --- GET --- Forbidden
+24-12-2023	08:58:18 ----- idError--- 82356c56-d9bd-4a0b-8587-d5c6afdb7357 --- / --- GET --- Forbidden
+24-12-2023	08:59:51 ----- idError--- a15b7f36-b525-4a1f-871e-093933457550 --- / --- GET --- Forbidden
+24-12-2023	09:00:11 ----- idError--- 0759dc87-5c11-45af-a944-0b2d26ef4ff1 --- / --- GET --- Forbidden
+24-12-2023	09:00:12 ----- idError--- 998bb808-28a7-4a72-96f8-288bed697664 --- / --- GET --- Forbidden
+24-12-2023	09:00:12 ----- idError--- 15e916ae-4793-4008-b6e1-53960f4b79cc --- / --- GET --- Forbidden
+24-12-2023	09:00:20 ----- idError--- 35c4fae9-6465-4e43-9b1f-f5262bb4a292 --- / --- GET --- Forbidden
+24-12-2023	09:00:21 ----- idError--- 14495b0e-a5b4-4916-8932-665fbde74bdd --- / --- GET --- Forbidden
+24-12-2023	09:01:16 ----- idError--- 8e45d83b-5680-4c89-bee2-9aa7ede221d2 --- / --- GET --- Forbidden
+24-12-2023	09:01:28 ----- idError--- b883ddee-6b36-4347-b45a-eec412d44851 --- / --- GET --- Forbidden
+24-12-2023	09:03:19 ----- idError--- ea98c2ee-3d14-4bed-a071-32576618a9f5 --- / --- GET --- Forbidden
+24-12-2023	15:23:36 ----- idError--- 3e3ada5f-dff9-4118-80f6-a50c7669dd36 --- /api/v1/auth/signupa --- POST --- Not found
+24-12-2023	15:40:26 ----- idError--- 964ea3d3-769e-45c1-9724-83f6a198f649 --- /api/v1/auth/signup --- POST --- BadRequestError is not defined
+24-12-2023	15:41:23 ----- idError--- 58d67b73-5add-4b58-9396-d7daebf2108f --- /api/v1/auth/signup --- POST --- Error: User already registered!
+24-12-2023	15:44:07 ----- idError--- 990a587f-12e3-4a98-bf7b-85ca8173346e --- /api/v1/auth/signupe --- POST --- Not found
+24-12-2023	15:44:28 ----- idError--- 8d2ee367-4a38-46b7-92ee-0673ebe7ccf8 --- /api/v1/auth/signupe --- POST --- Not found
+24-12-2023	15:44:53 ----- idError--- 61d46fe8-ed76-4da8-b292-a9479da69b5b --- /api/v1/auth/signup --- POST --- Error: User already registered!
+24-12-2023	15:44:56 ----- idError--- 09cc62dd-afb5-4504-81d5-45535b4b4962 --- /api/v1/auth/signup --- POST --- Error: User already registered!
+24-12-2023	15:48:00 ----- idError--- 41a6d6dd-78f7-41f6-b2d0-cce61199a1e0 --- /api/v1/auth/signup --- POST --- Error: User already registered!
+24-12-2023	15:48:04 ----- idError--- 000c6c31-050b-4c36-9d3a-2a485741b597 --- /api/v1/auth/signup%C6%B0 --- POST --- Not Found
+24-12-2023	15:48:08 ----- idError--- 81932b90-e948-4050-955c-d96d4c54f49b --- /api/v1/auth/signup%C6%B0 --- POST --- Not Found
+24-12-2023	15:48:08 ----- idError--- b5059037-7efc-4891-9682-47273fb5356a --- /api/v1/auth/signup%C6%B0 --- POST --- Not Found
+24-12-2023	16:15:19 ----- idError--- c741310a-992d-4190-a98d-415569a8b47e --- /api/v1/auth/signup --- POST --- Error: User already registered!
+24-12-2023	16:41:17 ----- idError--- cbabbed4-5051-432d-a073-4628f90fd1c4 --- /api/v1/auth/signup/registerr --- POST --- Not Found
+24-12-2023	16:42:10 ----- idError--- 15f8db5b-91b4-4d23-946c-64798b8c14d1 --- /api/v1/auth/signup/register --- POST --- Error: User already registered!
+24-12-2023	16:42:30 ----- idError--- 5cf7fba8-3957-474a-ad36-0cb0dd1e026f --- /api/v1/auth/signup/register --- POST --- Lỗi không có username
+24-12-2023	16:43:24 ----- idError--- 9ee40c13-0be9-4fe1-88e9-2a19ad6631a3 --- /api/v1/auth/signup/register --- POST --- Missing Params
+24-12-2023	16:53:25 ----- idError--- f08d156b-0846-47be-87fb-02f8bfc53ec0 --- /api/v1/auth/signup/register --- POST --- Missing Params
+24-12-2023	17:01:48 ----- idError--- f8dae279-1ce7-47ca-9d2a-a68dffa730e8 --- /api/v1/auth/signup/register --- POST --- Not Found
+25-12-2023	10:20:38 ----- idError--- 670dbe2a-b102-4bfe-a446-2b69600bdd7e --- /api/v1/auth/register/verify --- POST --- Không tìm thấy mã OTP cho email này
+25-12-2023	10:23:06 ----- idError--- f1a44f9c-9a16-4308-95ca-794c65395744 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+25-12-2023	10:24:03 ----- idError--- f532f757-bba2-44bf-87be-f012d9d22a7b --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+25-12-2023	10:24:08 ----- idError--- 0ac9e081-2c64-47ef-9111-c338b1650a88 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+25-12-2023	10:24:38 ----- idError--- a0ee73e8-bc27-44ac-846f-34004e5ac8e5 --- /api/v1/auth/register/verify --- POST --- Không tìm thấy mã OTP cho email này
+25-12-2023	10:24:45 ----- idError--- 72a94ba5-599f-420e-b7e4-9277465f9426 --- /api/v1/auth/register/verify --- POST --- Không tìm thấy mã OTP cho email này
+25-12-2023	10:24:51 ----- idError--- f393515a-5e98-4770-ae9d-23f2ec8eb22c --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+25-12-2023	10:25:02 ----- idError--- ccedbc1e-55b9-40da-9dfe-090076e1d89a --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+25-12-2023	10:25:04 ----- idError--- 581b54df-af36-4360-b70d-6e1d64e68eb8 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+25-12-2023	10:28:18 ----- idError--- 94f354f1-caac-469c-b302-279ab248a130 --- /api/v1/auth/register --- POST --- Error: User already registered!
+25-12-2023	10:28:49 ----- idError--- 5c52e612-dd46-4016-b1cd-791b60fc7b97 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+25-12-2023	10:30:04 ----- idError--- 20a53c13-30be-46bb-98e8-1581f4d6d366 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+25-12-2023	10:53:12 ----- idError--- 9b0d6d45-0e9d-4eea-a664-9a40c92a7cd3 --- /api/v1/auth/register --- POST --- Error: User already registered!
+25-12-2023	10:54:01 ----- idError--- 7a411b41-fd2a-4bd3-a0be-0b727e4a4b3e --- /api/v1/auth/register/verify --- POST --- Không tìm thấy mã OTP cho email này
+25-12-2023	10:54:14 ----- idError--- 0b6ff807-b619-4c90-8bb3-bd09782f11a4 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+25-12-2023	10:54:37 ----- idError--- b6e46995-046b-40c2-b4ba-98dc3d9cf11d --- /api/v1/auth/register/verify --- POST --- Không tìm thấy mã OTP cho email này
+25-12-2023	11:34:42 ----- idError--- 58d6da76-732c-4e57-8cee-10b8ed4d17c7 --- /api/v1/auth/signup --- POST --- Error: User already registered!
+25-12-2023	12:43:01 ----- idError--- 9554d15d-42f9-4822-bd87-8ed8d259c010 --- /api/v1/auth/loginTIPJS --- POST --- User Not Registered
+25-12-2023	12:43:22 ----- idError--- e51db5f6-72e4-4ac5-8bb8-e98bcf7010b4 --- /api/v1/auth/logoutTIPJS --- POST --- Not Found
+25-12-2023	12:43:36 ----- idError--- cc49fe77-7dc2-4d79-8153-abda0e850f51 --- /api/v1/auth/logoutTIPJS --- GET --- keyTokenModel.remove is not a function
+25-12-2023	12:47:10 ----- idError--- 3b5f84ac-9944-4889-9d72-cbcfbb19d2bf --- /api/v1/auth/logoutTIPJS --- GET --- Cast to ObjectId failed for value "{ id: new ObjectId("65890713ef2743cc1dee592e") }" (type Object) at path "_id" for model "Key"
+25-12-2023	12:47:48 ----- idError--- 9be55945-d3e2-46f6-970c-5f735c19abee --- /api/v1/auth/logoutTIPJS --- GET --- Argument passed in must have an id that is of type string or Buffer
+25-12-2023	12:48:41 ----- idError--- 5801f708-1998-4f4b-9422-b25608c6a97b --- /api/v1/auth/logoutTIPJS --- GET --- Argument passed in must have an id that is of type string or Buffer
+25-12-2023	12:51:22 ----- idError--- b0e853e9-3d6e-4811-9767-5c989a5eb344 --- /api/v1/auth/logoutTIPJS --- GET --- Not Found keyStore
+25-12-2023	14:10:50 ----- idError--- 4be04a17-b73f-4dba-9198-07f40832d176 --- /api/v1/auth/logoutTIPJS --- GET --- invalid signature
+25-12-2023	14:12:10 ----- idError--- 7e9451ed-87fa-41a6-aeba-8cde2c71a6a9 --- /api/v1/auth/handlerRTTIPJS --- POST --- Unexpected token } in JSON at position 257
+25-12-2023	14:13:17 ----- idError--- 8a53996b-7e75-4b42-bdf1-a053e635b72a --- /api/v1/auth/handlerRTTIPJS --- POST --- Unexpected token } in JSON at position 257
+25-12-2023	14:13:59 ----- idError--- 0271feed-0597-4732-9500-49284f67bc0e --- /api/v1/auth/handlerRTTIPJS --- POST --- Unexpected token } in JSON at position 257
+25-12-2023	14:14:03 ----- idError--- b9e1c93b-a5a0-4044-a778-6d7aa7ac3ca2 --- /api/v1/auth/handlerRTTIPJS --- POST --- Unexpected token } in JSON at position 257
+25-12-2023	14:15:08 ----- idError--- 8c57d506-22f9-49ae-8429-10ed1d5987da --- /api/v1/auth/logoutTIPJS --- GET --- invalid signature
+25-12-2023	14:15:54 ----- idError--- d705eab4-1095-49a4-ab74-7ba7c05cdb8b --- /api/v1/auth/handlerRTTIPJS --- POST --- User not registered
+25-12-2023	14:18:34 ----- idError--- 9e4c02ef-d7db-4e32-9cd4-b1693739cfdf --- /api/v1/auth/handlerRTTIPJS --- POST --- newUser is not defined
+25-12-2023	14:19:02 ----- idError--- f839bae3-3272-4c28-a6ca-d488530fa672 --- /api/v1/auth/handlerRTTIPJS --- POST --- holderToken.update is not a function
+25-12-2023	14:20:59 ----- idError--- 676be26f-b54e-4fac-9018-2057bd0c5096 --- /api/v1/auth/handlerRTTIPJS --- POST --- User not registered
+25-12-2023	14:21:57 ----- idError--- 2cea200a-620c-49fc-b986-95078884348e --- /api/v1/auth/handlerRTTIPJS --- POST --- User not registered 1
+25-12-2023	14:23:04 ----- idError--- 5edc8096-ff8d-4662-9dfc-4e009ae4a4be --- /api/v1/auth/handlerRTTIPJS --- POST --- User not registered 1
+25-12-2023	14:26:28 ----- idError--- be02fc89-6b01-4a60-bb1b-e434aa0b2cd8 --- /api/v1/auth/handlerRTTIPJS --- POST --- User not registered 1
+25-12-2023	14:27:09 ----- idError--- d1483520-16c3-475b-92b3-1eaddeda2b3b --- /api/v1/auth/logoutTIPJS --- GET --- invalid signature
+25-12-2023	14:27:35 ----- idError--- a2c0704c-e2cb-4c81-8925-69260355391e --- /api/v1/auth/handlerRTTIPJS --- POST --- Cast to ObjectId failed for value "{ user: '6589071bdde203193dcf8fab' }" (type Object) at path "_id" for model "Key"
+25-12-2023	14:28:43 ----- idError--- 5dee3633-b2a4-4ff2-b38d-deb600ddcdf1 --- /api/v1/auth/handlerRTTIPJS --- POST --- Cast to ObjectId failed for value "{ user: '6589071bdde203193dcf8fab' }" (type Object) at path "_id" for model "Key"
+25-12-2023	14:29:38 ----- idError--- 78989364-26a8-4971-909a-468b039c830e --- /api/v1/auth/handlerRTTIPJS --- POST --- Cast to ObjectId failed for value "{ user: new ObjectId("6589071bdde203193dcf8fab") }" (type Object) at path "_id" for model "Key"
+25-12-2023	14:29:43 ----- idError--- b38a289d-f4dc-4373-81b5-53117e6884d9 --- /api/v1/auth/handlerRTTIPJS --- POST --- Cast to ObjectId failed for value "{ user: new ObjectId("6589071bdde203193dcf8fab") }" (type Object) at path "_id" for model "Key"
+25-12-2023	14:31:09 ----- idError--- 3a8ac7be-6949-433b-8c1b-a446ebbdd335 --- /api/v1/auth/handlerRTTIPJS --- POST --- Something wrong happened!! Please login
+25-12-2023	14:31:21 ----- idError--- 34adb8af-fed8-4666-9c62-7efc15f0ceec --- /api/v1/auth/handlerRTTIPJS --- POST --- Not Found keyStore
+25-12-2023	16:24:39 ----- idError--- 3ab2a504-7640-4463-875e-07fb24bf6100 --- /api/v1/auth/handlerRTTIPJS --- POST --- Cannot destructure property 'userId' of 'user' as it is undefined.
+25-12-2023	16:26:46 ----- idError--- af2760e5-6c7b-41be-ae4c-5d1499aca77c --- /api/v1/auth/handlerRTTIPJS --- POST --- Cannot destructure property 'userId' of 'user' as it is undefined.
+25-12-2023	16:27:32 ----- idError--- 8c8ef9e9-f5d2-4cff-baa1-005f275f6bee --- /api/v1/auth/handlerRTTIPJS --- POST --- Cannot destructure property 'userId' of 'user' as it is undefined.
+25-12-2023	16:31:07 ----- idError--- 8502672d-b98c-4edb-a293-cdd0c4ab71d6 --- /api/v1/auth/handlerRTTIPJS --- POST --- Something wrong, warning!
+25-12-2023	16:31:49 ----- idError--- ddc684e6-e024-4589-adea-8c1f8e4ffdf0 --- /api/v1/auth/handlerRTTIPJS --- POST --- Not Found keyStore
+25-12-2023	16:31:53 ----- idError--- a7f627bd-6871-4b50-8d3c-c4c15f9c2d2d --- /api/v1/auth/handlerRTTIPJS --- POST --- Not Found keyStore
+25-12-2023	16:31:57 ----- idError--- 4a6d501d-991c-46ab-9e5e-8eb4d64e376f --- /api/v1/auth/handlerRTTIPJS --- POST --- Not Found keyStore
+27-12-2023	14:17:41 ----- idError--- 0b306679-ce84-415c-b554-0b23e95935f2 --- /api/v1/auth/login --- POST --- foundUser.save is not a function
+27-12-2023	14:23:05 ----- idError--- 61891030-82c7-4516-9bb8-8c2c3e59411b --- /api/v1/auth/login --- POST --- Tài khoản không tồn tại
+27-12-2023	14:24:20 ----- idError--- 7bac2865-42a9-4ba1-8e41-1959384d870d --- /api/v1/auth/login --- POST --- Tài khoản không tồn tại
+27-12-2023	14:24:28 ----- idError--- 711b82df-1add-4c6a-b237-3aafeb495ddb --- /api/v1/auth/login --- POST --- Authentication Error
+27-12-2023	14:24:46 ----- idError--- 67656595-1260-4d7a-a734-a53152d0cf5f --- /api/v1/auth/login --- POST --- Authentication Error
+27-12-2023	14:51:16 ----- idError--- a1a00325-2aba-4a67-a72c-1e6cd28e1267 --- /api/v1/auth/refresh --- GET --- Forbidden 1
+27-12-2023	15:43:54 ----- idError--- 3ec52da7-1b4d-4d48-a08c-f565142ca243 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+27-12-2023	15:44:13 ----- idError--- 8624b88d-8527-4f39-8fd8-724b35b60142 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+27-12-2023	15:49:27 ----- idError--- e5886264-286d-4c78-b380-ce8b076834dc --- /api/v1/auth/refresh --- GET --- Forbidden 2
+27-12-2023	15:50:53 ----- idError--- c9ce28c1-bedb-4ebf-aea5-faaea818fef9 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+27-12-2023	15:55:29 ----- idError--- 408c116c-d4c6-4046-bbbb-45fc80b64103 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+27-12-2023	15:57:02 ----- idError--- fcfac779-f2b2-4be1-bd0d-1e5ced5162e8 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+27-12-2023	16:20:32 ----- idError--- 5f9db773-ecb1-45fc-9d04-2e5b2e216e8c --- /api/v1/auth/login --- POST --- Cannot read properties of undefined (reading 'accesstoken')
+27-12-2023	16:21:33 ----- idError--- 5f28dbb1-4fd7-46f0-9af0-8b6c7be50aa6 --- /api/v1/auth/login --- POST --- Cannot read properties of undefined (reading 'accesstoken')
+27-12-2023	16:22:26 ----- idError--- c9c52157-0d1b-4b31-9009-7d7f000dca9c --- /api/v1/auth/login --- POST --- Cannot read properties of undefined (reading 'accesstoken')
+27-12-2023	16:23:50 ----- idError--- 7a0f27dd-2de0-4325-b428-79dd74d4afbe --- /api/v1/auth/login --- POST --- Cannot read properties of undefined (reading 'accesstoken')
+27-12-2023	16:24:24 ----- idError--- 879b986d-3bbf-4c73-8eb1-6c86f33466a5 --- /api/v1/auth/login --- POST --- Cannot read properties of undefined (reading 'accesstoken')
+27-12-2023	16:25:14 ----- idError--- c6ea3187-b941-4069-94d9-22d9a8047567 --- /api/v1/auth/login --- POST --- Cannot read properties of undefined (reading 'accesstoken')
+27-12-2023	16:26:43 ----- idError--- bef4fdd4-3e1b-4538-b9c4-40a905b98640 --- /api/v1/auth/login --- POST --- Cannot read properties of undefined (reading 'accesstoken')
+27-12-2023	16:40:14 ----- idError--- 677d5a96-cb39-45f1-b20e-eef8a0c01cd5 --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:43:47 ----- idError--- 36ce0be2-666d-4144-8de6-d8752fecc016 --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:48:16 ----- idError--- 5f57781b-f48a-4844-97f3-eac7af4de0bd --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:51:17 ----- idError--- 168c34ca-5a31-42b6-a717-b25ec6f57e4f --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:52:38 ----- idError--- 7ab695a4-deea-4f03-9039-307bad3838b4 --- /api/v1/auth/login --- POST --- Tài khoản không tồn tại
+27-12-2023	16:53:10 ----- idError--- 6671e21e-73dd-451e-b65f-9b08bea4d64a --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:54:17 ----- idError--- f84cd1c2-6bd7-4e75-aab8-095c26de7bbc --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:54:19 ----- idError--- 419d5b36-04ef-42f6-924c-eebf29196108 --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:54:33 ----- idError--- fc936d7e-7eb0-4e3d-bf60-ef7a3c148fca --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:54:35 ----- idError--- 143234e5-c713-48d8-b23f-b2d0c84d985e --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:56:01 ----- idError--- a4bb75e3-5670-40c0-a6a0-5d031a1f464c --- /api/v1/auth/refresh --- GET --- jwt must be provided
+27-12-2023	16:58:25 ----- idError--- a52f2c76-c795-4659-8caf-44209dccecfc --- /api/v1/auth/refresh --- GET --- You're not authenticated
+27-12-2023	16:58:29 ----- idError--- f484bd05-5bdb-4fd7-b33f-53b046674a0d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+27-12-2023	16:58:33 ----- idError--- 4a0f7b04-1c6b-4057-bb08-a32cbd24d73e --- /api/v1/auth/refresh --- GET --- You're not authenticated
+27-12-2023	16:59:28 ----- idError--- d8ff93d0-5135-492a-9ccb-b09faee9ebc7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+27-12-2023	16:59:32 ----- idError--- 4c961700-d24e-4eb2-b46a-58e11b15f34f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+27-12-2023	16:59:34 ----- idError--- 872d1553-1fbd-4b9a-92ee-028b2cca862e --- /api/v1/auth/refresh --- GET --- You're not authenticated
+27-12-2023	17:00:36 ----- idError--- 297435f3-17b7-4579-8d89-24dc7b429dc7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+27-12-2023	17:00:38 ----- idError--- be724549-ad42-4f32-b6eb-a8eb95f2e8e7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	10:14:20 ----- idError--- 0f45ec61-275d-4782-a34c-ec4041be349c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	10:28:31 ----- idError--- f3c15d12-3ec9-4bdf-ba3e-75e058881d50 --- /api/v1/auth/login --- POST --- No matching document found for id "6588fd0e9cd50e6445b2fd35" version 41 modifiedPaths "refreshToken"
+28-12-2023	10:30:42 ----- idError--- ff00aa9f-a224-43bf-b758-989cb7bb6cb3 --- /api/v1/auth/login --- POST --- Cannot read properties of null (reading 'refreshToken')
+28-12-2023	11:53:09 ----- idError--- ea48c1c9-29f0-4a6a-b57f-86995ab09668 --- /api/v1/auth/refresh --- GET --- Forbidden 1
+28-12-2023	11:53:59 ----- idError--- 900a5e04-c7c2-4153-bf86-ec030578d5c5 --- /api/v1/auth/refresh --- GET --- No matching document found for id "64e83b4f992300806ae9a282" version 708 modifiedPaths "refreshToken"
+28-12-2023	11:55:21 ----- idError--- b39aa9eb-327d-4b3d-b5f1-8c8073c5dcdb --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	11:56:21 ----- idError--- 58ecb874-04b3-41e6-b635-4538045a5ad1 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	12:11:32 ----- idError--- e1746f5a-adf8-4f5b-8d6b-f992b1feacba --- /api/v1/auth/logout --- GET --- Fobidden
+28-12-2023	12:13:31 ----- idError--- 23e60588-b060-4ebe-845d-d8245c4a5ff4 --- /api/v1/auth/logout --- GET --- Fobidden
+28-12-2023	14:50:14 ----- idError--- 29ad44b9-a989-43c2-8f2a-d43d7644696c --- /api/v1/auth/forgot-pwd-user --- PUT --- User Not Registered
+28-12-2023	14:55:50 ----- idError--- 7d5793e5-4950-4ae6-8349-e99ac1823b6f --- /api/v1/auth//forgot-pwd-user-verify --- PUT --- User Not Registered
+28-12-2023	14:55:56 ----- idError--- 05810a57-52b7-4cc1-a97c-7a8dc70e18f8 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- User Not Registered
+28-12-2023	14:56:07 ----- idError--- 5f5fa09a-4246-434d-92fc-e46cf7c3b105 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	14:56:53 ----- idError--- 7a3bc1ad-b3a7-4eda-9b0b-981f305b72c8 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Không tìm thấy mã OTP cho email này
+28-12-2023	14:57:02 ----- idError--- c80d8d5a-4743-418e-8329-aeb4a3dadfa7 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	14:57:09 ----- idError--- 0167fc10-b636-41db-abd0-ed0e570e5b09 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	14:57:26 ----- idError--- eeff95f6-47e4-4432-9486-44efea73fac1 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	14:58:00 ----- idError--- 8cc598ba-9920-4fbb-a13f-6ecbc73aaff9 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Không tìm thấy mã OTP cho email này
+28-12-2023	14:59:51 ----- idError--- 7947888f-2fb0-4476-8ae8-8646e4cfd71d --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	15:02:48 ----- idError--- eab6cd80-07fe-4f00-b3cb-07012f6b3111 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- User Not Registered
+28-12-2023	15:02:57 ----- idError--- 403b50fc-5b44-4000-bb89-762178c99c2a --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Không tìm thấy mã OTP cho email này
+28-12-2023	15:05:06 ----- idError--- c7ad370e-5d98-4ed7-9fd7-96192449fada --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	15:06:55 ----- idError--- a112a309-0e14-426d-829a-556d8851599d --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Không tìm thấy mã OTP cho email này
+28-12-2023	15:10:42 ----- idError--- d49a6ece-e54d-4a81-bb2c-65be09356c48 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Không tìm thấy mã OTP cho email này
+28-12-2023	15:11:10 ----- idError--- 106b3593-805a-4757-bf01-f4dfa108e4e4 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- User Not Registered
+28-12-2023	15:11:26 ----- idError--- 418425c9-d147-4f44-a8d5-31f88088b9b7 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- User Not Registered
+28-12-2023	15:11:43 ----- idError--- 4f194e8e-a080-4281-ae28-1789493b0725 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	15:12:03 ----- idError--- 45e0f7b2-9e31-4d0e-b2fc-bf8544a22068 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	15:13:52 ----- idError--- ff648396-06d9-4e56-9aaa-7ddf118c9418 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	15:14:20 ----- idError--- 3b65925a-17f2-448d-8425-5ce1475ffd18 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	15:14:24 ----- idError--- fc46fab0-d766-4049-b089-f9b4c9c0c0ff --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- User Not Registered
+28-12-2023	15:15:04 ----- idError--- be0c7d2d-c072-4a28-977a-d261ee03b348 --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+28-12-2023	16:13:04 ----- idError--- 26613d73-abc9-47d5-8f3a-f4a1fbfece5a --- /api/v1/auth/login --- POST --- Tài khoản không tồn tại
+28-12-2023	16:13:25 ----- idError--- 2b8679d0-d4b0-4d8b-b1b6-18434c52aaa3 --- /api/v1/auth/login --- POST --- Tài khoản không tồn tại
+28-12-2023	16:13:34 ----- idError--- 469a8059-ae7d-436f-8ece-ced9ad618b10 --- /api/v1/auth/login --- POST --- Tài khoản không tồn tại
+28-12-2023	16:13:45 ----- idError--- d71087ce-61a0-438c-ba41-db4e0e00984e --- /api/v1/auth/login --- POST --- Authentication Error
+28-12-2023	16:14:37 ----- idError--- 08f1a325-4710-4279-ba3b-69d6761d9a40 --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:14:37 ----- idError--- 4e6650cc-bf90-4122-9485-5dd8ef652480 --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:15:16 ----- idError--- 0bcbbc5c-4a97-4931-ba86-8d89c828720c --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:15:16 ----- idError--- 9cebfe84-7e5f-4356-a266-24c7a6e64a71 --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:16:26 ----- idError--- cc056501-380c-4bbc-a73e-2c8c4759f6c5 --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:16:26 ----- idError--- 82072a00-2aa4-4438-ab7b-867bc99fab28 --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:16:31 ----- idError--- c8ac3b58-7a38-4cd8-b11c-a806a8bf15f7 --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:16:31 ----- idError--- 53721fdb-8c9c-4acf-8bab-b0dd28265fff --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:17:37 ----- idError--- 3d6e42b7-c668-4c37-a288-7ed9b9c9605a --- /api/v1/category/admin/admin-get-cate --- GET --- Unexpected token u in JSON at position 0
+28-12-2023	16:18:45 ----- idError--- c6a54428-b443-4319-84e5-663f37814bf7 --- /api/v1/category/admin/admin-get-cate --- GET --- Unexpected token u in JSON at position 0
+28-12-2023	16:19:56 ----- idError--- cfdffb68-0bd0-48a1-b2a1-74aad8f22907 --- /api/v1/category/admin/admin-get-cate?page=1&pageSize=5&filter=%7B%7D; --- GET --- Unexpected token ; in JSON at position 2
+28-12-2023	16:20:07 ----- idError--- ed81b44c-60d2-45cf-aa72-4319c8e89f1c --- /api/v1/category/admin/admin-get-cate?page=1&pageSize=5 --- GET --- Unexpected token u in JSON at position 0
+28-12-2023	16:20:24 ----- idError--- 7635105e-af03-4e70-9fee-51cec4d77dae --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:20:24 ----- idError--- 9034ba11-1a14-41f4-a46d-f023e3d64f86 --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:25:01 ----- idError--- eee5c317-e78a-49b1-900e-d35d730139eb --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	16:25:51 ----- idError--- 26b6644a-8ec1-45b1-995e-2509569ea881 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:25:51 ----- idError--- 4b0105da-8250-449f-9073-5e69d2bbc6d7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:26:50 ----- idError--- a46dffc2-c524-4d9b-bc8c-f1a653a5d159 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:26:54 ----- idError--- 9a0aaddd-f235-4735-9791-15fa342cc709 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:26:56 ----- idError--- 742d9c52-1b04-4c43-8a4c-5ecb2d26d8f8 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:26:56 ----- idError--- 25f6ac8d-390b-4319-9682-6a60f3f3c038 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:26:56 ----- idError--- 3e855d59-e517-4ef9-87cb-47e17e92fe52 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:26:56 ----- idError--- 9dd899d0-36cb-476d-a564-02ec28efa4fe --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:26:56 ----- idError--- b9fc7915-a398-4c78-8ca5-675a121eb9eb --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:27:01 ----- idError--- 149df276-6507-4776-9237-43f25b017e6c --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:27:26 ----- idError--- a874c420-d957-42fc-a5a3-d05db0ea6970 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:27:26 ----- idError--- 6d53558f-6a73-4b87-bde5-456aa80b6b23 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:27:42 ----- idError--- de0e596e-0c82-49c8-83c4-b040c23b6abf --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:28:32 ----- idError--- 8ea9cb81-03ef-4646-90b1-b9ac8801a115 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	16:28:39 ----- idError--- 06995610-5b28-4a41-8dfa-2d5136cd22a1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:28:39 ----- idError--- b9dcfef2-8f07-4edb-ad4b-339dba2bf268 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:29:16 ----- idError--- 5e81e198-c37f-4533-9dfc-5a382b81efe0 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:29:16 ----- idError--- 6a6dc380-1690-4c96-99fa-731770b7732f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:31:33 ----- idError--- e5f7f9f5-35f7-4f9c-a330-447357783caf --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:31:36 ----- idError--- 9e5f084f-7371-428d-b9c7-f9f1c06ef90c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:31:36 ----- idError--- bc66f724-9b0c-439b-aaec-67181899280f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:32:11 ----- idError--- 69ce7e17-98e3-4310-8780-bd2023129cb2 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	16:34:32 ----- idError--- 0f83e892-b0d2-4c16-aca4-56dbc730c8e0 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:34:32 ----- idError--- d01203ab-2509-44bb-956b-4586496654c2 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:34:57 ----- idError--- 4c3080f4-99a6-4493-b697-8eb5689364b9 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	16:35:01 ----- idError--- 9c882e18-dc0c-4c59-8a0e-c0c642bcc099 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:35:01 ----- idError--- 7f03459c-fc94-4e2a-b89c-c91ccce1069f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:37:14 ----- idError--- 3f54a8c0-5b00-4526-a8c8-e912242ae848 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:37:14 ----- idError--- 816b1c33-e8fa-43df-9098-eefffc35a570 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:40:26 ----- idError--- aeab5b1e-b588-4239-a8cc-8de161101ece --- /api/v1/auth/refresh --- POST --- Not Found
+28-12-2023	16:40:44 ----- idError--- 1a7d0d2e-8b3a-47c5-a2a7-a5e47dda0b6c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:40:50 ----- idError--- c0c745aa-00c2-4b9a-bcfb-2d2ae517db72 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:40:59 ----- idError--- 09b37ca7-dd92-41b2-a1df-48ec1640c68b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:41:14 ----- idError--- 18e99436-cd44-47c5-b60b-30bbabc22478 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:41:16 ----- idError--- 1b0d941a-3e4c-45d0-866e-4ca89e1a4982 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:41:16 ----- idError--- d9e2bc70-bde4-4480-a165-e303cb58923a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:44:03 ----- idError--- 5402d629-8fd8-4ab9-a048-0ff4894675e9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:44:03 ----- idError--- 600c6d82-9568-4030-b0f0-e83a474cc43a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:44:06 ----- idError--- cd376e47-1265-4732-82f7-8fab9a1b2228 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:44:06 ----- idError--- 3bf8924d-9032-44e7-b74d-0657027ea463 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:44:31 ----- idError--- fb7415f9-4cb8-46b6-b649-da8c7e0d7c89 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	16:44:40 ----- idError--- b32ba483-b7ae-4430-a295-5f1fc831826a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:44:40 ----- idError--- 5d015214-54f7-4c39-ab22-963003d84228 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:46:18 ----- idError--- 4cda84de-e427-4812-9677-4289c81c54e4 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:46:44 ----- idError--- b8643d12-c0b8-4560-ab4a-305c337f73f1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:46:48 ----- idError--- 3d14de5a-4cea-4b25-b90c-a8f81a942e17 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:47:16 ----- idError--- 008cba35-8475-4911-b7ac-d70068e3ee71 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	16:47:23 ----- idError--- d6ab7a7a-7129-48ee-9da4-2fcae1a1c0a3 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:47:23 ----- idError--- c23f5d08-abca-4490-9b74-92d805337c34 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:48:17 ----- idError--- 5d8dc427-3ad5-48d0-a72e-820d10a23921 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:48:17 ----- idError--- 4216ff53-a1f9-4826-98c7-3f6cd5a2904b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:50:32 ----- idError--- 985d0f90-1801-4d89-a599-0d386a6d23d6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:51:03 ----- idError--- fa8ea73b-d591-49a3-bab1-bb8dbb56ac35 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:52:11 ----- idError--- d464832f-24b1-4a1c-82cf-73c99b87a89f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:52:11 ----- idError--- 6893b2b3-1749-4acb-9785-ceaa4d318ab5 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:52:20 ----- idError--- c3ef2d82-6fea-4f99-a13c-a8eea8f77ab1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:52:28 ----- idError--- 8a6d81d1-9a30-427b-b6c2-26deb8c07523 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:52:45 ----- idError--- d58919f9-0f81-4f94-8fa1-2248fea9543c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:52:45 ----- idError--- ed778cce-a362-42b4-9f86-7439963e93b3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:52:57 ----- idError--- e7e741e7-dcd5-46e5-8e55-9f66b33b8272 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:53:40 ----- idError--- 45de8e45-831a-4165-bb67-2a39bdfc2de8 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	16:53:40 ----- idError--- 58491d48-0c95-4ed5-9c0d-7ed049fe712e --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:54:10 ----- idError--- 23b5fe06-5fad-41c3-a262-9994e9f87a0d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:54:10 ----- idError--- 98b1547e-6113-4280-afe7-b635ea617490 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:54:10 ----- idError--- 470ca5ba-1af1-4aca-8f71-6b287e0b8850 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:54:10 ----- idError--- 22a0cd86-4ce3-494d-bf3e-997726e938ed --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:54:16 ----- idError--- 4b4d9801-b38f-4c81-b1bf-a5162fb9a36a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:54:16 ----- idError--- 4a8438e5-d1c9-4a71-b17b-320b40a48e2d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:54:16 ----- idError--- 89b93426-7a4c-4df8-9009-6336096f4ec7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:54:16 ----- idError--- d8390696-0076-4744-ae13-5a451a842c9e --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:55:21 ----- idError--- 596cd525-76cb-45ff-8ee4-64c71cea9627 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:55:21 ----- idError--- 97e5907e-031b-4962-891d-974d045a3c2c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:55:21 ----- idError--- 9803492b-8dba-4b78-9b9b-e7565390dfb1 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:55:21 ----- idError--- 5e5e8fba-6c7f-4793-ae3e-0836bf3051e0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:56:46 ----- idError--- 4deaf729-1ef2-4ed9-8fc3-0794b7b9931c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:56:46 ----- idError--- 4075dda8-9449-46ea-9303-60b08e4f8efc --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:57:31 ----- idError--- a8c21dc1-4826-472c-9f64-70e6a3b7d9dd --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:57:55 ----- idError--- 7fed22f5-bca9-41cc-98bb-cfd16b330338 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	16:57:55 ----- idError--- be622800-7a33-4c01-93fe-ddf0f77a1123 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:59:28 ----- idError--- e0a9371a-ecab-4e34-aaa5-99d3347a7bb5 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:59:28 ----- idError--- d539d352-7cf9-492e-ac41-8334acad74b3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:59:38 ----- idError--- 865d30ef-10da-4f15-85c6-8d74fa310371 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:59:38 ----- idError--- 24c6658c-d0e4-4fe8-8952-a97b641b3ac2 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	16:59:53 ----- idError--- a71fd9d7-3d8b-4863-8f45-ab6117818b1c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	16:59:53 ----- idError--- eecea5b7-f127-4172-a9d5-392dfcfe18d5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:00:21 ----- idError--- 78f1945d-45ce-4631-a7b1-19b50032589a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:00:21 ----- idError--- 8b0e6b83-09ce-4cd5-b3a1-bc58881398f8 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:00:21 ----- idError--- 716051ee-f48a-4501-a854-25042e76a68d --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:00:21 ----- idError--- 8a85a4c6-8949-4ba7-8fce-8c5082df3103 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:01:12 ----- idError--- 84b01fde-bcf7-4729-a188-fbc6444ca3ac --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:01:12 ----- idError--- f546f4b1-2e60-4d67-aa97-41d828763a21 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:01:57 ----- idError--- 229bb032-6120-47f6-99a3-eeb3eda2973f --- /api/v1/auth/login --- POST --- Authentication Error
+28-12-2023	17:01:59 ----- idError--- 2917528b-a11c-4a1e-b67c-c8abe22b73fc --- /api/v1/auth/login --- POST --- No matching document found for id "64e83b4f992300806ae9a282" version 751 modifiedPaths "refreshToken"
+28-12-2023	17:16:11 ----- idError--- c804a042-0940-409a-b316-61624a00ffeb --- /api/v1/auth/refresh --- GET --- Forbidden 2
+28-12-2023	17:16:11 ----- idError--- 9fcdc8aa-bc00-46ba-b893-d570fd5b6e38 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:16:21 ----- idError--- 1412ad82-e0e6-4d87-92f3-543a0264bcf4 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:16:21 ----- idError--- f809c68d-e1d4-469d-9697-492c4f39056b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:16:21 ----- idError--- 2ced2392-2ad3-4ea0-b98e-edbbee795fdf --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:16:21 ----- idError--- 240e0145-5348-4a8f-b884-7f4d237508b7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:16:46 ----- idError--- f1360507-535c-4c42-871c-523859eeaeb6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:16:46 ----- idError--- 3ece463f-6b56-4280-a912-778edaff2085 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:16:46 ----- idError--- a9e32537-76f4-43b6-b1ff-092400c08f0d --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:16:46 ----- idError--- 53274390-e589-4dc3-bba3-17bd7bf31c30 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:17:01 ----- idError--- 1d686b90-11db-4b88-a24e-b6208244bd30 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:17:01 ----- idError--- ffa488ab-86a5-4fa0-9297-363201aff8e9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:17:01 ----- idError--- cf45cbf6-4a24-49ea-9cf0-6633a14fc766 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:17:01 ----- idError--- a0236d8e-7df7-4406-993b-18afcc2b5283 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:17:10 ----- idError--- 97c3df62-5d74-4ac6-a67f-e7c02b8dd418 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:17:10 ----- idError--- d9d28896-f581-4fe3-ba9a-7921717b4677 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:17:10 ----- idError--- 4039bf0c-5529-4e72-b4b9-1075147c7cee --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:17:10 ----- idError--- e65353cd-dd0d-4ac1-af33-d4211e758f5b --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:17:19 ----- idError--- f8deef88-7129-4fac-9492-6f960eb9243e --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:17:19 ----- idError--- 5e5956ae-f6df-4046-8d3f-1dde48af9e96 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:17:19 ----- idError--- c82abe95-09d5-471e-8ac7-2d1e9681cc8a --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:17:19 ----- idError--- 39d87ef9-3ec8-4bda-b9ba-0731583deaea --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:17:36 ----- idError--- 59e63f81-acb1-4a80-95a0-62f5bbf7e9b2 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:17:36 ----- idError--- 0e387231-a67c-4d8d-9f69-7a6f6fd907e3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-12-2023	17:17:44 ----- idError--- 2fdcf022-8096-48b8-a6f0-455c7e3e94d1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-12-2023	17:17:45 ----- idError--- 652f43b3-ec45-41a3-9046-09623b4b75f0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	08:55:38 ----- idError--- e4079b75-3de4-44a4-bb87-e56f1c5d307e --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	08:55:41 ----- idError--- 59fa0200-97d5-4d9f-8636-6c91cc72df5b --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	08:55:47 ----- idError--- 6ff7c3fb-8a50-410a-a8b1-9b2655d1c6a5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	09:24:49 ----- idError--- 7c85e463-4ec7-4ad4-b472-3d55db08d4e0 --- /api/v1/category/admin/add-category --- POST --- not have new cate
+29-12-2023	09:25:34 ----- idError--- 8294e673-e761-49c9-a74f-a854df434ea2 --- /api/v1/category/admin/add-category --- POST --- not have new cate
+29-12-2023	09:33:40 ----- idError--- b4cf0d42-11f3-4dff-b1f3-126d2e8b186f --- /api/v1/category/admin/update-category --- PUT --- Không có thể loại để cập nhật
+29-12-2023	09:34:00 ----- idError--- f039b188-8f46-45bd-8a36-369d58dab6e3 --- /api/v1/category/admin/update-category --- PUT --- Không có thể loại để cập nhật
+29-12-2023	09:43:18 ----- idError--- a809387b-befd-4f55-b76f-decc376c0bd2 --- /api/v1/category/disabled-category --- PUT --- Not Found
+29-12-2023	09:44:52 ----- idError--- d184e8cf-99f2-4004-bcb6-305b7da741d5 --- /api/v1/category/admina/disabled-category --- PUT --- Not Found
+29-12-2023	09:45:24 ----- idError--- bd3bf16b-160f-421c-9acf-c55c1c2a31db --- /api/v1/category/admina/disabled-category --- PUT --- Not Found
+29-12-2023	09:45:26 ----- idError--- ddaa9b1a-192b-496a-95cc-99e5dc0c96da --- /api/v1/category/admina/disabled-category --- PUT --- Not Found
+29-12-2023	09:45:44 ----- idError--- 2335774d-343b-4264-9294-3e2a082ce1a7 --- /api/v1/category/admina/disabled-category --- PUT --- Not Found
+29-12-2023	09:46:33 ----- idError--- 6ee07098-1b43-49b3-a709-4562fc0c35d8 --- /api/v1/category/admina/disabled-category --- PUT --- Not Found
+29-12-2023	09:46:34 ----- idError--- a484215d-7d86-44ea-bd5b-1587c86e03b2 --- /api/v1/category/admina/disabled-category --- PUT --- Not Found
+29-12-2023	12:14:39 ----- idError--- 4a04bfcb-9366-4b2f-84c2-e8330e58a404 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+29-12-2023	12:14:51 ----- idError--- 1b6589af-7b8f-442b-a0a4-d4c0272abc43 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:15:09 ----- idError--- 836af0bf-fbca-466c-ac36-06f65b126c00 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:15:14 ----- idError--- 5ed24a3e-9592-43a8-b58e-1439a65a7851 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:15:37 ----- idError--- 41b342c4-f20d-4827-9c0a-5e0edacc5d33 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:15:48 ----- idError--- 1252d957-ac11-407c-8f93-b5c2ab60ea0e --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:16:03 ----- idError--- 327f065e-ed25-41f2-be50-7bcb357576dc --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:16:26 ----- idError--- af71938a-f66a-45f7-9aad-7f58df3124a5 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:16:26 ----- idError--- 8ca9f810-b233-4f32-9685-b213f1586ed5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	12:16:44 ----- idError--- 952d7e62-3d55-49d8-880a-0cba01ab5d3f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:16:44 ----- idError--- 57f3667d-48bc-4589-9391-ff4f4a47c6f4 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	12:16:45 ----- idError--- 8c7282c9-b860-4c00-a275-224b498e74da --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	12:23:35 ----- idError--- a9142d46-f051-4469-b6d6-a3631e2ae81c --- /api/v1/auth/refresh --- GET --- Forbidden 2
+29-12-2023	12:23:35 ----- idError--- 42a94db4-b16e-4692-9929-0c6c8c4a1b94 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	12:23:36 ----- idError--- 618a9c19-20ac-4f90-ab5b-430fb5efe7e5 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+29-12-2023	12:23:36 ----- idError--- 7ca4ee8c-058a-4590-8fa3-7e163be7baaf --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	12:39:20 ----- idError--- 48fb0f76-f417-4b04-9aa3-33b56815cf1a --- /api/v1/movie/get-category-movie?cateId=64f1ce11b84ba3a85e0b417b&page=1&pageSize=30 --- GET --- ObjectId is not defined
+29-12-2023	12:43:43 ----- idError--- 7640cafc-40cd-48e8-96ef-bf08af6ef1a7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:43:43 ----- idError--- 041ceae0-7160-42dc-bb1b-c05d80d60c4d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:44:36 ----- idError--- 2eb24321-dd36-48b1-9749-36fd82d9c828 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:44:49 ----- idError--- 4dbbdfed-986b-4dab-ac76-7d05f155c1a2 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:45:12 ----- idError--- 117fafc7-c6ff-49cf-8ee2-7fa026078d5f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	12:45:35 ----- idError--- 0e087785-fa99-473f-b6e4-3e9b3b60150a --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	12:55:26 ----- idError--- 6487a359-283c-4f12-b9a6-b3ca1148915c --- /api/v1/movie/admin/single-movie/ban-in-loi --- GET --- Movie is not defined
+29-12-2023	12:55:26 ----- idError--- 4fe1cc14-581a-4c77-babe-f6273d0ed646 --- /api/v1/movie/admin/single-movie/ban-in-loi --- GET --- Movie is not defined
+29-12-2023	12:55:30 ----- idError--- 796b0b04-3791-4b8e-a7ac-84bcfd148237 --- /api/v1/movie/admin/single-movie/ban-in-loi --- GET --- Movie is not defined
+29-12-2023	13:07:22 ----- idError--- 94d4e4a9-5520-48bf-9568-829d30499108 --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:08:19 ----- idError--- 74d0b08c-1330-48b8-ada2-1d4771145c01 --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:09:29 ----- idError--- 51407f32-1a95-489c-83f4-af1a1e36e09c --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:10:13 ----- idError--- cb4fcba9-19a8-47cb-ac68-5be3e548445f --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:10:43 ----- idError--- 77258fd4-f617-4ec5-9512-a09cf910e652 --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:11:14 ----- idError--- 2aff3291-2e00-4296-bc1e-2d4dc3bf8040 --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:12:18 ----- idError--- 0afbafae-2d78-4c3f-9af8-4a7cade717fd --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:13:43 ----- idError--- 85cb93b5-4909-4a4e-a102-e20cf097eaf8 --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:16:45 ----- idError--- fd7f91b0-a88a-4b59-84de-50c454720de6 --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:19:47 ----- idError--- 09b2bec3-d323-497c-8c0e-540c34576937 --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:22:27 ----- idError--- 5a4a2ad1-034a-48c2-bc19-18b7c8b9e5d1 --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:25:17 ----- idError--- 96f6c127-1a86-406f-be32-e9c7da334d20 --- /api/v1/movie/admin/add-movie --- POST --- Movie validation failed: category.0: Cast to [ObjectId] failed for value "[ { value: '64e8d9f1eb515b55b37a4de5', label: 'Hành động' } ]" (type string) at path "category.0" because of "CastError"
+29-12-2023	13:27:25 ----- idError--- 1c9073d8-de92-4769-aca4-d5431ff95a50 --- /api/v1/movie/admin/add-movie --- POST --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-12-2023	13:28:07 ----- idError--- bea14e06-ae95-4b03-a94b-d05dae87455e --- /api/v1/movie/admin/add-movie --- POST --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-12-2023	13:34:54 ----- idError--- ba24dc51-165d-4ca3-8956-fed663adcbeb --- /api/v1/movie/admin/add-movie --- POST --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-12-2023	13:35:12 ----- idError--- 3517c8da-ab79-4088-8750-9d4f75e647c6 --- /api/v1/movie/admin/add-movie --- POST --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-12-2023	13:36:23 ----- idError--- 5937cd4a-d47d-453a-b831-574b15150fa8 --- /api/v1/movie/admin/add-movie --- POST --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-12-2023	13:40:37 ----- idError--- bcc2610a-38e0-4ba7-af43-222e7703943c --- /api/v1/movie/admin/add-movie --- POST --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-12-2023	13:42:49 ----- idError--- 85d5857e-6d95-48d6-aab3-cfc9ba6f7078 --- /api/v1/movie/admin/add-movie --- POST --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-12-2023	13:51:16 ----- idError--- b2a524cb-f339-4157-8b18-1c66127e19f7 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+29-12-2023	13:51:16 ----- idError--- b4fe65c7-61fc-4e4c-80b2-39abbb163ce8 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	13:51:28 ----- idError--- 99b44fac-1c47-4fef-bd4a-6c5166ec5bfe --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	13:51:28 ----- idError--- d0f4ad77-2fe2-426b-9ada-40d1205fb8a0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	13:56:59 ----- idError--- 1339818f-aaf6-44a5-abcc-339231808caf --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	13:57:00 ----- idError--- 3934527c-46d5-4314-ba46-d7298fcec594 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	13:57:26 ----- idError--- a2e860e8-b97f-47e1-9557-7acf9c0b6e56 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	13:57:26 ----- idError--- fe769152-8d6a-4efa-81fe-a5d66954f4c5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	20:06:24 ----- idError--- d41df8a1-48fd-4638-8b31-9d5a6368b1c2 --- /favicon.ico --- GET --- Not Found
+29-12-2023	20:27:37 ----- idError--- 822dc168-14ac-4948-b158-2489775529e8 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+29-12-2023	20:27:37 ----- idError--- 7768f853-4f34-453f-97a9-9f8f8631e0e3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	20:27:41 ----- idError--- 575c61c0-992e-4d19-a6c2-fcbd40b0afcf --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	20:27:41 ----- idError--- 63107152-4edf-4cd7-a439-357750d44374 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	20:28:01 ----- idError--- ca2b10d8-7478-47df-9a0a-7857b880bda3 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	20:28:01 ----- idError--- 191fd9d3-6314-4ba5-992d-2cceb7d25069 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	20:34:25 ----- idError--- f76c360b-d148-4a68-8fd4-12e82e11edbc --- /api/v1/auth/refresh --- GET --- Forbidden 2
+29-12-2023	20:34:25 ----- idError--- 66e39955-3645-40bc-89fa-1c9342a1d7c7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	20:34:30 ----- idError--- d0064688-3806-4b5d-854e-ea040488cf0a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	20:34:30 ----- idError--- dc7b2471-c6a5-4fad-9f35-caecf047d25b --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	20:34:36 ----- idError--- 6fa09cf5-0341-473b-9c0b-6106f0bd1357 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	20:34:36 ----- idError--- 389276c0-dfe4-41a4-a2e7-9c97a979f178 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	20:34:36 ----- idError--- 5861aa8f-6cc4-4967-8165-f0b05ae19057 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	20:34:36 ----- idError--- 6e494e68-f5f7-46c7-a8b7-176238a20bd5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	20:36:33 ----- idError--- cd9406ea-5b90-4e05-9f57-2b56cb16e708 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	20:36:33 ----- idError--- d48aa84c-259c-4b03-8ff1-9043b20993d9 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	20:36:51 ----- idError--- 7d7f382b-d983-4ff8-b4aa-d079533550e9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	20:36:51 ----- idError--- 309e131f-ecd9-4d63-83c5-3aea82699091 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-12-2023	21:11:40 ----- idError--- 6d03a676-9bc0-4fd5-b10f-e48e5ba7a931 --- /api/v1/movie/admin/ban-in-loi --- GET --- Not Found
+29-12-2023	21:11:40 ----- idError--- fd849bfc-66d4-48c8-be3a-b8c09888dff1 --- /api/v1/movie/admin/ban-in-loi --- GET --- Not Found
+29-12-2023	21:11:44 ----- idError--- 569a762e-466c-4aa5-8783-eccaf7d9f513 --- /api/v1/movie/admin/ban-in-loi --- GET --- Not Found
+29-12-2023	21:11:44 ----- idError--- 3e04054f-219a-4590-ae86-b3d92e93fea7 --- /api/v1/movie/admin/ban-in-loi --- GET --- Not Found
+29-12-2023	21:12:15 ----- idError--- a4d94028-08dd-43d2-b9e3-dd1357d9d69e --- /api/v1/auth/refresh --- GET --- Forbidden 2
+29-12-2023	21:12:33 ----- idError--- c6f8ce23-855c-4a9a-a051-dfc8554f7d22 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	21:12:45 ----- idError--- 6c81109b-262a-4e99-b86d-85b140e6f8a9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	21:13:01 ----- idError--- 5786ff6c-8c31-450a-9bfb-75dd938d5887 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-12-2023	21:16:08 ----- idError--- d6a36e82-cc91-4588-ac66-f1fe1e547689 --- /api/v1/movie/update-movie --- PUT --- Not Found
+29-12-2023	21:17:58 ----- idError--- 47ca1cfd-3eba-449a-bccd-c79b6942891f --- /api/v1/movie/user/ban-in-loi-kkk --- GET --- Không có phim này
+29-12-2023	21:17:58 ----- idError--- 689a85ee-307d-49ff-91ae-62aacad95850 --- /api/v1/movie/user/ban-in-loi-kkk --- GET --- Không có phim này
+29-12-2023	21:26:56 ----- idError--- 38d9edde-490e-46b5-b9c5-fd0a4bfc7a7a --- /api/v1/movie/disabled-movie --- PUT --- Not Found
+29-12-2023	21:29:48 ----- idError--- 9017d171-0db5-4162-aa7b-454f97371ddf --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	21:30:33 ----- idError--- f25c7d1f-167c-4a3b-a334-50b207062b87 --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	21:31:01 ----- idError--- cbf63768-d258-4805-90ae-7452ebde5f42 --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	21:31:06 ----- idError--- 0835d0ef-e503-4cea-8338-b421b6a15a4c --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	21:32:09 ----- idError--- d0ef59a8-d1ff-4110-b967-38ef3639d4ba --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	21:32:26 ----- idError--- 717a728b-90cf-42b6-9cb5-5fbd06e09b04 --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	21:33:11 ----- idError--- 2e0181e5-8e4c-4936-ad24-3ba6151477da --- /api/v1/movie/admin/delete-movie/658ed7d06ee93ab273278784 --- DELETE --- Không có phim để xóa
+29-12-2023	21:33:42 ----- idError--- 9872da16-8fee-4af7-ab47-40492e76c498 --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	21:33:56 ----- idError--- affe5b9f-6d8b-44d4-8c39-4fafb8890611 --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	21:34:07 ----- idError--- e815ab4d-dbb2-4444-b8ce-0d153a11dbae --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	21:37:35 ----- idError--- 4f0b6c2b-13e9-4a82-870b-6d2c008d3103 --- /api/v1/movie/admin/delete-movie/658ed7cb6ee93ab273278780 --- DELETE --- Không có phim để xóa
+29-12-2023	22:01:58 ----- idError--- 7f049d54-a19c-434f-a987-7f68409faac0 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+29-12-2023	22:01:58 ----- idError--- cb40e524-858e-4f48-859a-14a2f1d8b2b2 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	09:45:41 ----- idError--- c6abe954-0f2a-4dfc-bd31-8a62fa2d3352 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	09:45:41 ----- idError--- cb7b101c-accc-4ae7-9823-786cace9b361 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	09:46:12 ----- idError--- f6df3112-3c70-4b00-ac68-6b42fe22ea4f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	09:46:44 ----- idError--- 27ae0a04-fa36-4da6-b747-0f71d0ea094d --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:07:46 ----- idError--- 3662fac1-885b-41ce-a6e7-dfe016c34bb6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:07:46 ----- idError--- 9a1b6c2b-222a-4d57-9a12-d853d33c5973 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:07:57 ----- idError--- be6dc6f5-019d-475f-b226-0c4bd30e041f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:27:53 ----- idError--- c3ce764f-4142-43d3-992b-51d0ec3174c9 --- /api/v1/notify/update-notify-seen --- PUT --- Notification is not defined
+30-12-2023	10:47:56 ----- idError--- 1220a311-36cb-47fa-8d08-d9c0d7a1b8e9 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	10:47:56 ----- idError--- 7c4d9e9f-05d4-4b33-ad4c-734915e4996e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:47:58 ----- idError--- fcc11277-4f27-4c4d-8286-308296da7646 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	10:47:58 ----- idError--- 00655129-6d64-41e3-974b-719f37634b4f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:48:23 ----- idError--- b1dd9960-96da-4641-9f88-549ad3353d13 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:48:23 ----- idError--- 3dcbfb5e-0779-46e6-b198-886105cef104 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:48:23 ----- idError--- 7850b3bf-7f23-4d09-88eb-d119bbdcc3a9 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:48:23 ----- idError--- a5928773-738f-476f-a419-c151d2c4c562 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:48:48 ----- idError--- f7879250-0f49-4cdd-b294-7cfc39fbb63c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:48:48 ----- idError--- 12592ef1-a14a-4245-abe7-b70b3cc622ce --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:48:48 ----- idError--- 04c4e696-2502-45a0-8705-d6323ee4fd44 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:48:48 ----- idError--- 3f7bed37-6a56-42cb-87ee-004f0dc91953 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:48:55 ----- idError--- 9e164238-9432-4877-ae31-cea3399d1489 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:48:55 ----- idError--- 90b5e48e-224d-46b7-973f-93a7987d8f0c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:48:55 ----- idError--- 54067d07-eb78-4cd8-91fe-4b2fad78c3dc --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:48:55 ----- idError--- db6b96c3-4e1f-4acd-83a6-be7ed2b64bbf --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:49:33 ----- idError--- bd72c59a-ad42-458a-bd77-13b2a5817923 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:49:33 ----- idError--- 3e0c67fd-31c5-45a3-be2d-684e21dd1ba6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:49:33 ----- idError--- 40ef9f52-ca83-4015-8176-60f0529dc34e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:49:33 ----- idError--- db9cba3f-b953-421c-b0cb-1932427630ed --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:50:26 ----- idError--- b0a4f354-a0b8-4064-a8e4-0f89c1014e1e --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:50:26 ----- idError--- 31b68ea1-b1f2-4daa-986d-d472b77eef28 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:50:26 ----- idError--- a9ad1f26-f205-420c-ac94-dfa557f38446 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:50:26 ----- idError--- 6374993e-8f81-49bc-9574-eed58b3d802c --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:50:26 ----- idError--- c91e0149-dd8f-42f6-88b8-faa8718b7732 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:50:26 ----- idError--- bca8cc41-2377-44ac-a2e8-ddeb412ba7e5 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:50:26 ----- idError--- c41342c7-ed1b-4fea-8a7e-31f512e4bfc7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:50:26 ----- idError--- d69d31bc-fd55-4361-b8b1-90c2e75e48f5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:51:32 ----- idError--- 35af9382-5a49-492a-a1b2-d97e29097747 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:51:32 ----- idError--- 21f50f8c-50d6-44de-9fdc-a58faa4116ba --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:51:32 ----- idError--- bfda8cc8-326a-4670-948d-c1464ef22a6d --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:51:32 ----- idError--- e9794445-7a03-4688-ab5f-27b424ec4601 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:52:14 ----- idError--- d499788b-4b17-4915-bdc3-132705dab5b5 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	10:52:14 ----- idError--- 27decb4b-2726-4383-959c-43b415b5de8e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:53:10 ----- idError--- af1c715c-6ef2-4360-87c1-b13c9c2864a7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:53:10 ----- idError--- b9649801-2ad8-44d7-8bee-fdb67acee39f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:53:10 ----- idError--- 3aab440b-a254-42e9-bb15-1ff39ab52125 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:53:10 ----- idError--- 4a7dceb2-1c69-44ab-b86a-fc64acc60db3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:53:35 ----- idError--- c8931db2-1e15-4739-9b7a-0f059cec50ff --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:53:35 ----- idError--- 6ae8cca0-61fe-41d7-8cff-698121b09bbe --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:53:35 ----- idError--- a2cadb98-6bda-4be0-8124-1a650199a08a --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:53:35 ----- idError--- 521a0b85-f12a-4e43-9ccc-e49c99b3dd29 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:53:44 ----- idError--- caff0114-5d2d-468f-8754-7c363c233338 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:53:44 ----- idError--- efcd7fae-0fda-44ac-b5cb-b876f7e0c566 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:53:44 ----- idError--- 2a8da53f-5bc9-4fd2-9494-a4a737777a3e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:53:44 ----- idError--- 90b3de1f-b616-4dc1-b7cc-e730278f2932 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:53:59 ----- idError--- ea1fa483-5311-4034-83c2-5162dc790b11 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:53:59 ----- idError--- 0a2a438d-1e57-4650-9d8a-c2f2073b4c9b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:53:59 ----- idError--- 40740d94-05b1-44e1-a646-fc6bc91db0f4 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:53:59 ----- idError--- be40ead9-f98a-424f-b719-952e968d0f03 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:54:48 ----- idError--- 209c20a5-3dcb-460b-ac06-82346fdc80bc --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:54:48 ----- idError--- de43b32f-0058-4aec-b777-9bf4573640eb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:54:48 ----- idError--- b3c0655d-f139-4b99-b142-37db22139a1f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:54:48 ----- idError--- 7e4df234-8ffc-4224-9b89-7fdaf25db7ad --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:02 ----- idError--- 9a2457d1-e266-43ea-9243-7ab864c57f90 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:02 ----- idError--- 15b42ae0-d419-40cc-bf8d-3f15b1d576a7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:02 ----- idError--- d85be246-003c-4554-8d55-122f5e4cecbb --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:02 ----- idError--- 7628ccb5-549d-4823-bd3f-ff8a0fe2692e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:12 ----- idError--- a15ce3b4-c0a2-442a-bcad-c310f64140ec --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:12 ----- idError--- 2fd971f5-9556-4cd9-bb6e-941276bfe45b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:12 ----- idError--- 8412378f-e7f8-48e9-a513-1131e277697f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:12 ----- idError--- 6dec7bc4-0570-4d92-a6a4-104a05f123a1 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:12 ----- idError--- cd408891-53cd-4a14-8f50-918c5c7d2367 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:12 ----- idError--- 83becee1-9d4e-40c9-b06b-cfd76b09b54b --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:12 ----- idError--- 280dafe6-4444-46ac-ab61-50eb8f5c7aca --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:12 ----- idError--- 20c27e16-0b42-4e66-a73b-a4fd06c5504e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:21 ----- idError--- e61c882b-4125-4eb6-89c0-a047bc0c65b2 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:21 ----- idError--- dce0fdbe-9a05-4783-bc8c-e3d389d880a5 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:21 ----- idError--- 42d64d18-89fe-4fa8-99cc-79620f8e201f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:21 ----- idError--- 3d78a02b-1a86-42ed-82d7-9b7c80e31830 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:21 ----- idError--- 9fd797ae-c66a-497e-990f-bf2ad0d0bddd --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:21 ----- idError--- b5ba1c41-f3a5-4663-acf8-e8f9a4e602f4 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:55:21 ----- idError--- 0f8e06ef-c18b-49c5-85fa-68d48fc1f674 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:21 ----- idError--- 6021734c-1c50-414b-acea-5b1789a6daca --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:55:58 ----- idError--- 3d189807-5ebe-4f9c-a69e-3069768916dd --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	10:55:58 ----- idError--- b7e54cc8-2fa8-4c75-9558-73f27696f933 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:59:23 ----- idError--- 41d9d416-9f55-4e9a-a780-3600fa3c6162 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:59:24 ----- idError--- 101b6ade-3143-4a0d-9891-b106b82fd8f9 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:59:29 ----- idError--- d9808afe-edc5-43c8-9185-5b292ddfb85b --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	10:59:29 ----- idError--- 488792c4-06b3-4593-be01-0684e607da2f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:59:58 ----- idError--- 6bcc1240-88f2-44de-a9be-1ef3a3ddf541 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:59:58 ----- idError--- dbb75651-2c67-433f-ad4b-c7b8c5e5251c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	10:59:58 ----- idError--- 52fb3d22-507a-4246-b15c-95fd402a7c03 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	10:59:58 ----- idError--- a0767c6f-4fb3-4d3c-bffa-409de899c06a --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:00:35 ----- idError--- 4a6cd6f1-5176-4fa4-b687-0b6b817c6acf --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	11:00:35 ----- idError--- 60c88ae6-3799-45c1-8289-1cee8352563f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:23:24 ----- idError--- 60f7253c-2485-4405-9ade-209a3ebd70f0 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:23:24 ----- idError--- d173ebd8-4ef9-40b6-acc9-1f4bb449adda --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:23:31 ----- idError--- 5aaa4aec-79d5-42eb-bb3b-7f54cc8d6146 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	11:23:31 ----- idError--- b21db206-737e-44f6-98ce-15dd618a3b6d --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:25:02 ----- idError--- 5735dce3-4a18-4fd9-b980-3061fba076c9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:25:02 ----- idError--- f447a577-af81-4eef-9806-8d1cc8a80165 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:25:02 ----- idError--- 1a137af7-ee6f-4eb3-b517-c920923cb087 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:25:02 ----- idError--- be6825ce-c8e7-4d89-9c24-15d5f9d26204 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:25:03 ----- idError--- e4a8bfcb-071c-40cd-8973-5813c2181897 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:25:03 ----- idError--- db58eaa9-2f92-4ddd-91c6-0e1ae2c5c6c6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:25:03 ----- idError--- d981a590-a866-4b09-a8a3-66fd5ff10413 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:25:03 ----- idError--- 6bfbd369-e198-427e-9f3a-5b2af5f87c36 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:25:47 ----- idError--- 8a0694e6-4274-4c91-9442-d9e3269c56bb --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	11:25:47 ----- idError--- c3cba65b-f34a-4208-900b-0686468d8e17 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:26:17 ----- idError--- e93a532d-87d8-4cb9-bf20-44ec1cb04c6a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:26:17 ----- idError--- f26a9343-e4fd-4b4a-86f5-7d0031532cc1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:26:17 ----- idError--- 63bac6e0-f449-4446-a502-4c12feeb8f8c --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:26:17 ----- idError--- bfd9a519-5a42-4584-bf17-03fea75e5553 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:26:22 ----- idError--- d6362754-9054-4457-9433-d8ce2582694f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:26:22 ----- idError--- 599cba5b-14fb-47e7-9519-722686a7d9f4 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:26:22 ----- idError--- 30dec9b3-b951-42cf-a463-3a8d97c8859d --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:26:22 ----- idError--- 323cc827-927a-42b2-a225-ac81a3b69818 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:26:22 ----- idError--- 5a91b260-be0a-453f-a41f-fda8d05387ae --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:26:22 ----- idError--- 609a7b8d-42bb-4f5c-b99b-b1d19b60430a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:26:22 ----- idError--- 0b7a7402-0b5c-4591-afe0-3d2bac6be9d2 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:26:22 ----- idError--- f6ee407b-6c80-4c57-8d22-8f5555968b64 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:32:34 ----- idError--- 77d37510-4b2f-4da3-b680-08c8d0d9e5e6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:32:34 ----- idError--- 1af8e5f1-1cd4-49f4-b8d7-8515fcd87556 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:32:34 ----- idError--- 00ec9f07-86ec-429d-b2bf-65fa124ad5c4 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:32:34 ----- idError--- c4cafea9-43cd-4c5b-8810-3879acb8fc68 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:33:27 ----- idError--- 09711a5f-fb71-4da1-a4e1-6d9ef831cacc --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:33:27 ----- idError--- cb1144d0-326a-45b5-9fa1-a282e1afa8dc --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:33:27 ----- idError--- c445f1c3-a5f7-4303-946f-6ccb6dc3c2a5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:33:27 ----- idError--- 287891ab-3ecc-41a5-baca-6a33dc647f28 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:34:34 ----- idError--- d91d109a-6cfc-4d0b-8be1-2f25d0a3afb4 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	11:34:34 ----- idError--- f0b1a9f2-a2e0-475b-8069-68e03200386f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:36:25 ----- idError--- f870d6d5-6785-4538-97cf-c5236a148886 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:36:25 ----- idError--- be6020aa-1ec9-45da-84f9-b6cbc58f8512 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:37:12 ----- idError--- 0a8d9f9a-f592-4b79-9150-26cb9419d9d0 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:37:12 ----- idError--- 277947a8-a88d-45c0-9157-bc2ee01bd408 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:37:12 ----- idError--- 1aa27275-a0ab-4e5a-b0ff-abb71df231ee --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:37:12 ----- idError--- 77413a9a-b7f2-4675-ac57-10c535796130 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:37:18 ----- idError--- c67f4afb-5b62-4de5-b222-3e6038ff3f15 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:37:18 ----- idError--- 643e88ff-c9b5-40b8-a8ad-d2ddb65b45fc --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:37:18 ----- idError--- 0f5b2c98-f53e-4d8e-aebb-424a04a5ccd7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:37:18 ----- idError--- 9b0bbd65-4695-43e9-8d36-80aedc807234 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:37:20 ----- idError--- 5ba2e988-a8a1-4107-be5a-1a5ab2a3311b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:37:20 ----- idError--- 995f5d8c-b4a3-4fbd-933b-db2650395ab5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:42:08 ----- idError--- a45a43bd-c6ce-4964-acf1-68295bdca0ed --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	11:42:08 ----- idError--- f66266a0-06d6-48ab-9c33-0fd3cc632161 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:49:44 ----- idError--- fb3e0344-d578-416a-b1cf-85bfbe6c250d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:49:44 ----- idError--- 2c6784ea-8ba1-4fc5-97e0-122b72f5a7c3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:49:48 ----- idError--- 5681b88d-ce5c-405d-bc8b-5460d8eecbb0 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:49:49 ----- idError--- ffe8e907-7ae8-4eaa-8754-e1ea5c5c2924 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:49:52 ----- idError--- dd988015-fe0f-417b-a1b7-b98bd5296187 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:49:52 ----- idError--- 28b38ed1-558a-49a4-a7c4-e817c9e28e8c --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:49:55 ----- idError--- e4fc0c11-db0b-4034-834f-314e7d6f1884 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:49:55 ----- idError--- 125e8e30-efac-49e8-935f-d211e6d116ac --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:52:45 ----- idError--- 5b19f400-905d-40b5-9a5a-c0958fc4a89d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	11:52:45 ----- idError--- e80d71b2-5159-493c-ad25-871c0ec16d61 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	11:56:44 ----- idError--- f4d69550-2cef-4aa5-baf6-3c236bea256a --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	11:56:44 ----- idError--- b9ee93ed-8dbb-46d3-9fd0-b0df1ed48049 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:07:30 ----- idError--- d752fa2c-a79d-4e81-8870-1e55e4de4294 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:07:30 ----- idError--- b76b3805-a6d1-44e1-a244-550dbc933407 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:07:30 ----- idError--- ab57dab6-c6f7-4500-94f6-4e31b843647c --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:07:30 ----- idError--- 3b97ae9a-c708-4e73-af00-fda9c5a753aa --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:07:59 ----- idError--- c0f4719d-015a-4a0c-9ba5-c5060e3efd8d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:07:59 ----- idError--- 9323d0ca-f5c5-4a26-a0cb-e4a7a2b3469f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:07:59 ----- idError--- 03a0f59c-cce2-4320-9542-d9f51c44b785 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:07:59 ----- idError--- 67768de4-b173-42b0-b08c-86241e4f59f8 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:13 ----- idError--- d14c8eda-1eda-4652-814b-3894457003cb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:13 ----- idError--- 3de31ad0-052f-4f59-b497-eaa9a8c620f5 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:13 ----- idError--- 1a823206-209b-4e8d-9b2e-e319c3c82fd1 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:13 ----- idError--- 857cc540-009c-4f1e-a631-f89ffce490a1 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:18 ----- idError--- 7339470e-3ee2-4b1b-8bd5-d44aff16533c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:18 ----- idError--- c08a386e-5458-444a-82e3-5edf6405076c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:18 ----- idError--- ce05ec1e-2374-46cc-87e9-f9599a1ea92a --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:18 ----- idError--- 2c5c31da-c1e8-49bc-879f-9fa12c49e70d --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:18 ----- idError--- 2ddf818c-49f7-4500-8295-6c00e7522447 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:18 ----- idError--- cafc80a1-a3fe-47f8-94c9-004380cf1fe0 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:18 ----- idError--- 7047794d-1b84-4840-8546-be56591ac054 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:18 ----- idError--- dd47d701-4e20-4406-ae78-43cf61d8039c --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:24 ----- idError--- 96bf7548-6135-44e8-a235-445007cf48d4 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:24 ----- idError--- 3e9e225c-a80c-45a7-96d4-fb341853ce21 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:24 ----- idError--- 74cac427-e1c0-430d-a9fe-779792606bba --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:24 ----- idError--- 8d253226-adfe-4040-8637-4e0e49f1ee8e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:24 ----- idError--- fb3e4dab-299a-447e-a759-03331803bb1e --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:24 ----- idError--- 7c13640d-44e1-4002-9c6e-78005a95336e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:24 ----- idError--- 10359922-f379-4301-8a6b-8ca5f5ce9eb4 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:24 ----- idError--- 1f8ab047-fdae-43f7-a726-8b801c27da86 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:38 ----- idError--- 54db9a04-9011-433d-a999-81410d3045e6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:38 ----- idError--- 5c4c4f13-c416-4b64-a772-09fb9f780298 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:38 ----- idError--- 0a510a0e-e125-4db6-8933-9e6fa823698a --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:38 ----- idError--- 966b39cb-5a75-4be7-a14a-86511e78644f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:45 ----- idError--- 6ee2d8e7-af48-4849-be01-e95f5ff7ba2b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:45 ----- idError--- aecd340c-434d-4034-a9f2-66e5361d6205 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:45 ----- idError--- 6d6f095a-844e-4503-a244-2a8b37a67d95 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:45 ----- idError--- ccc2f2bd-13ad-433a-acc2-bc06dc7eeb31 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:51 ----- idError--- 4f0e8570-cb11-438c-a646-7df5aefad766 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:51 ----- idError--- 4039765c-ae7d-489c-b73c-71e01dd2f904 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:51 ----- idError--- a00a637a-db1a-48f6-a10d-6309e50ec73e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:51 ----- idError--- 4b4ecfba-e37d-4d87-8924-91018cb8be8a --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:56 ----- idError--- b57a2903-4854-4e0f-8a36-453c36b24c1f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:56 ----- idError--- 5d54f12f-cd3a-4b2f-ad9b-be4ccab0c03b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:56 ----- idError--- 998df347-2d8d-4639-8ea2-3ecc2c7de1c7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:56 ----- idError--- 9bc94c8a-2765-4e6d-aae4-0ec076213aa1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:56 ----- idError--- 845af9f8-5a66-4a27-929b-7dc88acf59ce --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:56 ----- idError--- e5c5e834-bf86-4a07-99e5-b0c3c60c830a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:08:56 ----- idError--- 0a7d8a49-7697-4e7d-b77c-7ad8720f2c8f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:08:56 ----- idError--- ae13bc84-69f9-4b0c-91d8-01b4dbc76fd4 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:00 ----- idError--- a589d753-5a05-4ca9-b307-287d2c7e570d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:00 ----- idError--- 47895f88-87e3-45bc-9a0d-283e1d4388fb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:00 ----- idError--- 3d5b6024-f341-4273-a387-5583bac34471 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:00 ----- idError--- bc9c206f-c560-42eb-8e03-06fffc0a6b2c --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:00 ----- idError--- 9a1d5bc3-e64d-489c-8d6e-fe1d8c37b17f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:00 ----- idError--- 2a2a5160-b787-491a-935a-3f86e03b2c60 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:00 ----- idError--- 9fba1b84-9a92-406a-b2cb-075e4a6e1c1d --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:00 ----- idError--- a69e9fbc-64fd-49b8-9e12-f57276479855 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:09 ----- idError--- 011f3335-4f8d-44ed-a559-ff26ece44bda --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:09 ----- idError--- ca625d2b-1f56-4e34-9bc6-52a8bf688c0d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:09 ----- idError--- 9928d079-e1fc-49c1-bcfb-33fad9f6bab8 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:09 ----- idError--- 034674ae-f3d8-4538-b023-8138b0d09f3f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:09 ----- idError--- 5641f764-176f-44cd-a58e-1eea3d6cf93a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:09 ----- idError--- 5ca1d706-b1b4-455f-9131-cd6f16678153 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:09 ----- idError--- b38adb3b-eb3e-4d6a-8b8c-a513d0454625 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:09 ----- idError--- cbc4956c-b9ad-437c-9181-428e4507f4e9 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:14 ----- idError--- b2eb0b6b-cc33-43b4-9da3-2198b9e5d514 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:14 ----- idError--- 5a2b2f81-1ef1-401e-aaea-f2d5eb76abe4 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:14 ----- idError--- 7ef09f36-15cc-4f41-83b8-5b5bf6ef636d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:09:14 ----- idError--- 0c2e78c8-78bb-4c2b-85c3-c569f9ec8ba0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:09:56 ----- idError--- e3eb9daa-2ec6-4a8e-9ec4-f17416e52882 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	12:09:56 ----- idError--- 9c59f575-3344-418e-bb9c-80ea80cf18f0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:17:04 ----- idError--- a7b2332f-d782-4aca-b961-593d0a28f38b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:17:04 ----- idError--- babb1962-6d55-4776-94b2-040995158419 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:17:04 ----- idError--- a96195e2-83e5-46e7-93d7-6ab3e890804d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:17:04 ----- idError--- 9ff3801b-d32f-4bed-be9a-997caf8d070b --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:17:04 ----- idError--- ed08617d-56ac-4ca7-8569-85df079263fa --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:17:04 ----- idError--- 2aaf755b-d028-4976-adc9-52c42d5b72f6 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:17:04 ----- idError--- c2187c2a-51c3-419b-9cc6-2b4320a099ed --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:17:04 ----- idError--- 92fdf30e-d153-43c4-a275-7fc818c9a5c9 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:17:29 ----- idError--- d5c8b029-fc30-496d-859e-aa86a45e17b5 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:17:29 ----- idError--- 60f6ca90-0579-4840-ab50-6901242d7a90 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:17:29 ----- idError--- 402385b5-0e1c-4a3d-9939-c74a987727da --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:17:29 ----- idError--- 0cb1c5d3-0ce0-4a75-a1d5-fd2013fe8f98 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:17:29 ----- idError--- ddb7f3bf-7a7f-4ae0-871c-20923a64fc83 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:17:29 ----- idError--- 4ccd582a-f334-4973-a35f-698bdc45522d --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:17:29 ----- idError--- c77dccd9-da00-471a-8c24-e41d3ff3c8ef --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:17:29 ----- idError--- 76d1c2b8-b450-4b67-9bbb-991a6054b604 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:17:53 ----- idError--- c39ab3ce-7989-4efd-93f2-615479fa98d5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:18:25 ----- idError--- 4051fe0d-87d6-4a17-9e64-e1b47cc112e0 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	12:18:25 ----- idError--- 753fe879-c1ab-4e8b-ac08-b9955c3ab33f --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:22:21 ----- idError--- 03f28180-c7e4-40e7-be7d-4f3f3f407173 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	12:22:21 ----- idError--- e723f9d3-fd17-4dbb-bcc9-121710ac9130 --- /api/v1/auth/logout --- GET --- Fobidden
+30-12-2023	12:22:31 ----- idError--- f30672c0-a60e-4a53-ad7b-ae2bfef1779b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:22:31 ----- idError--- 8acbfc8c-8c07-4a69-9aaf-a039f41ec06b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:22:31 ----- idError--- ade15e31-8197-4ba2-94c2-7df221e2c2bb --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:22:31 ----- idError--- 69caeb60-a5c0-4cce-bc91-3938a02ea464 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:25:29 ----- idError--- e903c8e2-39a7-4853-81b1-5142677e0aea --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:27:16 ----- idError--- 889255a1-567d-4192-b3b2-48370e50bb03 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	12:27:16 ----- idError--- 8bcff4a0-543e-489a-8a94-de5a31ab73e2 --- /api/v1/auth/logout --- GET --- Fobidden
+30-12-2023	12:28:05 ----- idError--- 4a397a2e-11df-498a-aa1c-53f44ab15845 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:28:05 ----- idError--- 163db35a-a800-4324-9a0c-afc7afca10be --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:28:05 ----- idError--- 58b6fd39-ae44-4af5-900d-50946363f9d2 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:28:05 ----- idError--- 63f37a18-ce0b-4208-a1ac-ef211b600d12 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:28:36 ----- idError--- 26e571fe-7e7d-44e8-8457-a34713fa1ec6 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	12:28:37 ----- idError--- e3c65158-89fc-47a2-b888-fef458dac918 --- /api/v1/auth/logout --- GET --- Fobidden
+30-12-2023	12:29:33 ----- idError--- cb853c7f-0d06-459c-92ff-5d5dfb0bdd47 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:30:03 ----- idError--- 5616eeba-6313-43c8-a9e2-8c26cb6ebf67 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+30-12-2023	12:30:03 ----- idError--- de32233a-347b-4faa-9bcb-8ed1ce7f4891 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:32:53 ----- idError--- f52a0dd9-140d-45ca-9ca7-49fdc3f7b7b6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:32:53 ----- idError--- 83ed17cb-5a7d-4c8f-bd72-930e65e3ecda --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:33:03 ----- idError--- d512ea4b-660b-4b74-9c88-2c343a72bfca --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:33:03 ----- idError--- 6df509a2-78de-42b5-b9da-18f3d4c0eaee --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:33:03 ----- idError--- 2fa12bf5-8758-47ac-8ecd-86fecdb506e0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:33:03 ----- idError--- f53b267c-a49c-4fc4-a2d4-6151c91b3658 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:33:03 ----- idError--- 5bae0962-2f5d-4c4b-9fa3-cfbfb6fe1d68 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:33:03 ----- idError--- 3dbd4e90-5ec5-4797-a583-ef97d72c6d3f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	12:33:03 ----- idError--- eaf9fe9a-4bb6-4f18-b1eb-681d5535f6d5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	12:33:03 ----- idError--- c11c963f-11b2-441f-920d-8721e76ab4c8 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	14:28:24 ----- idError--- 46e045d3-54ea-4242-b733-dba068ed8efc --- /api/v1/auth/refresh --- GET --- You're not authenticated
+30-12-2023	14:28:24 ----- idError--- bd8e94dd-2162-475e-82f2-b849cdc781a0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	14:28:28 ----- idError--- ea6d33d6-602c-49b6-b437-f139aa7fb95e --- /api/v1/auth/logout --- GET --- You're not authenticated
+30-12-2023	14:37:12 ----- idError--- 44e0eb06-ee0c-452a-8878-291439348733 --- /api/v1/user/disabled-user --- PUT --- Not Found
+30-12-2023	15:08:53 ----- idError--- 2080cbf0-d12c-472a-8985-fba5e389895b --- /api/v1/movie/tunadayy444 --- GET --- Not Found
+30-12-2023	15:09:07 ----- idError--- 9d67c619-418b-4400-8714-e8b27d26e871 --- /api/v1/movie/tunadayy444 --- GET --- Not Found
+30-12-2023	15:11:06 ----- idError--- 5162151f-9652-4805-a921-fa167ff083c4 --- /api/v1/movie/single-info/tunadayy444 --- GET --- Not Found
+30-12-2023	15:11:18 ----- idError--- 85438621-39e1-43e6-8eeb-0c2494cb1324 --- /api/v1/movie/single-info/tunadayy444 --- GET --- Not Found
+30-12-2023	15:11:36 ----- idError--- 13b9997b-adb3-418b-a5fc-f33c32e8295e --- /api/v1/movie/single-info/tunadayy444 --- GET --- Not Found
+30-12-2023	15:12:02 ----- idError--- a683bea7-b583-4e57-89f4-27b2a49f108d --- /api/v1/movie/admin/single-info/tunadayy444 --- GET --- Not Found
+30-12-2023	15:12:07 ----- idError--- 85eb6ce7-fea9-4856-8bf2-532f041ec4be --- /api/v1/movie/admin/single-info/tunadayy444 --- GET --- Not Found
+30-12-2023	15:22:05 ----- idError--- 9ab43ba0-4cc0-4621-acd5-1fd40ce02540 --- /api/v1/user/check-fav-mark/admin_dev_tuan%F0%9F%98%8B/653a7007f1e528aa5324a3e8 --- GET --- req is not defined
+30-12-2023	15:23:10 ----- idError--- dd18bbdd-d295-4735-a659-95ddda706f1b --- /api/v1/user/check-fav-mark/admin_dev_tuan%F0%9F%98%8B/65378ec448da1a2e3c5d8dc0 --- GET --- req is not defined
+30-12-2023	15:33:26 ----- idError--- ba96e35f-4c5e-4735-af76-09fb2e5442cb --- /api/v1/user/update-info-user --- PUT --- req is not defined
+30-12-2023	15:34:06 ----- idError--- 9ee288d1-de0a-4e53-b7af-e85853dbc273 --- /api/v1/user/update-info-user --- PUT --- req is not defined
+30-12-2023	15:42:09 ----- idError--- f8672b01-53dc-4f94-a609-ddfc291b9938 --- /api/v1/user/check-fav-mark/admin_dev_tuan%F0%9F%98%8B/653a7007f1e528aa5324a3e8 --- GET --- Cannot read properties of undefined (reading 'loveMovie')
+31-12-2023	11:13:01 ----- idError--- f4e83df1-9a18-401c-a3e3-b635cf8c6711 --- /api/v1/comment/64fc6c2d5ebf82c9f0aec299?page=1&batchSize=3 --- GET --- CommentService.getAllNotifyByUserId is not a function
+31-12-2023	11:13:01 ----- idError--- ceecce35-6f2f-4763-9500-f64aa9928d7f --- /api/v1/user/check-fav-mark/admin_dev_tuan%F0%9F%98%8B/64fc6c2d5ebf82c9f0aec299 --- GET --- Cannot read properties of undefined (reading 'loveMovie')
+31-12-2023	11:13:58 ----- idError--- 6235a188-4ff2-4669-b1e1-87523290496d --- /api/v1/comment/64fc6c2d5ebf82c9f0aec299?page=1&batchSize=3 --- GET --- CommentService.getAllNotifyByUserId is not a function
+31-12-2023	11:14:00 ----- idError--- d6864afe-2ea7-4295-a117-8ee64d3fba24 --- /api/v1/comment/64fc6c2d5ebf82c9f0aec299?page=1&batchSize=3 --- GET --- CommentService.getAllNotifyByUserId is not a function
+31-12-2023	11:14:03 ----- idError--- 8ff26787-8d41-4145-a04c-2222589d9478 --- /api/v1/comment/64fc6c2d5ebf82c9f0aec299?page=1&batchSize=3 --- GET --- CommentService.getAllNotifyByUserId is not a function
+31-12-2023	11:14:03 ----- idError--- 55642cf3-5e3b-43d5-8f3c-770e84c1cf95 --- /api/v1/user/check-fav-mark/admin_dev_tuan%F0%9F%98%8B/64fc6c2d5ebf82c9f0aec299 --- GET --- Cannot read properties of undefined (reading 'loveMovie')
+31-12-2023	11:14:44 ----- idError--- ca1d53d2-9090-4e8a-b927-ffd29c811ba8 --- /api/v1/user/check-fav-mark/admin_dev_tuan%F0%9F%98%8B/64fc6c2d5ebf82c9f0aec299 --- GET --- Cannot read properties of undefined (reading 'loveMovie')
+31-12-2023	11:18:02 ----- idError--- fe4bcdc0-63e4-43b5-9e7c-25c57d2f9172 --- /api/v1/user/check-fav-mark/admin_dev_tuan%F0%9F%98%8B/652a0c9d9e95e49cdd135b83 --- GET --- Cannot read properties of undefined (reading 'loveMovie')
+31-12-2023	11:18:08 ----- idError--- 684ebe89-bbab-4228-9ae0-dfb63c271dcf --- /api/v1/user/check-fav-mark/admin_dev_tuan%F0%9F%98%8B/652a0c9d9e95e49cdd135b83 --- GET --- Cannot read properties of undefined (reading 'loveMovie')
+31-12-2023	11:18:49 ----- idError--- 676144cd-638d-4e69-8071-a1efcc82e78b --- /api/v1/user/check-fav-mark/64e83b4f992300806ae9a282/652a0c9d9e95e49cdd135b83 --- GET --- Cannot read properties of undefined (reading 'loveMovie')
+04-01-2024	13:40:50 ----- idError--- 25e85792-8d4e-42ff-8ea0-a303eb4e934f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:40:50 ----- idError--- 4e3ed675-945f-4678-9e60-d981766d0d17 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:41:19 ----- idError--- 10588564-287a-4fb3-9992-9dad536f9725 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:41:20 ----- idError--- 5d09ec79-d6fb-47fb-8f03-fb4af5d539f0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:42:12 ----- idError--- 88630449-925a-45e6-8ade-e78762e0b11d --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:47:07 ----- idError--- 56b61dd7-50f6-4964-bd6b-6d20445f81d6 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	13:47:07 ----- idError--- c39f585b-4f96-401c-86d4-abac84b8b38b --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:49:50 ----- idError--- fef683f9-5d37-4860-a040-572db6a02b6a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:49:50 ----- idError--- 1141a28b-ecd6-4724-abfc-75756b2d0110 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:49:50 ----- idError--- 2b75d495-1766-41f1-a2a8-51e619d4186d --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:49:50 ----- idError--- c34fc766-a4f1-4a03-bbb1-27f3620644af --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:50:36 ----- idError--- 69b3a2b9-9e43-4108-b5d6-619a3e336697 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:50:36 ----- idError--- 65e38f35-9728-435d-b572-92e6227dde26 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:50:36 ----- idError--- ebc7b4f6-cabb-462a-90c1-85e459fc5a22 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:50:36 ----- idError--- 1bc88618-f993-40f5-a5de-f4abed2eea04 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:51:40 ----- idError--- 3b197c9b-2210-4e46-b8b6-30b2f1fc9241 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:51:40 ----- idError--- eff144f9-2c4e-4646-a4e7-4142dd8b44f9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:51:40 ----- idError--- 37516217-4d66-4afb-bcfe-827b335f425c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:51:40 ----- idError--- f83c24fb-d602-44a5-8b42-9668ec69ffa7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:51:40 ----- idError--- 55b9fd6e-f7bc-4972-bc61-74cca23c8351 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:52:01 ----- idError--- b80b4b4f-123e-4590-815c-f38f1376bb2d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:01 ----- idError--- a0aef150-570b-4ed2-b9d3-cae7a88045eb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:01 ----- idError--- 0b4aa213-3da0-4942-b77d-34849a5e0472 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:52:01 ----- idError--- be912354-f40c-4ac4-abd5-cbfb37bd486d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:01 ----- idError--- 75e16968-6bd8-4dd4-98ad-d77a9558bbf1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:01 ----- idError--- a23f0b25-7b15-4bb7-91da-e6bf8ba46c4a --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:52:02 ----- idError--- 82d3eb4e-d605-4eec-a376-8cf28a376212 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:02 ----- idError--- 25d93cdf-0288-4097-b308-58fdafcf39d7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:02 ----- idError--- b3216abc-122f-44dc-97a1-3379807eccdd --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:02 ----- idError--- b388a847-6001-4d9f-bb74-7a13b84ed619 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:52:02 ----- idError--- 7a30bc13-9b8a-45e5-8c37-774a8eeea886 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:02 ----- idError--- 15e07b5f-8d75-456c-b2f0-0f46e6f7128e --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:52:39 ----- idError--- 8d7d41a8-d003-46df-b7f0-2fd8f24b67de --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:39 ----- idError--- 48107a5d-e945-4dfa-8561-d9e62c14a73a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:39 ----- idError--- 0fbe5393-0744-4ecb-b480-03abf127d47d --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:52:39 ----- idError--- ea3147c3-214d-4b1f-beda-a3e00bd8db5b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:39 ----- idError--- acac55cf-2e0a-458a-8109-d458391b3740 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:39 ----- idError--- f6bf874a-9d81-450c-960b-70ee24f6f7c3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:52:47 ----- idError--- 97ae0f7c-3239-45c0-8a15-60b32d466b49 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:47 ----- idError--- 7ac89a45-4c5b-4caf-9455-9ecc61cff87c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:47 ----- idError--- 49ceb70a-6f41-41ed-be9b-5a21aaef3e1f --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:52:47 ----- idError--- 321f6b98-2ca1-455b-b300-cc6cc6c02c67 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:47 ----- idError--- 3de46012-105f-47e3-bf40-9015c3544203 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:52:47 ----- idError--- 98509065-9be7-452b-8fe8-65198f34badb --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:53:38 ----- idError--- f916b3ca-a367-4652-b838-7391c2db0e3c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:53:38 ----- idError--- 86f821da-749a-48b0-aea8-9f252efc2a0c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:54:36 ----- idError--- d1cb4167-7477-48ff-863f-0cc388644e18 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:54:36 ----- idError--- 4a3cc278-3234-4ae1-8624-88cba93fe351 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:54:36 ----- idError--- 40673c0f-b8a2-4793-94b9-09afb5d8740d --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:54:36 ----- idError--- a26c9c10-6497-48d6-b8e9-5b01952ddfa0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:57:57 ----- idError--- a2d2bb33-8e96-4a40-ac38-4c9abaa51765 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:57:57 ----- idError--- c287d1db-d8f2-448e-9592-d2bc140a3265 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:59:29 ----- idError--- f5f28e79-9de8-4b32-af69-28c16f097653 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:59:29 ----- idError--- 542d715b-8ff2-4f78-8ddd-fc9bddd7942b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:59:32 ----- idError--- 9b4f05c5-2ba9-4afa-b786-dfe6eeceed13 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:59:32 ----- idError--- a14d9270-f415-4583-817f-a3880e01dbb9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	13:59:32 ----- idError--- 577d9ff2-6e14-44d1-9f23-4e39d61c3980 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	13:59:32 ----- idError--- 6a26da35-ed76-499a-8208-1dade47bf0f7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:02:30 ----- idError--- fd7cb31d-4826-4185-9540-f22fed01a9f8 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	14:02:30 ----- idError--- 77f9d3c1-eef0-4cf7-ad31-954deaa59ac0 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:04:31 ----- idError--- d31a361e-1724-4742-bb34-9850f7c44ed6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:04:31 ----- idError--- 17911739-c913-47bd-aaf3-63f95cf695a7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:04:32 ----- idError--- ce241cf4-3a17-4d0a-8e33-bff10a93493a --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:04:32 ----- idError--- 516d937a-c1c2-4eaf-9d72-2641ff04f5f3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:04:45 ----- idError--- 78c029eb-0dda-4ea7-902c-42e0b93592ba --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:04:45 ----- idError--- 01e41f95-abaf-4359-8cd8-e4d7b9b3b508 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:05:37 ----- idError--- bac61117-2b0f-4d84-a33d-6412ac8040f2 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	14:10:00 ----- idError--- f8c362be-5585-45b0-8ca8-dc1d37ad582c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:10:13 ----- idError--- d3635a23-6786-4849-b483-9d88b96238bc --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:10:27 ----- idError--- 2c0777a5-f040-47c1-9403-27b7b6bd6362 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:10:42 ----- idError--- 2310b8e9-7643-48b3-a00f-574339ce6287 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:10:58 ----- idError--- d2c379cb-91b5-4db4-959c-afce2370b59c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:11:24 ----- idError--- 392b5790-416d-4d4f-86e6-f19b81c021ff --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:11:30 ----- idError--- 4377731e-0673-4353-ad22-a258dbf924f1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:11:43 ----- idError--- 08eb3574-eaa6-41f5-8270-6723dc7f0f7b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:11:54 ----- idError--- 2a2c917a-a881-4a81-afa5-9da3b1b6eb4b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:11:54 ----- idError--- e8d20aeb-76c9-4a5e-b3aa-0d3558a68538 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:12:00 ----- idError--- bfee9c4d-a254-411d-b037-6fe793049ddb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:12:00 ----- idError--- aa438365-34c4-42ae-bcca-e2c530559bf1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:12:10 ----- idError--- c4da9aec-222d-48dd-8ba1-d7c9a8bbe510 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:13:12 ----- idError--- f9661dba-09be-4f53-9ac0-9e2a4f8609be --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	14:13:48 ----- idError--- ef0f7eda-4646-4f0b-a665-b2421d495651 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:13:48 ----- idError--- a8e9ce7b-785b-433f-9923-03ce96c9526a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:16:44 ----- idError--- dcef18d9-0fa8-401e-9669-86717ea08afa --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:16:44 ----- idError--- a4b2b323-afd3-4b81-992c-800682d4c830 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:22:09 ----- idError--- 0d22dcf6-179c-4eef-855f-6700de19eb5f --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:22:09 ----- idError--- 29436f24-2c74-4db7-a513-d275ca79ce6d --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:22:29 ----- idError--- 4787c390-8751-4c7e-8913-8f58bd30134f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:22:29 ----- idError--- 94a3bd27-5db9-4567-b19d-643bf19328c8 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:24:47 ----- idError--- b7ea6145-f771-40ad-b200-aa3b9e0303b0 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	14:35:53 ----- idError--- aa84682a-b403-4f4f-b8c6-c12810949d93 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:35:53 ----- idError--- 3b2c2fe7-c0f8-4462-bf39-3b8b89851c7c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:37:30 ----- idError--- c986d2cf-9a40-42a8-8a12-57425e544138 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:37:30 ----- idError--- c4cae46c-5367-40f0-bf76-e145a89ad5b8 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:37:30 ----- idError--- c3a7cccd-50bc-4052-9b48-7535197224f1 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:37:30 ----- idError--- 84142e6a-157b-496e-96ae-35518dfdf68e --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:46:10 ----- idError--- 1dc96025-9b00-487b-8eb7-1d049f1ce2a2 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:46:10 ----- idError--- 4fc557b7-7d72-479c-a23f-e1d8d1951010 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:46:10 ----- idError--- 87a7d2d5-c0a1-4c3f-a2b7-91ae7c76e9bb --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:46:10 ----- idError--- 5833f1d0-302f-4b7d-9182-7bffc6db22ae --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:46:44 ----- idError--- 5c8b0d55-ec00-43d2-a267-5310823f6641 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	14:46:44 ----- idError--- 4eb86abb-9c3c-4d9f-ac0a-9cb185da568a --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:49:44 ----- idError--- d4048c5e-f508-44fd-9da8-90a1c19995a8 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:49:44 ----- idError--- 89c4fc0a-5ce7-4ed0-bb16-c10a4b8576cb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:49:44 ----- idError--- fd978be2-6df4-4f05-84ce-d3645c73e905 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:49:44 ----- idError--- 4da79445-0146-44f2-b15b-022ef6b90285 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:49:48 ----- idError--- 3a33a561-7b64-483d-890e-9b0ac37c0adf --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:49:48 ----- idError--- 4a9f0eaa-bc5f-4f4c-8814-5188061521dc --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:49:48 ----- idError--- 7ede6d22-7cba-45b2-a607-af9e8cfcacda --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:49:48 ----- idError--- 55212ff5-d762-4913-b568-deba20098669 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:49:54 ----- idError--- 95775641-c009-4798-abea-d397b3dffc78 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:49:54 ----- idError--- 70918535-b333-4cf7-bc8a-12e6a03e6ff4 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:49:54 ----- idError--- a1b12461-df56-4b9e-a90e-2fdf946f6315 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:49:54 ----- idError--- 0baa17ee-0737-47f2-835d-f53f6a0df648 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:51:17 ----- idError--- 4d7b3edf-2c3e-4166-83eb-1fe0ff2c31c7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:51:17 ----- idError--- e54a93c1-70b9-4d8d-9f39-4dbda660f1ef --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:51:18 ----- idError--- 46aa7557-5c2c-4b55-aa41-9b94b21189e7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:51:18 ----- idError--- 3e47b4ba-e43d-4c46-80a1-50fed94203c3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:52:51 ----- idError--- e1a6c8f2-2436-44ca-906c-fd30eba5a63d --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	14:52:51 ----- idError--- ceaae7b5-4696-4b67-8bf1-23b8d7d394c4 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	14:55:25 ----- idError--- c133c388-c0fd-4f20-b784-802c311810e9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	14:55:25 ----- idError--- 79ed756c-44ef-465b-977e-b6c829c1d696 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:05:30 ----- idError--- 4289bd7c-8603-47fc-9047-a70e300476f9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:05:30 ----- idError--- 689a549f-68b1-41aa-afe9-74dfbc280555 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:05:30 ----- idError--- 27f9d2e5-be4e-4f8e-98b8-28b4bbe9eda3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:05:30 ----- idError--- e8914ccb-9f3d-4d70-bffa-8b86c9aa7fd7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:06:01 ----- idError--- 9e9926ba-7a54-4edc-a215-cd3d0c42095a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:06:01 ----- idError--- 570052b5-e44e-4941-9f85-d29e930f365b --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:06:01 ----- idError--- 1ef05795-bbd5-4364-b464-b425f6d23db8 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:06:01 ----- idError--- 45f40b3d-6470-4760-8950-ee74287efa86 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:06:04 ----- idError--- 775eea24-4fce-4875-ba0c-da04a6c24fb2 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:06:04 ----- idError--- f83799a9-1769-4b25-a499-e5ab34f05eeb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:06:04 ----- idError--- b720b21d-69b8-4448-aaec-f9630b4690b9 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:06:04 ----- idError--- d3177b03-2200-477d-962c-a36d35da3ee1 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:07:47 ----- idError--- 0979e562-2235-417c-bac8-2661b09ff749 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:07:47 ----- idError--- 6a25f16a-1e32-4cff-ae30-cb765ca9286a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:07:47 ----- idError--- 74efb675-f8a1-48f3-afdb-f0b053c93fe1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:07:47 ----- idError--- 647a7c0a-11e8-42cc-ae5a-17127c1e740f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:07:47 ----- idError--- 9332500e-b5b5-47f5-a23b-f9a9ca47e953 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:07:47 ----- idError--- 5e28febb-d22b-4dc1-8ef7-1f22802503cd --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:07:54 ----- idError--- 80a1c785-5974-4e8c-8523-431b54c16bb7 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:07:54 ----- idError--- 260bee12-8a57-4dbe-8520-29bf98100268 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:07:54 ----- idError--- 9ffefa23-1823-424a-93ba-9725d4a6c6b9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:07:54 ----- idError--- 4655e8f2-3ee8-4df2-8897-a2200fc4b60f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:07:54 ----- idError--- c8bb6fc4-86fa-4438-b190-25fd341d2b79 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:07:54 ----- idError--- fdf66ba7-f631-4b7d-aa78-f3f1fb81fef5 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:08:16 ----- idError--- 0f41b063-fab4-4e06-9d52-b65c743019b1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:08:16 ----- idError--- f81db4e2-d4b8-4f29-8061-69d2519ff4e2 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:08:56 ----- idError--- c26c22cf-d8ec-476e-90b6-bca6a64274af --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:08:56 ----- idError--- 0765e811-c692-4560-b9a0-1ca3869f6abb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:09:00 ----- idError--- 6216589d-1c93-49d7-b801-32013913c303 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:09:00 ----- idError--- 95d75068-24bc-4a56-adb7-ffbb5ca71138 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:09:53 ----- idError--- 7f6c3133-fe79-4911-9686-d256b63a300e --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:09:53 ----- idError--- bafccd07-74fa-4197-a132-efc7c8db44ac --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:10:15 ----- idError--- 029b7f8f-f4e7-4684-8120-a0e805f04238 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:10:15 ----- idError--- ad2ba575-6e04-4e3d-8fea-bfeb8e83068a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:10:24 ----- idError--- a4c84272-675c-476a-b8f0-9444565456f8 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:10:24 ----- idError--- 98ee5a25-1152-4d38-ae7d-dcaf3e09bd7f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:10:39 ----- idError--- 1128c4e5-0c62-4b84-9500-935ebde61e57 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:10:39 ----- idError--- 78f00953-08b5-4e93-b73f-04676d208739 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:10:44 ----- idError--- a55b1181-8578-4aec-b383-798b910fb882 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:10:44 ----- idError--- a78823bd-4cea-40cc-a4ed-bc6a0e0ac1f0 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:11:04 ----- idError--- c19cf0ef-ca07-41df-a267-d390d36159f0 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:11:04 ----- idError--- c818df40-bd85-454d-b236-2bad9b1be965 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:11:04 ----- idError--- 59a1b2bc-7043-4582-a13a-b440041bd990 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:11:05 ----- idError--- cfa4f8df-7a19-489d-a5e0-5a98c9168b34 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:11:40 ----- idError--- b3ec8fda-aea6-4bf8-93e7-c135ebf51be6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:11:40 ----- idError--- 66d33e97-6064-4b31-a213-3c9fd72f3266 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:11:40 ----- idError--- 7ef92ed9-bd81-4553-b5c8-5eef86e11d36 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:11:40 ----- idError--- 1feef10e-e83a-492b-bc56-a00e73ed932f --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:11:51 ----- idError--- 9cd73619-0cc4-4109-b806-b13a8133f208 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:11:51 ----- idError--- ac6a131c-f0a6-4d8d-a739-351767c418ec --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:11:51 ----- idError--- 96d5c44e-1ef4-4512-9038-2ef2e034ea94 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:11:51 ----- idError--- 1f3ac22c-6d88-4a11-b606-b200e6f3b4ab --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:12:16 ----- idError--- 744a3afc-8d94-4f1a-ab31-8f6e31c7f774 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:12:16 ----- idError--- 0fc3d2ae-313b-41a3-8fa4-368eadc90feb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:12:16 ----- idError--- aff17368-33f7-47e6-8ea8-063a163eb107 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:12:16 ----- idError--- ef1ba908-74f9-4417-a83d-2f4e391fb557 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:12:45 ----- idError--- 84fe0c08-92a1-4ce9-8ae6-912af7613870 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:12:45 ----- idError--- 994a5dc0-71e7-4898-9a89-f22e8e3c16c5 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:12:45 ----- idError--- 8456540a-f04d-4bb1-bb6e-4797c176c90e --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:12:45 ----- idError--- 62909e15-b12d-4ed0-a71a-4e4ac263e9d3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:13:44 ----- idError--- 9a63f617-a385-4a35-a2c5-b4596e82de54 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	15:13:44 ----- idError--- 6786f178-9002-41bd-bd20-f7f83977f4f4 --- /api/v1/auth/logout --- GET --- You're not authenticated
+04-01-2024	15:14:34 ----- idError--- e16f2d3a-690b-48b9-a291-e89c13663efe --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:14:34 ----- idError--- 44a19d75-415b-484a-88ea-5d89e88af71e --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:14:39 ----- idError--- 1dae9da0-cb61-4bae-a4bd-a607fdef265f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:14:39 ----- idError--- 94972f6c-6e03-4c9c-a665-c8423a9e6fc2 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:15:01 ----- idError--- 5f329ce9-1879-4093-8fb4-48dc3c36db51 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:15:01 ----- idError--- 45aa8ae2-301e-4d2a-a544-cfc197b31aad --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:15:10 ----- idError--- 02300a1e-1bea-421b-b8cf-4fb09b1371e1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:15:10 ----- idError--- b080e2ff-8c49-414f-b27b-874b48928d88 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:15:30 ----- idError--- a49b51d8-0aa6-43a0-99ce-340b881fbc55 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:22:03 ----- idError--- 6b3190aa-20bc-41bb-9044-3957d073d166 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	15:23:57 ----- idError--- 4a34c9ee-f7f9-4808-b030-856692e3182f --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	15:23:58 ----- idError--- 4392bee2-c81a-4083-a3bf-f66e9cb6a5ea --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	15:24:06 ----- idError--- 1d05a3bd-cb41-41a0-9787-65a0dada7816 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:43:32 ----- idError--- ff17e5ee-3781-4aac-92a9-dfd00c14970f --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	15:48:14 ----- idError--- a983f786-61a8-43d5-bb41-dc6dfe81431a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:48:14 ----- idError--- 440f58aa-b0ee-45b9-bd6d-7b6c55c7baf4 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:49:20 ----- idError--- 073731d1-6b2b-4eaa-b04b-ea28467cec0f --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	15:50:42 ----- idError--- 3a34c2ad-96bf-4edc-b88d-5cafb2b8e80d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:50:42 ----- idError--- e60a0014-48da-4c07-9fff-81c597b8b6d6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:51:39 ----- idError--- 3e9cdcee-8c1b-4eeb-9406-661184eef4f9 --- /api/v1/auth/refresh --- GET --- Forbidden 2
+04-01-2024	15:51:51 ----- idError--- f9b52110-e6e7-4da2-a22a-3e57cf5f5a85 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:51:51 ----- idError--- ad91c191-74e9-4d14-85be-d9157f65a76d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:52:35 ----- idError--- cd0b0be7-b84f-43d4-993a-979a675edb7d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+04-01-2024	15:57:40 ----- idError--- 7c5283ce-2cb3-4876-b9d6-1d0c01defad3 --- /favicon.ico --- GET --- Not Found
+06-01-2024	12:45:04 ----- idError--- ad494d6b-33f9-4d29-973a-1d3b4edfa2d4 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	12:45:14 ----- idError--- 99eefed4-95d9-4057-ae37-41212914fe24 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	12:45:31 ----- idError--- 4a232c6d-b06f-4f73-a13d-5ea43fdd8092 --- /api/v1/auth/logout --- GET --- You're not authenticated
+06-01-2024	13:13:47 ----- idError--- e2b8a98f-c726-4aa8-a2fb-893da1795b82 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:13:53 ----- idError--- ec99e294-e24a-4c5c-9a2f-114dd7381d4f --- /api/v1/auth/logout --- GET --- You're not authenticated
+06-01-2024	13:13:56 ----- idError--- 595c416a-994b-4a9f-af56-f4a2f2a3c919 --- /api/v1/auth/logout --- GET --- You're not authenticated
+06-01-2024	13:33:58 ----- idError--- e4022204-75c0-4f74-962e-af32fc428924 --- /api/v1/auth/refresh --- GET --- Fobidden last line
+06-01-2024	13:35:01 ----- idError--- f1ffc925-27a9-43d2-b4d1-f8b0b737a7a3 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:36:14 ----- idError--- cc54bdb0-35ce-434b-b682-e87d8345f3a8 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:36:15 ----- idError--- f2f4002a-9189-4bd5-b439-7e19c2b6ba26 --- /api/v1/auth/refresh --- GET --- Fobidden last line
+06-01-2024	13:37:06 ----- idError--- 7cbf7b0a-c19b-4ebe-9478-18d0d5b1382d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:37:54 ----- idError--- f87e4baf-d98a-4997-8ec7-7a6eae61992a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:37:54 ----- idError--- e3619915-9a42-485c-8007-441c8a6ff0db --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:37:55 ----- idError--- 7b9cde60-ab25-49be-865d-d8fe659acaa9 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:37:55 ----- idError--- 8f6f5f41-1d52-4ae7-a0e4-16c0e5a4d35f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:38:05 ----- idError--- 58d8af77-6f28-450f-9708-3657edce5dfb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:40:17 ----- idError--- 89f7fca3-04ab-4a9c-b070-1be5420ed4ab --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:40:17 ----- idError--- b26962ed-eed4-4a18-a70c-5e6040ddd8e6 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:41:12 ----- idError--- 84c946b0-85e5-4197-b409-0824016f35dd --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:41:12 ----- idError--- 290e2f01-66ae-4bcc-866f-dad9d9c1ed96 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:41:27 ----- idError--- 8473e33c-c7cc-4e63-9564-2dca148f3b4a --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:41:27 ----- idError--- 49cc3df3-1810-4fd6-a61d-58a97b60207d --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:41:32 ----- idError--- 9ddf551f-dae0-49bd-81a4-38ec388c8c20 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:47:49 ----- idError--- 7f7d51c2-d381-47df-a8ba-cc82adf51eb1 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:48:09 ----- idError--- eb249051-7bb4-4396-b968-b959f25f2c57 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:48:09 ----- idError--- be7fecbb-3211-4381-b1d5-f7c223432d5c --- /api/v1/auth/logout --- GET --- You're not authenticated
+06-01-2024	13:48:38 ----- idError--- 0ad3d280-a018-48a1-ab97-7cf15196cf1f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	13:48:38 ----- idError--- d788ec17-3e84-4662-bcea-46a1b4ad41cc --- /api/v1/auth/logout --- GET --- You're not authenticated
+06-01-2024	13:50:08 ----- idError--- e59dc082-a796-482c-ae7d-610df6f86f3e --- /api/v1/auth/refresh --- GET --- Fobidden last line
+06-01-2024	13:50:08 ----- idError--- 40261d5d-04c9-45ec-9ea4-6359f30a9866 --- /api/v1/auth/logout --- GET --- You're not authenticated
+06-01-2024	15:13:23 ----- idError--- 827e49f8-c5a8-47e3-85bd-6e0bb7cb01e0 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+06-01-2024	15:13:23 ----- idError--- 366b8a47-525d-4abd-a8c5-0d44ab18b941 --- /api/v1/auth/logout --- GET --- You're not authenticated
+14-01-2024	20:08:08 ----- idError--- efe7d8cd-180b-403c-80e0-e662ebd5a05c --- /api/v1/auth/refresh --- GET --- Fobidden last line
+14-01-2024	20:08:08 ----- idError--- 0b61bead-9944-4f0b-9a48-69a3ad7af2b6 --- /api/v1/auth/logout --- GET --- You're not authenticated
+15-01-2024	22:19:18 ----- idError--- 00171418-9e77-436c-97c9-b36567af9958 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+15-01-2024	22:19:18 ----- idError--- d269d6fa-bfa5-40d2-8948-e31b6193534b --- /api/v1/auth/logout --- GET --- You're not authenticated
+15-01-2024	22:19:54 ----- idError--- 10d58de1-f0bb-4a99-aa1f-454d8e748ea3 --- /api/v1/auth/refresh --- GET --- Fobidden last line
+15-01-2024	22:19:54 ----- idError--- a2b325d7-1373-4373-9035-134c756bfe80 --- /api/v1/auth/logout --- GET --- You're not authenticated
+15-01-2024	22:20:31 ----- idError--- 09b90cb7-7d2b-4756-8129-e70b4b7310e7 --- /api/v1/auth/refresh --- GET --- Fobidden last line
+15-01-2024	22:20:31 ----- idError--- 77c54cc6-9be0-4741-9423-a1274b92177f --- /api/v1/auth/logout --- GET --- You're not authenticated
+15-01-2024	22:20:42 ----- idError--- 560a3338-4eca-4dfd-98bd-aa38750431eb --- /api/v1/auth/refresh --- GET --- You're not authenticated
+15-01-2024	22:20:42 ----- idError--- 16da908c-be63-4c9c-8159-9d1cb4122e90 --- /api/v1/auth/logout --- GET --- You're not authenticated
+15-01-2024	22:21:15 ----- idError--- c2d85ff4-db4e-40b4-8505-87d0334953de --- /api/v1/auth/refresh --- GET --- Fobidden last line
+15-01-2024	22:21:15 ----- idError--- f097bda6-7c49-4dd4-9f63-860f8e949cde --- /api/v1/auth/logout --- GET --- You're not authenticated
+15-01-2024	22:21:51 ----- idError--- 0185f9d0-9112-43d3-ad97-4acadb531b8c --- /api/v1/auth/refresh --- GET --- You're not authenticated
+15-01-2024	22:21:51 ----- idError--- 00b6ed5a-1594-4c25-8d33-0808fe13078c --- /api/v1/auth/logout --- GET --- You're not authenticated
+22-02-2024	10:02:10 ----- idError--- 70593619-eaef-472f-8c26-e8d4fed62c81 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+22-02-2024	10:02:10 ----- idError--- 9dbdf9ee-31f2-4ace-a361-3db4cc48f050 --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-02-2024	13:44:44 ----- idError--- a3cf38e2-d418-4b25-ba84-dc157240417f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-02-2024	13:44:44 ----- idError--- 1e77e7d0-de11-4fc3-8938-976a02a2a7fd --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-02-2024	15:01:51 ----- idError--- 9bcf04b8-08e6-41bf-94a4-bf305239ae36 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-02-2024	15:01:51 ----- idError--- 3f999ecc-9737-43e0-b516-daa12032722d --- /api/v1/auth/logout --- GET --- You're not authenticated
+28-02-2024	15:01:59 ----- idError--- 5c3d82fe-1011-4a4b-b109-2c5bc3d6013f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+28-02-2024	15:02:00 ----- idError--- 6728c9e7-ebb4-4d50-8d23-126b7713b1f3 --- /api/v1/auth/logout --- GET --- You're not authenticated
+21-03-2024	17:12:07 ----- idError--- a7f39ce2-4d48-4b66-8033-c02c3aec8010 --- /api/v1/comment/add-commentV2 --- POST --- Parent comment not found
+21-03-2024	17:34:50 ----- idError--- ba59e538-a2e7-424d-a877-674da3085b70 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16/65fc07768a23361c703f1a78?page=1&batchSize=30 --- GET --- Not Found
+21-03-2024	17:36:32 ----- idError--- 561fd55c-ef84-46d1-acb0-bc1bbbe96c40 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16/65fc07768a23361c703f1a78?page=1&batchSize=30 --- GET --- Not Found
+21-03-2024	20:52:34 ----- idError--- cdf51c9e-5930-42ea-a302-0670dab152a7 --- /api/v1/comment/update-commentV2 --- POST --- Not Found
+21-03-2024	22:03:09 ----- idError--- 28eac0d2-f0ad-476e-99ea-627077407ed8 --- /api/v1/comment/delete-commentV2/65fc4bf1b238b83b044eeee8 --- DELETE --- parentCommentId is not defined
+24-03-2024	15:38:53 ----- idError--- c149f329-5101-4f7d-a218-c3d51eec94cf --- /api/v1/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3 --- GET --- Not Found
+24-03-2024	15:38:55 ----- idError--- 78196610-e2d0-40fe-97fe-670edec0584f --- /api/v1/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3 --- GET --- Not Found
+24-03-2024	15:38:59 ----- idError--- 4a4bb9b3-4cc4-4260-9ef4-6f43071471e1 --- /api/v1/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3 --- GET --- Not Found
+24-03-2024	15:39:49 ----- idError--- 3ec6d8bc-3df9-4d09-a03f-24872b52879f --- /api/v1/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3 --- GET --- Not Found
+24-03-2024	16:10:49 ----- idError--- d28e4582-812c-435e-9261-b3798e22b815 --- /api/v1/comment/add-commentV2 --- POST --- Parent comment not found
+24-03-2024	16:11:50 ----- idError--- 8ba887f9-6e1e-436f-85c8-8ae0926b3372 --- /api/v1/comment/add-commentV2 --- POST --- Cast to ObjectId failed for value "test add new cmt 5" (type string) at path "_id" for model "CommentV2"
+24-03-2024	16:13:12 ----- idError--- 3b9ae9b3-b3e1-4e31-a1b7-a1d6879ae879 --- /api/v1/comment/add-commentV2 --- POST --- Cast to ObjectId failed for value "test add new cmt 5" (type string) at path "_id" for model "CommentV2"
+24-03-2024	16:19:39 ----- idError--- f08af200-35eb-4753-bd8a-5b70fa66f04d --- /api/v1/comment/delete-comment/65fff0212839195a6d6806e9 --- DELETE --- Không có bình luận để xóa
+24-03-2024	16:19:43 ----- idError--- 19c934d0-d8e1-463f-a974-6be53502baf1 --- /api/v1/comment/delete-comment/65fff0212839195a6d6806e9 --- DELETE --- Không có bình luận để xóa
+25-03-2024	15:23:06 ----- idError--- 5b2e9de4-61bc-4840-9f37-db5d0d7bfd4c --- /api/v1/comment/getCmtInBranchV2/64fca58ec2bd1a88b61b3f16/65fc4a14afc78baf75d15546?page=1&batchSize=30 --- GET --- getaddrinfo ENOTFOUND ac-bqlwcu1-shard-00-00.6ljlwx6.mongodb.net
+25-03-2024	16:26:44 ----- idError--- 0013f9ad-9603-4463-b0bc-08a1331ac389 --- /api/v1/comment/add-reply-comment --- POST --- Comment không tồn tại
+25-03-2024	16:27:19 ----- idError--- 4434d71a-6229-4cfb-998b-44f47d62dac1 --- /api/v1/comment/add-reply-comment --- POST --- Comment không tồn tại
+26-03-2024	15:37:19 ----- idError--- 7bd250a6-dafd-4a6a-8bd1-141acfe6304f --- /api/v1/auth/refresh --- GET --- You're not authenticated
+26-03-2024	15:37:19 ----- idError--- 2000ab19-abc1-4f9d-bf97-c8c52fef5bc7 --- /api/v1/auth/logout --- GET --- You're not authenticated
+26-03-2024	15:37:28 ----- idError--- 2890ae4f-f82a-4260-943c-143a39c84b1d --- /api/v1/auth/logout --- GET --- You're not authenticated
+26-03-2024	15:38:49 ----- idError--- bf32d93b-4e0d-42e8-9e26-5486db73cc21 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+26-03-2024	15:38:49 ----- idError--- 31536120-042c-45e7-b090-e1b9987e8754 --- /api/v1/auth/logout --- GET --- You're not authenticated
+26-03-2024	16:32:26 ----- idError--- 99d951d2-48e1-49c1-996a-6884d486ce46 --- /api/v1/comment/add-commentV2 --- POST --- Model.count() no longer accepts a callback
+26-03-2024	16:32:46 ----- idError--- 6d3e37a7-625d-49c3-8a53-4d459f70a46d --- /api/v1/comment/add-commentV2 --- POST --- mongoose is not defined
+26-03-2024	21:36:28 ----- idError--- c2190135-2d64-4927-bc0c-9f570fe9cf25 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+26-03-2024	21:36:50 ----- idError--- cb746adf-883f-4a08-a5cc-4efc62c51cc2 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+26-03-2024	21:47:35 ----- idError--- e9a98271-6778-4f86-bcae-47c2390d6b79 --- /api/v1/auth/register --- OPTIONS --- Not allowed by CORS
+26-03-2024	21:51:22 ----- idError--- e9020b4a-3f70-4002-bb1e-25ae2ba1635b --- /api/v1/auth/register --- OPTIONS --- Not allowed by CORS
+26-03-2024	21:51:26 ----- idError--- 4db6d51d-f982-46b2-94bf-b01e075e3e64 --- /api/v1/auth/register --- OPTIONS --- Not allowed by CORS
+26-03-2024	21:51:32 ----- idError--- 7bae4e6f-9e9f-4d5c-a00b-639e0da965c5 --- /api/v1/auth/register --- OPTIONS --- Not allowed by CORS
+26-03-2024	21:53:26 ----- idError--- 8230c3d6-018b-4fc2-881d-af9668c4e44e --- /api/v1/auth/register --- OPTIONS --- Not allowed by CORS
+26-03-2024	21:54:02 ----- idError--- c7f92881-99ee-4e7a-b35e-7fbb3b5e2e11 --- /api/v1/auth/register --- POST --- Error: User already registered!
+26-03-2024	22:04:38 ----- idError--- 4ce8b922-2969-4f22-80bc-6a6ec2960a53 --- /api/v1/auth/register/verify --- POST --- Mã OTP đã hết hạn hoặc không hợp lệ
+27-03-2024	09:41:44 ----- idError--- f9763833-8694-400a-a72b-ae11a0479cfd --- /api/v1/auth/logout --- GET --- Fobidden
+27-03-2024	09:57:03 ----- idError--- a5ad8f42-d060-479c-ab88-ba8ce1a0e40d --- /api/v1/auth/logout --- POST --- Not Found
+27-03-2024	09:57:28 ----- idError--- dcf3ff5a-1ff3-44e2-bb2f-f8eaafc962a4 --- /api/v1/auth/logout --- POST --- Not Found
+27-03-2024	10:02:38 ----- idError--- 9d0da858-aefe-47c6-a2d8-502038925273 --- /api/v1/auth/logout --- POST --- Not Found
+27-03-2024	10:02:55 ----- idError--- 741898a8-4a66-4d03-9697-e5790750e95a --- /api/v1/auth/logout --- GET --- You're not authenticated
+27-03-2024	10:25:43 ----- idError--- 651b6dc4-925d-4897-b93a-f273e3c01225 --- /api/v1/auth/logout --- GET --- You're not authenticated
+27-03-2024	10:26:25 ----- idError--- 60af08b2-9618-4755-96a2-283b69c2b094 --- /api/v1/auth/logout --- GET --- You're not authenticated
+27-03-2024	10:26:41 ----- idError--- 75b5ff7d-7fa9-40d7-bcc9-a72ecdcf957e --- /api/v1/auth/logout --- GET --- Fobidden
+27-03-2024	10:29:29 ----- idError--- 63afac54-5d9b-4899-99b6-b86d4b691220 --- /api/v1/auth/logout --- GET --- You're not authenticated
+27-03-2024	10:35:54 ----- idError--- 9d2f7ed3-9ee8-4d4c-ac67-48dde7e7d21a --- /api/v1/auth/logout --- GET --- You're not authenticated
+27-03-2024	10:37:47 ----- idError--- 9a4f0069-b355-4f7a-b1e1-e90c4c5bee1b --- /api/v1/auth/logout --- GET --- You're not authenticated
+27-03-2024	10:38:46 ----- idError--- d14cec14-6413-4f6d-9163-9a00169c5d58 --- /api/v1/auth/logout --- GET --- You're not authenticated
+27-03-2024	10:41:48 ----- idError--- ca432c4f-891b-4243-9857-df96915c1380 --- /api/v1/auth/logout --- GET --- You're not authenticated
+27-03-2024	10:42:38 ----- idError--- a5ccf348-1c46-4ec0-b109-00fe88389b1a --- /api/v1/auth/logout --- GET --- cookie is not defined
+27-03-2024	11:35:10 ----- idError--- a39ec53a-35d8-44b2-8e41-b2b685d0efdc --- /favicon.ico --- GET --- Not Found
+27-03-2024	13:00:03 ----- idError--- fd63d7ef-eaf4-4ae7-86a0-13ee6bb29822 --- /auth/login --- POST --- Not allowed by CORS
+27-03-2024	13:00:04 ----- idError--- dae8aad0-e31c-4f19-b11d-143a230d90a6 --- /auth/login --- POST --- Not allowed by CORS
+27-03-2024	13:00:46 ----- idError--- 316a4818-576d-4599-94cc-14eaac6bc239 --- /auth/login --- POST --- Not Found
+27-03-2024	13:37:52 ----- idError--- 9f157252-6583-45fd-b007-e5c8cb46221a --- /api/v1/auth/forgot-pwd-user-verify --- PUT --- Mã OTP đã hết hạn hoặc không hợp lệ
+27-03-2024	13:45:51 ----- idError--- 95004b31-97c5-4323-be40-da0dd77b1c78 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+27-03-2024	13:49:26 ----- idError--- aeb4a305-0c7b-4b71-89c6-99ab863fd1fe --- /api/v1/auth/refresh --- GET --- Forbidden 2
+27-03-2024	16:16:12 ----- idError--- 75e8770f-c67c-4bfa-bc6c-af4e5f8f6a9e --- /api/v1/movie/get-category-movie?cateId=656ac6075f262dc4166b43fa&page=1&pageSize=30 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
+27-03-2024	20:36:28 ----- idError--- 6ced3d87-68b8-4be4-98ab-2a790a56cf9d --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=null --- GET --- Cast to ObjectId failed for value "null" (type string) at path "_id" for model "CommentV2"
+27-03-2024	20:36:33 ----- idError--- 49730b18-754a-4ad7-8db2-23a5b8116c77 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=null --- GET --- Cast to ObjectId failed for value "null" (type string) at path "_id" for model "CommentV2"
+27-03-2024	20:37:59 ----- idError--- fa14f214-29c8-4fe0-b800-6b97ab63bd38 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=null --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:38:51 ----- idError--- 1c6bc763-6f53-4bc8-8296-165cd0d6ee44 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=null --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:40:39 ----- idError--- bc4f3835-4d8b-4a17-806a-12c5471ba7b6 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=null --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:40:42 ----- idError--- aa4d0a69-b5f3-45be-9ae4-20e2faabc4b5 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=null --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:41:15 ----- idError--- ca902bc6-ff0b-4962-864b-fc885b622086 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=null --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:48:42 ----- idError--- 2368894d-1175-490b-9079-bae5d152bee6 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=4&batchSize=3&lastReceivedCommentId=[object%20Object] --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:48:43 ----- idError--- e191d930-415b-4d7e-b830-de229340e484 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:48:58 ----- idError--- e87f1419-7c8c-4707-bcdc-2f9fa5b200a4 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:48:59 ----- idError--- 8bffa400-0a5b-479f-9034-192b5549e579 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:49:01 ----- idError--- 95a88cdd-4eb6-41d2-b725-e5a088a357ee --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:49:02 ----- idError--- 49215767-3bcd-4b7b-ab92-a14e1032e45b --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:50:54 ----- idError--- 23b81487-54f5-4ff3-b02e-93aa0c2d8046 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:50:56 ----- idError--- c53baa4d-b083-4634-885e-fb1aab028eb3 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:51:04 ----- idError--- 6b5aa471-13ee-4e86-9459-c41bf0917a6b --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:52:04 ----- idError--- 6dbfb796-cbca-4d4a-a2c7-8bffe9b175fd --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=2&batchSize=3&lastReceivedCommentId=[object%20Object] --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	20:52:23 ----- idError--- b24f2a74-b7d4-4158-9bad-380eda579212 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=2&batchSize=3&lastReceivedCommentId=6603f4edaa1f61e02e9dd845 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
+27-03-2024	20:53:07 ----- idError--- f0d7b719-ad56-43f1-b8cc-c022c9e92c80 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=2&batchSize=3&lastReceivedCommentId=6603f4edaa1f61e02e9dd845 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
+27-03-2024	21:01:06 ----- idError--- 64302210-4840-4693-ab5a-588643d15035 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "CommentV2"
+27-03-2024	21:01:11 ----- idError--- eedb7f96-9b9d-4a60-aa9b-372aa1fcedc7 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "CommentV2"
+27-03-2024	21:02:03 ----- idError--- d157c856-8a37-4ec3-bcc0-1dda373243eb --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	21:02:49 ----- idError--- 2e5c600a-126d-4c53-984a-46da6034eee9 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&lastReceivedCommentId=undefined --- GET --- input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+27-03-2024	21:03:29 ----- idError--- 8c5331d4-ee23-439d-a2d9-9b24576ebe23 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=2&batchSize=3&lastReceivedCommentId=6603f4edaa1f61e02e9dd845 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
+27-03-2024	21:12:35 ----- idError--- 9c848add-1688-4dd8-8106-97a523783d14 --- /api/v1/comment/delete-commentV2/6604281efc7ba42bfc59e0d2 --- DELETE --- Không có bình luận để xóa
+27-03-2024	21:12:46 ----- idError--- 82871f49-cca5-420c-8128-261614fdea22 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=2&batchSize=3&lastReceivedCommentId=6603f4edaa1f61e02e9dd845 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
+27-03-2024	21:14:57 ----- idError--- ca8bcb3a-a1aa-46bd-a9cf-57bb40579958 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=2&batchSize=3&lastReceivedCommentId=6603f4edaa1f61e02e9dd845 --- GET --- Can't use $le
+27-03-2024	21:24:38 ----- idError--- 665212fc-de19-4913-983e-bad5da83ae06 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=2&batchSize=3&lastReceivedCommentId=2024-03-27T10:29:01.562Z --- GET --- Cast to ObjectId failed for value "2024-03-27T10:29:01.562Z" (type string) at path "_id" for model "CommentV2"
+27-03-2024	23:10:18 ----- idError--- 5fadba22-0d48-415c-a267-c31965f855e3 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=2&batchSize=3&lastReceivedCommentId=2024-03-27T10:29:01.562Z --- GET --- Cast to ObjectId failed for value "2024-03-27T10:29:01.562Z" (type string) at path "_id" for model "CommentV2"
+27-03-2024	23:27:16 ----- idError--- 79cef03e-be49-4071-8c32-12bebe0616cb --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=1 --- GET --- Cast to ObjectId failed for value "1" (type string) at path "_id" for model "CommentV2"
+27-03-2024	23:30:02 ----- idError--- 93d40b28-9d34-444c-bca6-833bdeee7ab5 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=6603f4edaa1f61e02e9dd845 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:30:05 ----- idError--- d8e0dad3-de4e-4004-a466-03e7508abd0c --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=6603f4edaa1f61e02e9dd845 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:30:27 ----- idError--- 411c8f1b-3571-4b71-af93-c30be5a1fad1 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=6603f4edaa1f61e02e9dd845 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:37:46 ----- idError--- d00ae1d1-6f30-4a19-b250-ad8fd7fb92b8 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=6603f4edaa1f61e02e9dd845 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:40:27 ----- idError--- 7967f1c9-c274-4adf-b72e-f13f31ec8c07 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=6603e537aa1f61e02e9db5bd --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:43:40 ----- idError--- 1a3c376d-18bf-42f4-a987-d57dbb368bb8 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=6603e537aa1f61e02e9db5bd --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:46:30 ----- idError--- 3b150124-c6ab-4fdc-be75-07b8a1559029 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3 --- GET --- Cast to ObjectId failed for value "1" (type number) at path "_id" for model "CommentV2"
+27-03-2024	23:46:32 ----- idError--- 3bd1e940-37fb-456f-9663-c4ce1dcfc9fb --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3 --- GET --- Cast to ObjectId failed for value "1" (type number) at path "_id" for model "CommentV2"
+27-03-2024	23:53:35 ----- idError--- 374a4e59-4a00-4008-8ddc-2573636ef4bc --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:53:57 ----- idError--- b44eb73b-85b3-4d14-b696-d98b09bc176c --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:53:58 ----- idError--- 7c2f03a4-2271-4bb9-9b4c-3b6159be944e --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:54:13 ----- idError--- 2b5eb351-c11a-4495-8915-afc3cf5791be --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:54:15 ----- idError--- cc78c89e-0614-436b-bdd7-78d279762fba --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:54:31 ----- idError--- 91a973bd-86b2-49be-adf9-6b2b91f6ccd1 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:55:46 ----- idError--- bf9fac73-f772-4a7b-9db2-8626561f1f82 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+27-03-2024	23:56:17 ----- idError--- 2be95e2d-d03f-4157-9b8d-f04cd1d6fd35 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+28-03-2024	00:00:04 ----- idError--- 5cf26e2a-19ac-4af5-becf-04b0dcb0b227 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+28-03-2024	00:00:51 ----- idError--- ba39fb30-7e3f-4e18-8bb3-344cff956a08 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+28-03-2024	00:01:16 ----- idError--- e0022bb1-1f9b-4ba3-9f3a-197d3f8d1abb --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+28-03-2024	00:01:56 ----- idError--- 7fc8d078-5f2e-4c13-9acb-9f817993c8b1 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- totalCount is not defined
+28-03-2024	00:03:47 ----- idError--- a7dcb2f2-bffb-4c2d-b9de-322ade35c78d --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+28-03-2024	00:04:50 ----- idError--- c53c124c-4a53-45b2-b009-a20f45eafa3d --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?page=1&batchSize=3&next_cursor=65ffeef02839195a6d680610 --- GET --- Cannot read properties of undefined (reading '_id')
+28-03-2024	09:29:00 ----- idError--- eff8fb45-577b-4b7a-a27a-c3c943e5aef7 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?&batchSize=3&nextCursor=null --- GET --- Cast to ObjectId failed for value "null" (type string) at path "_id" for model "CommentV2"
+28-03-2024	09:29:53 ----- idError--- 26bd55cb-2b08-43d6-aa72-55ab6666805f --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?&batchSize=3&nextCursor=null --- GET --- Cast to ObjectId failed for value "null" (type string) at path "_id" for model "CommentV2"
+28-03-2024	09:30:24 ----- idError--- 7e678c35-b888-4e67-8889-022c36a9f81f --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?&batchSize=3&nextCursor=null --- GET --- Cast to ObjectId failed for value "null" (type string) at path "_id" for model "CommentV2"
+28-03-2024	09:30:40 ----- idError--- 7c4fbe20-bd64-42b9-a677-cfe532129b0f --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?&batchSize=3&nextCursor=null --- GET --- Cast to ObjectId failed for value "null" (type string) at path "_id" for model "CommentV2"
+28-03-2024	09:31:26 ----- idError--- e6888059-27a9-446a-82ae-79bb7056e37a --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?&batchSize=3&nextCursor=null --- GET --- Cast to ObjectId failed for value "null" (type string) at path "_id" for model "CommentV2"
+28-03-2024	09:31:47 ----- idError--- 70121ebc-26bf-467d-aae4-da25d8ed15f4 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?&batchSize=3&nextCursor=null --- GET --- Cast to ObjectId failed for value "null" (type string) at path "_id" for model "CommentV2"
+28-03-2024	09:32:34 ----- idError--- 564277c8-37c7-406f-ad96-0df04611e299 --- /api/v1/comment/getAllCmtV2/64fca58ec2bd1a88b61b3f16?&batchSize=3&nextCursor= --- GET --- Cast to ObjectId failed for value "" (type string) at path "_id" for model "CommentV2"
+28-03-2024	09:57:57 ----- idError--- 0c13b259-1af5-4364-9377-7d841e412547 --- /api/v1/comment/getCmtInBranchV2/64fca58ec2bd1a88b61b3f16/66028481f25cee07fdd00cbd=%22%22?nextCursor&batchSize=3 --- GET --- page is not defined
+28-03-2024	09:58:57 ----- idError--- c1c83252-222f-479b-a49f-8538bc0be41f --- /api/v1/comment/getCmtInBranchV2/64fca58ec2bd1a88b61b3f16/66028481f25cee07fdd00cbd?nextCursor=%22%22&batchSize=3 --- GET --- Cast to ObjectId failed for value """" (type string) at path "_id" for model "CommentV2"
+28-03-2024	14:38:28 ----- idError--- adb6866d-4f9a-4241-b8c2-937b852c5ee9 --- /api/v1/comment/delete-commentV2/66051e6d7d34fc888ed4d0e2 --- DELETE --- Không có bình luận để xóa
+28-03-2024	14:43:24 ----- idError--- e4207f00-d0ae-4175-a2a1-0229523f6446 --- /api/v1/comment/delete-commentV2/66051f2b7d34fc888ed4d1f1 --- DELETE --- Không có bình luận để xóa
+28-03-2024	21:40:57 ----- idError--- ef63344b-a1a1-4d26-8539-95aec94fad46 --- /api/v1/movie/update-viewsV2 --- PUT --- redisClient.exists is not a function
+28-03-2024	21:46:42 ----- idError--- ed1e7cc5-5b1b-4085-83f0-e8df07420bd3 --- /api/v1/movie/update-viewsV2 --- PUT --- redisClient.exists is not a function
+28-03-2024	21:46:44 ----- idError--- aff6fc37-9da5-425b-ad7f-41e12bdb71e0 --- /api/v1/movie/update-viewsV2 --- PUT --- redisClient.exists is not a function
+28-03-2024	21:51:58 ----- idError--- 4df68c80-23b9-412b-b43a-6ff9489a6722 --- /api/v1/movie/update-viewsV2 --- PUT --- redis is not defined
+28-03-2024	21:52:11 ----- idError--- f19825f4-fdde-4bdf-9b26-b6c59e3b8c4c --- /api/v1/movie/update-viewsV2 --- PUT --- key is not defined
+28-03-2024	22:06:11 ----- idError--- 5a6a3124-30d8-4a49-aa03-0f5aef1a06d2 --- /api/v1/movie/update-viewsV2 --- PUT --- promisify(...).bind(...).exists is not a function
+28-03-2024	22:06:30 ----- idError--- 77738c0f-8abd-4bcc-b010-cdb70604c681 --- /api/v1/movie/update-viewsV2 --- PUT --- promisify(...).bind(...).exists is not a function
+28-03-2024	22:06:33 ----- idError--- 97332858-f9c2-4892-b916-451a3beed770 --- /api/v1/movie/update-viewsV2 --- PUT --- promisify(...).bind(...).exists is not a function
+28-03-2024	22:34:20 ----- idError--- 8ca0dace-cb14-4bf7-839a-0b233344c05a --- /api/v1/movie/update-viewsV2 --- PUT --- redisClient.incrby is not a function
+28-03-2024	22:37:22 ----- idError--- 8eed14ea-fb8e-4084-8650-bd5c5543978c --- /api/v1/movie/update-viewsV2 --- PUT --- redisClient.incrby is not a function
+28-03-2024	23:22:01 ----- idError--- d9d6fad5-3c46-42dc-b59d-a2641bd0856b --- /api/v1/movie/update-viewsV2 --- PUT --- NX is not defined
+28-03-2024	23:22:03 ----- idError--- eeb84cfc-ba11-4713-8434-8a09283e2f35 --- /api/v1/movie/update-viewsV2 --- PUT --- NX is not defined
+29-03-2024	09:12:02 ----- idError--- 5f3f5545-9aaa-42be-be6f-e6b0efe9e458 --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
+29-03-2024	14:37:09 ----- idError--- db2799b3-329f-4f37-9d89-da5be4254141 --- /api/v1/movie --- GET --- data is not defined
+29-03-2024	14:39:19 ----- idError--- a9037cf5-6544-4342-87a9-b17b94680e81 --- /api/v1/movie --- GET --- data is not defined
+29-03-2024	14:51:32 ----- idError--- d60a890a-9532-424e-9e41-527ffb13b133 --- /api/v1/category --- GET --- redisClient is not defined
+29-03-2024	15:12:28 ----- idError--- b17a1af4-47b8-4a63-959a-fd92eed656b8 --- /api/v1/movie/get-more-movies?moreFilm=site-map&page=1&pageSize=30 --- GET --- res is not defined
+29-03-2024	15:12:33 ----- idError--- 5d738026-9b3f-44d1-b8d7-8a9ec969adbd --- /api/v1/movie/get-more-movies?moreFilm=sitemap&page=1&pageSize=30 --- GET --- res is not defined
+29-03-2024	15:12:39 ----- idError--- 44a68916-9116-4bf4-9f93-defd9f980e13 --- /api/v1/movie/get-more-movies?moreFilm=sitemap.js&page=1&pageSize=30 --- GET --- res is not defined
+29-03-2024	15:13:20 ----- idError--- 754e7d15-88e7-4e12-a86c-6bf77972e20d --- /api/v1/movie/get-more-movies?moreFilm=sitemap.js&page=1&pageSize=30 --- GET --- res is not defined
+29-03-2024	15:13:28 ----- idError--- be8a7c66-1d7f-4f9d-83cb-ef0279f78097 --- /api/v1/movie/get-more-movies?moreFilm=sitemap.js&page=1&pageSize=30 --- GET --- res is not defined
+29-03-2024	15:14:12 ----- idError--- 7e6ed8b8-6714-42a8-b408-870b37e43cfc --- /api/v1/movie/get-more-movies?moreFilm=sitemap.txt&page=1&pageSize=30 --- GET --- res is not defined
+29-03-2024	15:14:27 ----- idError--- 48bdc8a0-35ff-44e1-bb26-101c3c520ad6 --- /api/v1/movie/get-more-movies?moreFilm=robot.txt&page=1&pageSize=30 --- GET --- res is not defined
+29-03-2024	15:41:27 ----- idError--- f733399c-4c2e-4327-ba61-a4290031a6e4 --- /api/v1/movie --- GET --- Unexpected token u in JSON at position 0
+29-03-2024	15:42:36 ----- idError--- 80217b80-f13b-444d-8fdd-f63f8794389b --- /api/v1/movie --- GET --- Unexpected token u in JSON at position 0
+29-03-2024	15:42:38 ----- idError--- 671001d4-5754-4341-aa17-98458d729951 --- /api/v1/movie --- GET --- Unexpected token u in JSON at position 0
+29-03-2024	15:44:54 ----- idError--- c3203d04-9687-47d5-9ee1-e9ab1197bd40 --- /api/v1/movie --- GET --- Unexpected token u in JSON at position 0
+29-03-2024	15:45:35 ----- idError--- 6aca0284-6f02-47df-a32a-271bcee25be3 --- /api/v1/movie --- GET --- Unexpected token u in JSON at position 0
+29-03-2024	15:47:16 ----- idError--- 43f39f08-a9d5-462b-8cdb-efeed9a0a517 --- /api/v1/movie --- GET --- Unexpected token u in JSON at position 0
+29-03-2024	15:49:30 ----- idError--- 5abd716b-71d1-4465-bee7-404679362324 --- /api/v1/movie --- GET --- Unexpected token u in JSON at position 0
+29-03-2024	15:49:32 ----- idError--- f20509a6-5d95-49b8-aaed-092fde57b789 --- /api/v1/movie --- GET --- Unexpected token u in JSON at position 0
+29-03-2024	15:50:17 ----- idError--- 96dd784c-8c90-4c89-a63e-f5d90a703f40 --- /api/v1/movie --- GET --- Unexpected token o in JSON at position 1
+29-03-2024	15:52:10 ----- idError--- 0808d6e1-76b7-40eb-8161-74e5c1ebd6ea --- /api/v1/auth/refresh --- GET --- You're not authenticated
+29-03-2024	15:52:10 ----- idError--- a7b12096-1ba3-4c26-aa02-6d748d82dae9 --- /api/v1/auth/logout --- GET --- You're not authenticated
+29-03-2024	15:55:07 ----- idError--- 0e16229d-0512-4677-b808-734eb0abc020 --- /api/v1/movie/get-more-movies?moreFilm=sitemap.js&page=1&pageSize=30 --- GET --- res is not defined
+29-03-2024	16:08:35 ----- idError--- 2f829c20-353f-4109-8d7f-cf29d90e0255 --- /api/v1/info_shotflix/add-info-shotflix --- GET --- Not Found
+29-03-2024	16:49:46 ----- idError--- 59d5e512-6815-434c-957e-4b98da7ed723 --- /api/v1/movie/get-category-movie?cateId=64e30a69e2032779af0a65e2&page=1&pageSize=30 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-03-2024	16:51:46 ----- idError--- f31063c7-de87-4e0c-ba6a-125b62f83e04 --- /api/v1/movie/get-category-movie?cateId=64e30a69e2032779af0a65e2&page=1&pageSize=30 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-03-2024	16:52:06 ----- idError--- 662a0ead-f71b-4265-a623-7f815dc193a3 --- /api/v1/movie/get-category-movie?cateId=64e30a69e2032779af0a65e2&page=1&pageSize=30 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x
+29-03-2024	16:52:33 ----- idError--- 064cfdf8-0634-4129-a0a7-24ab7cdff912 --- /api/v1/movie/get-category-movie?cateId=64e30a69e2032779af0a65e2&page=1&pageSize=30 --- GET --- Unsupported BSON version, bson types must be from bson 5.x.x

@@ -1,0 +1,61 @@
+GET http://localhost:8000/api/v1/movie
+
+### register User
+POST http://localhost:8000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username": "tunaday444", 
+    "password": "111111", 
+    "email": "skttfaker25@gmail.com" 
+}
+
+### register verify User
+POST http://localhost:8000/api/v1/auth/register/verify
+Content-Type: application/json
+
+{
+    "username": "tunaday444", 
+    "password": "111111", 
+    "email": "skttfaker25@gmail.com",
+    "otp": "917728" 
+}
+
+### login User
+POST http://localhost:8000/api/v1/auth/login
+Content-Type: application/json
+Cookie: refreshTokenJWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg4ZmQwZTljZDUwZTY0NDViMmZkMzUiLCJ1c2VybmFtZSI6InR1bmFkYXl5NDQ0IiwiZW1haWwiOiJza3R0ZmFrZXIyNUBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzAzNzM0NzExLCJleHAiOjE3MDQzMzk1MTF9.PIQQwiJBTc6FfmzuMsSOQ8v568dKyHXMSk5w5Il1Wts
+
+{
+    "email": "skttfaker25@gmail.com",
+    "password": "111111"
+}
+
+### login User
+GET http://localhost:8000/api/v1/auth/refresh
+x-client-id: 6588fd0e9cd50e6445b2fd35
+Cookie: refreshTokenJWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg4ZmQwZTljZDUwZTY0NDViMmZkMzUiLCJ1c2VybmFtZSI6InR1bmFkYXl5NDQ0IiwiZW1haWwiOiJza3R0ZmFrZXIyNUBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzAzNzM5NDk5LCJleHAiOjE3MDQzNDQyOTl9.18KciWuEVkqU11UDZxfpZmj47NlnKIs7PV-5qUrCsCw
+
+### logout User
+GET http://localhost:8000/api/v1/auth/logout
+Cookie: refreshTokenJWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg4ZmQwZTljZDUwZTY0NDViMmZkMzUiLCJ1c2VybmFtZSI6InR1bmFkYXl5NDQ0IiwiZW1haWwiOiJza3R0ZmFrZXIyNUBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzAzNzQwMzg2LCJleHAiOjE3MDQzNDUxODZ9.ORcg69e3eAMpjUyp6FEcyYTGPLZXderEmRzuADN9TV8
+
+### Forgot User
+PUT http://localhost:8000/api/v1/auth/forgot-pwd-user
+Content-Type: application/json
+
+{
+    "email": "skttfaker25@gmail.com",
+    "password": "111111",
+    "confirmPassword": "111111"
+}
+
+### Forgot User with OTP
+PUT http://localhost:8000/api/v1/auth/forgot-pwd-user-verify
+Content-Type: application/json
+
+{
+    "email": "skttfaker25@gmail.com",
+    "password": "222222",
+    "otp": "390964"
+}

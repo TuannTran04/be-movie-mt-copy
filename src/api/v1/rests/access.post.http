@@ -1,0 +1,47 @@
+@url_dev=http://localhost:8000/api/v1
+
+
+### sign up TIPJS
+POST {{url_dev}}/auth/signup
+Content-Type: application/json
+x-api-key: f18c107e7396e5f535cbf32a7a9da2ec24bf8d0bdb87b16a9d6cda878c37c898d60a8454fe10260c06baad458412f07e3c8429458f9b5214f15a2b1bf26d7586
+
+{
+    "username": "testtt1234",
+    "email": "test1234@gmail.com",
+    "password": "111111"
+}
+
+### register
+POST {{url_dev}}/auth/register
+Content-Type: application/json
+
+{
+    "username": "tunaday444", 
+    "password": "111111", 
+    "email": "skttfaker25@gmail.com" 
+}
+
+### login TIPJS
+POST {{url_dev}}/auth/loginTIPJS
+Content-Type: application/json
+
+{
+    "email": "test1234@gmail.com",
+    "password": "111111"
+}
+
+### logout TIPJS
+GET {{url_dev}}/auth/logoutTIPJS
+Content-Type: application/json
+x-client-id: 6589071bdde203193dcf8fab
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg5MDcxYmRkZTIwMzE5M2RjZjhmYWIiLCJ1c2VybmFtZSI6InRlc3R0dDEyMzQiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzAzNDgyOTI3LCJleHAiOjE3MDM2NTU3Mjd9.-oDe-AWDq785YHLs9Dy4V8AdvBc6gtaxwMnKeM2pmug
+
+### refreshRT TIPJS
+POST {{url_dev}}/auth/handlerRTTIPJS
+Content-Type: application/json
+x-client-id: 6589071bdde203193dcf8fab
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg5MDcxYmRkZTIwMzE5M2RjZjhmYWIiLCJ1c2VybmFtZSI6InRlc3R0dDEyMzQiLCJlbWFpbCI6InRlc3QxMjM0QGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDM0OTYyNTQsImV4cCI6MTcwMzY2OTA1NH0.RN7FJBVPjFTamDkHF6QAlbEJHO-EoawZBYAIpjA0PjY
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg5MDcxYmRkZTIwMzE5M2RjZjhmYWIiLCJ1c2VybmFtZSI6InRlc3R0dDEyMzQiLCJlbWFpbCI6InRlc3QxMjM0QGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDM0OTYyNTQsImV4cCI6MTcwNDEwMTA1NH0.PoW9kHj4nzd9d88cSDOFt-J0scynzTyPnEOTwyqmr9Q
+
+

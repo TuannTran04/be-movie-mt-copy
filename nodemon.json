@@ -1,0 +1,4 @@
+{
+  "ext": ".ts, .js, .mjs, .cjs, .yaml, .json",
+  "ignore": []
+}

@@ -1,0 +1,6 @@
+@url_dev=http://localhost:8000/api/v1/movie
+
+### get all cate
+GET {{url_dev}}/
+
+

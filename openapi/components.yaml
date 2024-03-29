@@ -1,0 +1,198 @@
+components:
+  schemas:
+    RegisterBody:
+      type: object
+      properties:
+        username:
+          type: string
+          example: tunadayy444
+        email:
+          type: string
+          example: skttfaker25@gmail.com
+        password:
+          type: string
+          example: 111111
+    SuccessRegister:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Khởi tạo đăng ký
+        status:
+          type: number
+          example: 200
+        metadata:
+          type: object
+          properties:
+            message:
+              type: string
+              example: OTP gửi thành công
+            otp:
+              type: string
+              example: 133340
+            insertOtpService:
+              type: number
+              example: 1
+    RegisterVerifyBody:
+      type: object
+      properties:
+        username:
+          type: string
+          example: tunadayy444
+        email:
+          type: string
+          example: skttfaker25@gmail.com
+        password:
+          type: string
+          example: 111111
+        otp:
+          type: string
+          example: 133340
+    SuccessRegisterVerify:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Đăng ký thành công
+        status:
+          type: number
+          example: 201
+        metadata:
+          type: object
+          properties:
+            message:
+              type: string
+              example: Đăng ký thành công
+    LoginBody:
+      type: object
+      properties:
+        email:
+          type: string
+          example: skttfaker25@gmail.com
+        password:
+          type: string
+          example: 111111
+    SuccessLogin:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Đăng nhập thành công
+        status:
+          type: number
+          example: 200
+        metadata:
+          type: object
+          properties:
+            _id:
+              type: string
+              format: MongoId
+              example: 64e83b4f992300806ae9a282
+            username:
+              type: string
+              example: admin_dev_tuann😋
+            email:
+              type: string
+              example: tuantrann0402@gmail.com
+            isAdmin:
+              type: boolean
+              example: false
+            disabled:
+              type: boolean
+              example: false
+            givenName:
+              type: string
+              example: ""
+            familyName:
+              type: string
+              example: ""
+            national:
+              type: string
+              example: ""
+            roles:
+              type: array
+              example: []
+            status:
+              type: string
+              example: inactive
+            verify:
+              type: boolean
+              example: false
+            avatar:
+              type: string
+              example: https://firebasestorage.googleapis.com/v0/b/prj-cv-film.appspot.com/o/imgUser%2Fadmin_dev_tuan%F0%9F%98%8B%2F80543B17-9A8C-46D8-BA52-87985A333140.jpeg?alt=media&token=67fac6b7-8fdb-4723-bbb2-ab56340e77db
+            accessToken:
+              type: string
+              example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGU4M2I0Zjk5MjMwMDgwNmFlOWEyODIiLCJ1c2VybmFtZSI6ImFkbWluX2Rldl90dWFubvCfmIsiLCJlbWFpbCI6InR1YW50cmFubjA0MDJAZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzExNTA2NzcyLCJleHAiOjE3MTE2Nzk1NzJ9.Zn0mRoOs-Vs01o4wr2saik0LG_4kjWXq28GPtXaLtDI
+    ForgotPwdBody:
+      type: object
+      properties:
+        email:
+          type: string
+          example: skttfaker25@gmail.com
+        password:
+          type: string
+          example: 111111
+        confirmPassword:
+          type: string
+          example: 111111
+    SuccessForgotPwdBody:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Forget Password Init
+        status:
+          type: number
+          example: 200
+        metadata:
+          type: object
+          properties:
+            message:
+              type: string
+              example: OTP gửi thành công
+            otp:
+              type: string
+              example: 844481
+            insertOtpService:
+              type: number
+              example: 1
+    ForgotPwdVerifyBody:
+      type: object
+      properties:
+        email:
+          type: string
+          example: skttfaker25@gmail.com
+        password:
+          type: string
+          example: 111111
+        confirmPassword:
+          type: string
+          example: 111111
+        otp:
+          type: string
+          example: 696969
+    SuccessForgotPwdVerify:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Forget Password Success
+        status:
+          type: number
+          example: 200
+        metadata:
+          type: object
+          properties:
+            message:
+              type: string
+              example: Thay đổi mật khẩu thành công
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    cookieAuth:
+      type: apiKey
+      in: header
+      name: refreshTokenJWT
