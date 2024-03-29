@@ -314,8 +314,9 @@ class MovieService {
 
   static getMoviesByCate = async ({ cateId, page, pageSize }) => {
     console.log(">>> MovieSerive getMoviesByCate <<<", cateId, page, pageSize);
+    const keyMovieByCate = `movieByCateId::${cateId}`;
 
-    let moviesByCateCache = await getKeyString(`dataMoviesByCateCache`);
+    let moviesByCateCache = await getKeyString(keyMovieByCate);
     if (moviesByCateCache !== null) {
       const dataParse = JSON.parse(moviesByCateCache);
       console.log("dataParse >>", typeof dataParse);
@@ -345,8 +346,6 @@ class MovieService {
     const totalCount = await Movie.countDocuments(query);
     // console.log(totalCount);
 
-    const keyMovieByCate = `movieByCateId::${cateId}`;
-
     await setKeyString({
       key: keyMovieByCate,
       value: {
@@ -367,7 +366,9 @@ class MovieService {
   };
 
   static getSingleUser = async ({ slug }) => {
-    let singleFilmCache = await getKeyString(`dataSingleFilmUserCache`);
+    const keyMovieBySlug = `movieSingle::${movieSingle[0]._id}-${slug}`;
+
+    let singleFilmCache = await getKeyString(keyMovieBySlug);
     if (singleFilmCache !== null) {
       const datasingleFilmParse = JSON.parse(singleFilmCache);
       console.log("datasingleFilmParse >>", typeof datasingleFilmParse);
@@ -388,8 +389,6 @@ class MovieService {
       console.log("Không có phim này");
       throw new BadRequestError("Không có phim này", 404);
     }
-
-    const keyMovieBySlug = `movieSingle::${movieSingle[0]._id}-${slug}`;
 
     await setKeyString({
       key: keyMovieBySlug,
