@@ -21,9 +21,9 @@ class MovieService {
     console.log(">>> updateViews userId <<<", userId);
     console.log(">>> updateViews durationVideo <<<", durationVideo);
 
-    // const keyVideoId = await redisClient.set(`video::${movieId}`, 0);
+    // const keyVideoId = await redisClient.set(`video:${movieId}`, 0);
     // console.log(">>> keyVideoId <<<", keyVideoId);
-    const key = `video::${movieId}`;
+    const key = `video:${movieId}`;
     console.log(key);
     const checkExist = await redisClient.exists(key);
     console.log("checkExist", checkExist);
@@ -314,7 +314,7 @@ class MovieService {
 
   static getMoviesByCate = async ({ cateId, page, pageSize }) => {
     console.log(">>> MovieSerive getMoviesByCate <<<", cateId, page, pageSize);
-    const keyMovieByCate = `movieByCateId::${cateId}`;
+    const keyMovieByCate = `movieByCateId:${cateId}`;
 
     let moviesByCateCache = await getKeyString(keyMovieByCate);
     if (moviesByCateCache !== null) {

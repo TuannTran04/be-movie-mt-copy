@@ -1141,3 +1141,11 @@
 29-03-2024	21:43:49 ----- idError--- f7ea11dd-75d2-4893-a99c-00cccfe85cf9 --- /api/v1/movie/user/nang-am-xa-dan --- GET --- Cannot access 'movieSingle' before initialization
 29-03-2024	21:53:09 ----- idError--- 379af7c5-e4e2-4f3b-915f-43a580878ed7 --- /api/v1/movie/user/nang-am-xa-dan --- GET --- keyMovieBySlug is not defined
 29-03-2024	21:53:09 ----- idError--- 1d387d25-d8b2-48a8-aadb-99badfef0df3 --- /api/v1/movie/user/nang-am-xa-dan --- GET --- keyMovieBySlug is not defined
+29-03-2024	22:21:58 ----- idError--- 36e68e03-34df-438c-aacb-5e423ccd076c --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
+29-03-2024	22:22:53 ----- idError--- c6b9b17b-e82a-4b45-a4cd-6745dbdc5d2a --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
+29-03-2024	22:23:13 ----- idError--- 9b1b2b4a-a97b-45fe-934b-805fdc813b48 --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
+29-03-2024	22:23:34 ----- idError--- bb2b8838-a52f-4ddb-9417-69ca973e9c29 --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
+29-03-2024	22:23:57 ----- idError--- 86d8294d-cfbf-46a5-8efe-ef45dd70efb0 --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
+29-03-2024	22:24:24 ----- idError--- 7a51f46f-c639-49c5-b953-7a81ef5c467c --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
+29-03-2024	22:24:45 ----- idError--- 220d9ac1-7770-4be6-ae07-b050ab0986d1 --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
+29-03-2024	22:25:30 ----- idError--- 2009b2b9-1a01-4d49-9a4e-ac96c4638b36 --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
