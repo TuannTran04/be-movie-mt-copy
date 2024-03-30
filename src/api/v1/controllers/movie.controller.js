@@ -3,16 +3,16 @@ const MovieService = require("../services/movie.service");
 
 class MovieController {
   updateViewsV2 = async (req, res) => {
-    // const ipUser =
-    //   req.headers["cf-connecting-ip"] ||
-    //   req.headers["x-real-ip"] ||
-    //   req.headers["x-forwarded-for"] ||
-    //   req.socket.remoteAddress ||
-    //   "";
+    const ipUser =
+      req.headers["cf-connecting-ip"] ||
+      req.headers["x-real-ip"] ||
+      req.headers["x-forwarded-for"] ||
+      req.socket.remoteAddress ||
+      "";
 
     new SuccessResponse({
       message: "update view V2 movie Success",
-      metadata: await MovieService.updateViewsV2(req.body),
+      metadata: await MovieService.updateViewsV2(req.body, ipUser),
     }).send(res);
   };
 

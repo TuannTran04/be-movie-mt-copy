@@ -13,7 +13,6 @@ const {
 
 const { getRedis } = require("../connections/init.redis");
 const { setKeyString, getKeyString } = require("./redis.service");
-const { instanceConnect: redisClient } = getRedis();
 
 class MovieService {
   static updateViewsV2 = async ({ movieId, userId, duration }, ipUser = 1) => {
