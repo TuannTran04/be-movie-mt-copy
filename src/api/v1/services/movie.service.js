@@ -16,7 +16,7 @@ const { setKeyString, getKeyString } = require("./redis.service");
 const { instanceConnect: redisClient } = getRedis();
 
 class MovieService {
-  static updateViewsV2 = async ({ movieId, userId, duration }, ipUser) => {
+  static updateViewsV2 = async ({ movieId, userId, duration }, ipUser = 1) => {
     console.log(">>> updateViews movieId <<<", movieId);
     console.log(">>> updateViews userId <<<", userId);
     console.log(">>> updateViews durationVideo <<<", duration);
