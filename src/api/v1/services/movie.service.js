@@ -16,57 +16,106 @@ const { setKeyString, getKeyString } = require("./redis.service");
 const { instanceConnect: redisClient } = getRedis();
 
 class MovieService {
-  static updateViewsV2 = async ({ movieId, userId, durationVideo }) => {
+  static updateViewsV2 = async ({ movieId, userId, duration }, ipUser) => {
     console.log(">>> updateViews movieId <<<", movieId);
     console.log(">>> updateViews userId <<<", userId);
-    console.log(">>> updateViews durationVideo <<<", durationVideo);
+    console.log(">>> updateViews durationVideo <<<", duration);
+    // console.log(">>> updateViews ipUser <<<", ipUser);
 
-    // const keyVideoId = await redisClient.set(`video:${movieId}`, 0);
-    // console.log(">>> keyVideoId <<<", keyVideoId);
-    const key = `video:${movieId}`;
-    console.log(key);
-    const checkExist = await redisClient.exists(key);
-    console.log("checkExist", checkExist);
-    if (!checkExist) {
-      console.log("Key không tồn tại trong Redis");
-      throw new BadRequestError("Không có phim để cập nhật", 401);
-    }
-    // Kiểm tra sự tồn tại của key trong Redis
-    if (checkExist === 1) {
+    const key = userId
+      ? `user:${userId}-${movieId}`
+      : `ip:${ipUser}-${movieId}`;
+    console.log("key >>", key);
+
+    let movieCache = await getKeyString(key);
+    if (movieCache !== null) {
       console.log("Key tồn tại trong Redis");
+      const dataFilmParse = JSON.parse(movieCache);
+      console.log("dataFilmParse >>", dataFilmParse, typeof dataFilmParse);
 
-      const keyUserId = `user:${userId}-${key}`;
-      console.log(">>> keyUserId <<<", keyUserId);
-
-      const isOk = await setKeyString({
-        key: keyUserId,
-        value: "hits",
-        expire: 30,
-      });
-
-      if (isOk == "OK") {
-        // await redisClient.incr(`${key}`);
-        // let viewsRedis = await redisClient.get(`${key}`);
-        // console.log(">>> keyVideoId after OK <<<", viewsRedis);
-        // viewsRedis = parseInt(viewsRedis);
-
-        const updatedViewsMovie = await Movie.findOneAndUpdate(
-          { _id: movieId },
-          {
-            // $set: { views: viewsRedis },
-            $inc: { views: 1 },
-          },
-          { new: true } // Trả về bản ghi đã được cập nhật
-        );
-
-        console.log(">>> updatedViewsMovie <<<");
-      } else {
-        return { message: "update views not successfully" };
-      }
-
-      return { message: "update views successfully" };
+      return { message: "update views not successfully" };
     }
+
+    const isOk = await setKeyString({
+      key: key,
+      value: "hits",
+      expire: 30,
+    });
+    console.log("isOk >>", isOk);
+
+    if (isOk == "OK") {
+      const updatedViewsMovie = await Movie.findOneAndUpdate(
+        { _id: movieId },
+        {
+          // $set: { views: viewsRedis },
+          $inc: { views: 1 },
+        },
+        { new: true } // Trả về bản ghi đã được cập nhật
+      );
+
+      console.log(">>> updatedViewsMovie <<<");
+    }
+
+    return { message: "update views successfully" };
   };
+
+  // static updateViewsV2 = async ({ movieId, userId, duration }, ipUser) => {
+  //   console.log(">>> updateViews movieId <<<", movieId);
+  //   console.log(">>> updateViews userId <<<", userId);
+  //   console.log(">>> updateViews durationVideo <<<", duration);
+  //   // console.log(">>> updateViews ipUser <<<", ipUser);
+
+  //   // const keyVideoId = await redisClient.set(`video:${movieId}`, 0);
+  //   // console.log(">>> keyVideoId <<<", keyVideoId);
+  //   // const key = `video:${movieId}`;
+  //   // console.log(key);
+
+  //   const key = userId
+  //     ? `user:${userId}-${movieId}`
+  //     : `ip:${ipUser}-${movieId}`;
+  //   console.log("key >>", key);
+  //   const checkExist = await redisClient.exists(key);
+  //   console.log("checkExist", checkExist);
+  //   if (!checkExist) {
+  //     console.log("Key không tồn tại trong Redis");
+  //     // throw new BadRequestError("Không có phim để cập nhật", 401);
+  //   }
+  //   // Kiểm tra sự tồn tại của key trong Redis
+  //   if (checkExist === 1) {
+  //     console.log("Key tồn tại trong Redis");
+
+  //     // const keyUserId = `user:${userId}-${key}`; // ko login thi k co userId, xem xet userIP
+  //     // console.log(">>> keyUserId <<<", keyUserId);
+
+  //     const isOk = await setKeyString({
+  //       key: key,
+  //       value: "hits",
+  //       expire: 30,
+  //     });
+
+  //     if (isOk == "OK") {
+  //       // await redisClient.incr(`${key}`);
+  //       // let viewsRedis = await redisClient.get(`${key}`);
+  //       // console.log(">>> keyVideoId after OK <<<", viewsRedis);
+  //       // viewsRedis = parseInt(viewsRedis);
+
+  //       const updatedViewsMovie = await Movie.findOneAndUpdate(
+  //         { _id: movieId },
+  //         {
+  //           // $set: { views: viewsRedis },
+  //           $inc: { views: 1 },
+  //         },
+  //         { new: true } // Trả về bản ghi đã được cập nhật
+  //       );
+
+  //       console.log(">>> updatedViewsMovie <<<");
+  //     } else {
+  //       return { message: "update views not successfully" };
+  //     }
+
+  //     return { message: "update views successfully" };
+  //   }
+  // };
 
   static updateViews = async ({ movieId, userId, durationVideo }) => {
     console.log(">>> updateViews movieId <<<", movieId);

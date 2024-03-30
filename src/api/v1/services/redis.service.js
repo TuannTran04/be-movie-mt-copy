@@ -17,7 +17,7 @@ const setKeyString = async ({ key, value, expire }) => {
 
 const getKeyString = async (key) => {
   let dataCache = await redisClient.get(key);
-  console.log(`GET dataCache ${key} >>`, typeof dataCache);
+  console.log(`GET dataCache ${key} >>`, dataCache, typeof dataCache);
 
   return dataCache;
 };
