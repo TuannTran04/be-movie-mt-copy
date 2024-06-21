@@ -56,10 +56,10 @@ const handleEventConnection = ({ connectionRedis }) => {
 
 const initRedis = async () => {
   const instanceRedis = redis.createClient({
-    password: "sRmJ2m69sf2fJ3U9p3Crj7yWjKNmS65v",
+    password: "MI6aXevpRE3U8xWKm9xZrIfaB8yjBWxo",
     socket: {
-      host: "redis-16956.c11.us-east-1-3.ec2.cloud.redislabs.com",
-      port: 16956,
+      host: "redis-14292.c74.us-east-1-4.ec2.redns.redis-cloud.com",
+      port: 14292,
     },
   });
   instanceRedis.connect();

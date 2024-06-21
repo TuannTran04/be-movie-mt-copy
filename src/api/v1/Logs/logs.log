@@ -1150,3 +1150,7 @@
 29-03-2024	22:24:45 ----- idError--- 220d9ac1-7770-4be6-ae07-b050ab0986d1 --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
 29-03-2024	22:25:30 ----- idError--- 2009b2b9-1a01-4d49-9a4e-ac96c4638b36 --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
 30-03-2024	10:31:09 ----- idError--- 2d323ee6-40d7-4a52-ad1e-b0a6a107b889 --- /api/v1/movie/update-viewsV2 --- PUT --- Không có phim để cập nhật
+13-05-2024	17:00:20 ----- idError--- f41ab7ed-1d30-4506-9452-55419bb14ec8 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+13-05-2024	17:00:20 ----- idError--- 3edd3f3f-469f-4400-b6cd-bd9b170bee73 --- /api/v1/auth/logout --- GET --- You're not authenticated
+21-06-2024	22:15:24 ----- idError--- 6fdd46b5-25a1-42a2-ba0a-67a9e8af9644 --- /api/v1/auth/refresh --- GET --- You're not authenticated
+21-06-2024	22:15:24 ----- idError--- e584c5bd-52bf-4cd1-93ce-9fedc0966802 --- /api/v1/auth/logout --- GET --- You're not authenticated
